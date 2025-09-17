@@ -1,20 +1,18 @@
 import { defineStore } from 'pinia';
-import type { ThemeName } from 'src/themes'; // { classic, dark }
+import type { ThemeName } from 'src/themes';
 
 export const useThemeStore = defineStore('theme', {
   state: () => ({
-    currentTheme: 'classic' as ThemeName, // 'classic' | 'dark'
-    darkMode: false as boolean, // se controla automáticamente
+    currentTheme: 'light' as ThemeName, // ahora 'light' en vez de 'classic'
+    darkMode: false as boolean,
   }),
   actions: {
     setTheme(name: ThemeName) {
       this.currentTheme = name;
-      // 🔁 Sincroniza automáticamente el Dark Mode con el tema elegido
-      this.darkMode = name === 'dark';
+      this.darkMode = name === 'dark'; // sincroniza automáticamente
     },
-    // (opcional) toggle rápido entre classic/dark
     toggleTheme() {
-      this.setTheme(this.currentTheme === 'dark' ? 'classic' : 'dark');
+      this.setTheme(this.currentTheme === 'dark' ? 'light' : 'dark');
     },
   },
 });
