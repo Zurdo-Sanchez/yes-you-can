@@ -57,44 +57,63 @@
     <!-- Casos de Éxito -->
     <section class="success-section">
       <h2 class="section-title">Casos de Éxito</h2>
-      <div class="success-grid">
-        <div class="success-card">
-          <div
-            class="success-img"
-            style="
-              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoaF0evBqNMTsHpbDkxa3lKfRTfODf2ngy53OWOWjU42Ycibo6sLU88Um6oxvqFZDFaaJPnZFoXtmWM4UCSptdE5HBqyWPR87EJpYpAa0D_oOczsTTXHSeXGU5QY89PkgNWw1Y_1BoK6arKsXfEgrPtwksPMkRiuo-anr7tVeMapWR3Rw5gQQiakWlUyUiFGWtluimCoO2lFl1GDaFaxBkL6F9LMUgOToaSwJvmqq5tDg-r_tL9DvUao8MQXBcSjVtqgI-VmrtmXE');
-            "
-          ></div>
-          <h3 class="success-title">La Transformación de Max</h3>
-          <p class="success-desc">
-            De agresivo a gentil: la historia de Max superando los desafíos de comportamiento.
-          </p>
-        </div>
-        <div class="success-card">
-          <div
-            class="success-img"
-            style="
-              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpieVmGsrCDkLZKt8z8M1pdNyL5qFk8YHkIncGz5Y4Z_FPWpEXMrC5SV2_BalpsefR1q5iuqg6PCGTfPivdkU2IS3K_MyUs60UrjmXfcHsbCiJn8TGx6CL0SE248-tLMETfJYCxNAnnATDNlyDQ-OfjFrW8ZKz1PHw2kDuiXwXRxR7T-rsKB7_iCRM-631s5eCqIbqo-UiEQvu5zcJkKneneDYkIJtdFkjf0RNJy0vhG3-yrVnRJqzW6jGapbaSM8m_lWX-cIpsaQ');
-            "
-          ></div>
-          <h3 class="success-title">El Viaje de Bella</h3>
-          <p class="success-desc">
-            El viaje de Bella para convertirse en una compañera bien educada a través del
-            entrenamiento de obediencia.
-          </p>
-        </div>
-        <div class="success-card">
-          <div
-            class="success-img"
-            style="
-              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzXVYqtCoi3EFxg6OZF9zQE58u5N6HsgTI8-XHlIds71B_nPJzG5XBYFBtht7Z5MPOdtnxqzdngwOp1irzaaB3PzsSs5sSoD2izNKs79Lek0UJnKDZ6WojGy7rErjyQd_9pdScvmCVY1QDh3Xd15-JG5t40-dq40iIC7i98abxtD4H9BxE1HqOkZfpfQE6pLzW2zJ3xT1BiOe9ZsrBRuMcpsC3JNjCTkLjNj-JC_7fzDlufX55Hwp6LzcXEjGXzM8dWl8irWx2a94');
-            "
-          ></div>
-          <h3 class="success-title">El Progreso de Rocky</h3>
-          <p class="success-desc">
-            El exitoso desarrollo de Rocky de un cachorro juguetón a un adulto disciplinado.
-          </p>
-        </div>
+      <div class="q-pa-md flex flex-center">
+        <q-carousel
+          swipeable
+          animated
+          v-model="slide"
+          navigation
+          arrows
+          infinite
+          :autoplay="autoplay ? 5000 : false"
+          style="height: 520px; width: 95vw; min-width: 320px; margin: 0 auto"
+          ref="carousel"
+        >
+          <template v-slot:control>
+            <q-carousel-control
+              position="top-right"
+              :offset="[18, 18]"
+              class="text-white rounded-borders"
+              style="background: rgba(0, 0, 0, 0.3); padding: 4px 8px"
+            >
+              <q-toggle dense dark color="primary" v-model="autoplay" label="Auto Play" />
+            </q-carousel-control>
+          </template>
+          <q-carousel-slide
+            name="max"
+            img-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoaF0evBqNMTsHpbDkxa3lKfRTfODf2ngy53OWOWjU42Ycibo6sLU88Um6oxvqFZDFaaJPnZFoXtmWM4UCSptdE5HBqyWPR87EJpYpAa0D_oOczsTTXHSeXGU5QY89PkgNWw1Y_1BoK6arKsXfEgrPtwksPMkRiuo-anr7tVeMapWR3Rw5gQQiakWlUyUiFGWtluimCoO2lFl1GDaFaxBkL6F9LMUgOToaSwJvmqq5tDg-r_tL9DvUao8MQXBcSjVtqgI-VmrtmXE"
+          >
+            <div class="q-mt-md">
+              <h3 class="success-title">La Transformación de Max</h3>
+              <p class="success-desc">
+                De agresivo a gentil: la historia de Max superando los desafíos de comportamiento.
+              </p>
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide
+            name="bella"
+            img-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpieVmGsrCDkLZKt8z8M1pdNyL5qFk8YHkIncGz5Y4Z_FPWpEXMrC5SV2_BalpsefR1q5iuqg6PCGTfPivdkU2IS3K_MyUs60UrjmXfcHsbCiJn8TGx6CL0SE248-tLMETfJYCxNAnnATDNlyDQ-OfjFrW8ZKz1PHw2kDuiXwXRxR7T-rsKB7_iCRM-631s5eCqIbqo-UiEQvu5zcJkKneneDYkIJtdFkjf0RNJy0vhG3-yrVnRJqzW6jGapbaSM8m_lWX-cIpsaQ"
+          >
+            <div class="q-mt-md">
+              <h3 class="success-title">El Viaje de Bella</h3>
+              <p class="success-desc">
+                El viaje de Bella para convertirse en una compañera bien educada a través del
+                entrenamiento de obediencia.
+              </p>
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide
+            name="rocky"
+            img-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXVYqtCoi3EFxg6OZF9zQE58u5N6HsgTI8-XHlIds71B_nPJzG5XBYFBtht7Z5MPOdtnxqzdngwOp1irzaaB3PzsSs5sSoD2izNKs79Lek0UJnKDZ6WojGy7rErjyQd_9pdScvmCVY1QDh3Xd15-JG5t40-dq40iIC7i98abxtD4H9BxE1HqOkZfpfQE6pLzW2zJ3xT1BiOe9ZsrBRuMcpsC3JNjCTkLjNj-JC_7fzDlufX55Hwp6LzcXEjGXzM8dWl8irWx2a94"
+          >
+            <div class="q-mt-md">
+              <h3 class="success-title">El Progreso de Rocky</h3>
+              <p class="success-desc">
+                El exitoso desarrollo de Rocky de un cachorro juguetón a un adulto disciplinado.
+              </p>
+            </div>
+          </q-carousel-slide>
+        </q-carousel>
       </div>
     </section>
     <!-- Preguntas Frecuentes -->
@@ -135,6 +154,9 @@
 </template>
 <script setup lang="ts">
 import ContactComponent from '../components/ContactComponent.vue';
+import { ref } from 'vue';
+const slide = ref(0);
+const autoplay = ref(true);
 </script>
 <style scoped>
 /* ...existing styles... */
@@ -287,10 +309,11 @@ import ContactComponent from '../components/ContactComponent.vue';
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--q-white);
 }
 .success-desc {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--q-white);
 }
 .faq-section {
   padding: 3rem 0 2rem 0;
