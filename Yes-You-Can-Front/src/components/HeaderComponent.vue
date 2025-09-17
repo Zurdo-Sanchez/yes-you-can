@@ -5,21 +5,37 @@
         <img src="../assets/logo.png" alt="Logo" class="logo" />
         <span class="app-name centered-secondary">Yes You Can</span>
       </div>
+      <div class="header-center">
+        <nav class="header-nav">
+          <a class="nav-link">Nuestro Trabajo</a>
+          <a class="nav-link">Casos de Éxito</a>
+          <a class="nav-link">Preguntas Frecuentes</a>
+          <a class="nav-link">Contáctanos</a>
+        </nav>
+      </div>
       <div class="header-right">
-        <select v-model="language" class="language-select">
-          <option value="es">ES</option>
-          <option value="en">CA</option>
-        </select>
-        <button @click="toggleTheme" class="theme-btn">
+        <q-btn-dropdown split rounded icon="language" class="language-select">
+          <q-list>
+            <q-item clickable v-close-popup @click="setLanguage('es')">
+              <q-item-section>ES</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup @click="setLanguage('ca')">
+              <q-item-section>CA</q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
+        <q-btn rounded @click="toggleTheme" class="theme-btn">
           {{ themeStore.currentTheme === 'light' ? '🌞' : '🌙' }}
-        </button>
-        <button class="login-btn">Iniciar sesión</button>
-        <button
-          class="h-10 w-10 rounded-full bg-cover bg-center avatar"
-          style="
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1CSyUmV26H7RN9ZJuiZxsACrSnZWiW5m-KPlo5Bv4IpcGsQl4VgFFvDyKGIEeGmu4I3KGCGwLAzB9xHSRoP_88Efw5JJifeYJV80ojP8R4b0VyMOetIF7DINeY59tSt0ZgTpV25IfRqhl6xYDsWGsChvn3lmACApzgHM5OQck11pOSrkc2A4i6oZSFh7m7XwXh-l1aJeK48z4pxDjVX2GLpe06ytb0h5G-kTx1tYeLUI1ceoDW1f6o4vTe8xnBqzOC1uGLGmz4fg');
-          "
-        ></button>
+        </q-btn>
+        <q-btn rounded class="login-btn">Iniciar sesión</q-btn>
+        <q-btn round>
+          <q-avatar>
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1CSyUmV26H7RN9ZJuiZxsACrSnZWiW5m-KPlo5Bv4IpcGsQl4VgFFvDyKGIEeGmu4I3KGCGwLAzB9xHSRoP_88Efw5JJifeYJV80ojP8R4b0VyMOetIF7DINeY59tSt0ZgTpV25IfRqhl6xYDsWGsChvn3lmACApzgHM5OQck11pOSrkc2A4i6oZSFh7m7XwXh-l1aJeK48z4pxDjVX2GLpe06ytb0h5G-kTx1tYeLUI1ceoDW1f6o4vTe8xnBqzOC1uGLGmz4fg"
+              alt="User Avatar"
+            />
+          </q-avatar>
+        </q-btn>
       </div>
     </q-toolbar>
   </q-header>
@@ -38,6 +54,10 @@ const themeStore = useThemeStore();
 
 function toggleTheme() {
   themeStore.toggleTheme();
+}
+
+function setLanguage(lang: string) {
+  language.value = lang;
 }
 </script>
 <style scoped>
@@ -81,10 +101,20 @@ function toggleTheme() {
 }
 .language-select {
   margin-right: 1rem;
-  padding: 0.25rem;
-  border-radius: 30%;
+  padding: 0.1rem;
   border: 1px solid var(--q-primary -contrast);
   background: var(--q-primary);
+}
+.theme-btn {
+  margin-right: 1rem;
+  padding: 1 rem;
+  border: 1px solid var(--q-primary -contrast);
+  background: var(--q-primary);
+}
+.nav-link {
   color: var(--q-primary -contrast);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
 }
 </style>

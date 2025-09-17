@@ -130,30 +130,11 @@
       </div>
     </section>
     <!-- Contacto -->
-    <section class="contact-section">
-      <h2 class="section-title">Contáctanos</h2>
-      <q-form class="contact-form">
-        <q-input filled label="Tu Nombre" class="contact-input" v-model="name" />
-        <q-input filled label="Tu Email" type="email" class="contact-input" v-model="email" />
-        <q-input
-          filled
-          label="Tu Mensaje"
-          type="textarea"
-          class="contact-input"
-          v-model="message"
-        />
-        <div class="contact-actions">
-          <q-btn color="primary" label="Enviar Mensaje" />
-        </div>
-      </q-form>
-    </section>
+    <ContactComponent />
   </q-page-container>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
-const name = ref('');
-const email = ref('');
-const message = ref('');
+import ContactComponent from '../components/ContactComponent.vue';
 </script>
 <style scoped>
 /* ...existing styles... */
@@ -317,22 +298,5 @@ const message = ref('');
 .faq-list {
   max-width: 700px;
   margin: 2rem auto 0 auto;
-}
-.contact-section {
-  padding: 3rem 0 2rem 0;
-}
-.contact-form {
-  max-width: 500px;
-  margin: 2rem auto 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.contact-input {
-  margin-bottom: 0.5rem;
-}
-.contact-actions {
-  display: flex;
-  justify-content: flex-end;
 }
 </style>

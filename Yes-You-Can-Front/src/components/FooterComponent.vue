@@ -15,7 +15,8 @@ export default {
 .footer {
   background: var(--q-primary);
   border-top: 1px solid var(--q-primary);
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
+  height: min-content;
 }
 .footer-content {
   display: flex;
