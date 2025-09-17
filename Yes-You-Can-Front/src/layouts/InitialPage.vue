@@ -12,7 +12,7 @@
             <option value="en">CA</option>
           </select>
           <button @click="toggleTheme" class="theme-btn">
-            {{ theme === 'light' ? '🌞' : '🌙' }}
+            {{ themeStore.currentTheme === 'light' ? '🌞' : '🌙' }}
           </button>
           <button class="login-btn">Iniciar sesión</button>
         </div>
@@ -54,13 +54,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useThemeStore } from 'src/stores/theme';
+
+const themeStore = useThemeStore();
 
 const language = ref('es');
-const theme = ref('light');
 
 function toggleTheme() {
-  theme.value = theme.value === 'light' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', theme.value);
+  themeStore.toggleTheme();
 }
 </script>
 
