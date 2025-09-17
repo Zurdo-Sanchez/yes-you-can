@@ -244,9 +244,9 @@ const message = ref('');
   }
 }
 .work-card {
-  background: #fff;
+  background: var(--q-white);
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px var(--q-primary);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -268,10 +268,10 @@ const message = ref('');
 }
 .work-desc {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--q-black);
 }
 .success-section {
-  background: var(--q-primary);
+  background: var(--q-white);
   padding: 3rem 0 2rem 0;
 }
 .success-grid {
@@ -285,9 +285,9 @@ const message = ref('');
   }
 }
 .success-card {
-  background: #fff;
+  background: var(--q-white);
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px var(--q-primary);
   overflow: hidden;
   display: flex;
   flex-direction: column;

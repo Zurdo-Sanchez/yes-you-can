@@ -6,4 +6,6 @@ export default {
   negative: '#C10015',
   info: '#b26316', // Marrón
   warning: '#f1c66c', // Naranja claro
+  white: '#FFFFFF',
+  black: '#000000',
 };
