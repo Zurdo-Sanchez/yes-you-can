@@ -1,7 +1,7 @@
 <template>
   <q-page class="row items-center justify-evenly">
     <example-component
-      title="Example component"
+      :title="exampleTitle"
       active
       :todos="todos"
       :meta="meta"
@@ -10,34 +10,39 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import type { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ExampleComponent.vue';
 
-const todos = ref<Todo[]>([
+const { t } = useI18n();
+
+const todos = computed<Todo[]>(() => [
   {
     id: 1,
-    content: 'ct1',
+    content: t('pages.index.todos.first'),
   },
   {
     id: 2,
-    content: 'ct2',
+    content: t('pages.index.todos.second'),
   },
   {
     id: 3,
-    content: 'ct3',
+    content: t('pages.index.todos.third'),
   },
   {
     id: 4,
-    content: 'ct4',
+    content: t('pages.index.todos.fourth'),
   },
   {
     id: 5,
-    content: 'ct5',
+    content: t('pages.index.todos.fifth'),
   },
 ]);
 
 const meta = ref<Meta>({
   totalCount: 1200,
 });
+
+const exampleTitle = computed(() => t('pages.index.example.title'));
 </script>

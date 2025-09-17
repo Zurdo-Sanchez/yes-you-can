@@ -6,14 +6,23 @@
         {{ todo.id }} - {{ todo.content }}
       </li>
     </ul>
-    <p>Count: {{ todoCount }} / {{ meta.totalCount }}</p>
-    <p>Active: {{ active ? 'yes' : 'no' }}</p>
-    <p>Clicks on todos: {{ clickCount }}</p>
+    <p>
+      {{ t('components.example.todoCount', { done: todoCount, total: meta.totalCount }) }}
+    </p>
+    <p>
+      {{
+        t('components.example.active', {
+          status: active ? t('common.boolean.yes') : t('common.boolean.no'),
+        })
+      }}
+    </p>
+    <p>{{ t('components.example.clickCount', { count: clickCount }) }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import type { Todo, Meta } from './models';
 
 interface Props {
@@ -26,6 +35,8 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   todos: () => [],
 });
+
+const { t } = useI18n();
 
 const clickCount = ref(0);
 function increment() {
