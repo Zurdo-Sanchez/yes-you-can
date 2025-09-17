@@ -1,0 +1,338 @@
+<template>
+  <q-page-container>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Transformando el Comportamiento Canino</h1>
+        <p class="hero-desc">
+          Servicios expertos de adiestramiento canino adaptados a las necesidades de tu mascota. Nos
+          especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
+          cachorros.
+        </p>
+        <q-btn color="primary" class="hero-btn" label="Empezar" />
+      </div>
+    </section>
+    <!-- Nuestro Trabajo -->
+    <section class="work-section">
+      <h2 class="section-title">Nuestro Trabajo</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <div
+            class="work-img"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApsJKoPhQACDnJtaz3fETpFuHHNSYR3rk9eISgjxwuli9J4G-a7ovnllZrlYowTRIwom8f6tAYnJIVmCfRzugMQ7Aa_NqO8sDhh4JdxK5L7XhbCvJ1iEyc_MjmHWnqCurH4AUcLdWa9h5-zXOK3OFR5f5tEgogWUFL-isSIYRSCTt6KINCKTn-JA8Hbwzqv3XWMo9y4JaR7-aeQk9dNintMgspE8hmXYhsM21dApf-F6SOR9Qp1gAdePYWIfqbCtfxegki5oSzL00');
+            "
+          ></div>
+          <h3 class="work-title">Modificación de Conducta</h3>
+          <p class="work-desc">
+            Abordamos problemas de comportamiento como agresividad, ansiedad y ladridos excesivos.
+          </p>
+        </div>
+        <div class="work-card">
+          <div
+            class="work-img"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAL0m_x3zK5xO44B6Uz-rmcjTpuxBN2WDPMHaaU66zleiY2kob2D9XYKVWNHRRIAIWhh_A7zflgMVX_hRXizf-P5JxPjzqXds_G1HZBFA7huqOIaWFTnOEreT87ovA1VaTeLEOtP_qRirroLlgkEtp5KkOHhMFSEWZQpx0PQ0Bgk5VMFCI-8bVANpiahOsTRICoOta4D-zN7fPJhUoGvFPFioJH9dpJzkkE8SnbtVzoJgtcmDV-rm6W8AyaZgbNxfSOenCFccRyRWU');
+            "
+          ></div>
+          <h3 class="work-title">Entrenamiento de Obediencia</h3>
+          <p class="work-desc">Enseñamos comandos básicos y mejoramos la obediencia general.</p>
+        </div>
+        <div class="work-card">
+          <div
+            class="work-img"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6P_47MPV52ZQrMr6kFBaPj9h8Fy1gd48pfYlTObLd0UuI7CDK2jyQ7fbmF19s5jy5xreqeSJEX-_TOUAtUQ47T81ZSfflgeoTULTzqFyc6WGCUxv3jSaNSPKmYlHFFYAaja6EgEwpPMYuxdDTeuTptfo9422fX9O1InCNR8JQz9x4Et3YtbbnTsmj9AIK2HanFREB91tQR-2NGP-nEaAMkp8h-H7vo2QsbE-EXLndo4BqpvmO6PGzQuc0pFso2mMxR9cu9yYqjDI');
+            "
+          ></div>
+          <h3 class="work-title">Desarrollo de Cachorros</h3>
+          <p class="work-desc">
+            Socialización temprana y entrenamiento para cachorros para asegurar un perro adulto bien
+            adaptado.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Casos de Éxito -->
+    <section class="success-section">
+      <h2 class="section-title">Casos de Éxito</h2>
+      <div class="success-grid">
+        <div class="success-card">
+          <div
+            class="success-img"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoaF0evBqNMTsHpbDkxa3lKfRTfODf2ngy53OWOWjU42Ycibo6sLU88Um6oxvqFZDFaaJPnZFoXtmWM4UCSptdE5HBqyWPR87EJpYpAa0D_oOczsTTXHSeXGU5QY89PkgNWw1Y_1BoK6arKsXfEgrPtwksPMkRiuo-anr7tVeMapWR3Rw5gQQiakWlUyUiFGWtluimCoO2lFl1GDaFaxBkL6F9LMUgOToaSwJvmqq5tDg-r_tL9DvUao8MQXBcSjVtqgI-VmrtmXE');
+            "
+          ></div>
+          <h3 class="success-title">La Transformación de Max</h3>
+          <p class="success-desc">
+            De agresivo a gentil: la historia de Max superando los desafíos de comportamiento.
+          </p>
+        </div>
+        <div class="success-card">
+          <div
+            class="success-img"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpieVmGsrCDkLZKt8z8M1pdNyL5qFk8YHkIncGz5Y4Z_FPWpEXMrC5SV2_BalpsefR1q5iuqg6PCGTfPivdkU2IS3K_MyUs60UrjmXfcHsbCiJn8TGx6CL0SE248-tLMETfJYCxNAnnATDNlyDQ-OfjFrW8ZKz1PHw2kDuiXwXRxR7T-rsKB7_iCRM-631s5eCqIbqo-UiEQvu5zcJkKneneDYkIJtdFkjf0RNJy0vhG3-yrVnRJqzW6jGapbaSM8m_lWX-cIpsaQ');
+            "
+          ></div>
+          <h3 class="success-title">El Viaje de Bella</h3>
+          <p class="success-desc">
+            El viaje de Bella para convertirse en una compañera bien educada a través del
+            entrenamiento de obediencia.
+          </p>
+        </div>
+        <div class="success-card">
+          <div
+            class="success-img"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzXVYqtCoi3EFxg6OZF9zQE58u5N6HsgTI8-XHlIds71B_nPJzG5XBYFBtht7Z5MPOdtnxqzdngwOp1irzaaB3PzsSs5sSoD2izNKs79Lek0UJnKDZ6WojGy7rErjyQd_9pdScvmCVY1QDh3Xd15-JG5t40-dq40iIC7i98abxtD4H9BxE1HqOkZfpfQE6pLzW2zJ3xT1BiOe9ZsrBRuMcpsC3JNjCTkLjNj-JC_7fzDlufX55Hwp6LzcXEjGXzM8dWl8irWx2a94');
+            "
+          ></div>
+          <h3 class="success-title">El Progreso de Rocky</h3>
+          <p class="success-desc">
+            El exitoso desarrollo de Rocky de un cachorro juguetón a un adulto disciplinado.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Preguntas Frecuentes -->
+    <section class="faq-section">
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <div class="faq-list">
+        <q-expansion-item label="¿Qué tipo de métodos de adiestramiento utilizan?">
+          <div>
+            Utilizamos métodos de refuerzo positivo, centrándonos en recompensar los buenos
+            comportamientos en lugar de castigar los malos. Creemos que este enfoque construye un
+            vínculo fuerte y de confianza entre usted y su perro.
+          </div>
+        </q-expansion-item>
+        <q-expansion-item label="¿Cuánto dura cada sesión de adiestramiento?">
+          <div>
+            Nuestras sesiones de adiestramiento suelen durar entre 45 y 60 minutos. Esto nos permite
+            mantener al perro concentrado y comprometido sin agotarlo.
+          </div>
+        </q-expansion-item>
+        <q-expansion-item label="¿Ofrecen adiestramiento en grupo o individual?">
+          <div>
+            Ofrecemos ambas opciones. Las clases en grupo son excelentes para la socialización,
+            mientras que las sesiones individuales proporcionan una atención personalizada para
+            abordar problemas de comportamiento específicos.
+          </div>
+        </q-expansion-item>
+        <q-expansion-item label="¿Qué debo llevar a la sesión de adiestramiento?">
+          <div>
+            Debe traer a su perro con correa, sus premios favoritos y cualquier juguete que le
+            motive. También es útil traer agua para su perro.
+          </div>
+        </q-expansion-item>
+      </div>
+    </section>
+    <!-- Contacto -->
+    <section class="contact-section">
+      <h2 class="section-title">Contáctanos</h2>
+      <q-form class="contact-form">
+        <q-input filled label="Tu Nombre" class="contact-input" v-model="name" />
+        <q-input filled label="Tu Email" type="email" class="contact-input" v-model="email" />
+        <q-input
+          filled
+          label="Tu Mensaje"
+          type="textarea"
+          class="contact-input"
+          v-model="message"
+        />
+        <div class="contact-actions">
+          <q-btn color="primary" label="Enviar Mensaje" />
+        </div>
+      </q-form>
+    </section>
+  </q-page-container>
+</template>
+<script setup lang="ts">
+import { ref } from 'vue';
+const name = ref('');
+const email = ref('');
+const message = ref('');
+</script>
+<style scoped>
+/* ...existing styles... */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--q-primary);
+}
+.centered-secondary {
+  display: block;
+  text-align: center;
+  color: var(--q-secondary);
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--q-primary);
+}
+.icon-btn {
+  margin-right: 0.5rem;
+}
+.login-btn {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+.main-content {
+  background: var(--q-background-light);
+  gap: 2rem;
+}
+.hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRP6b5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.hero-content {
+  text-align: center;
+  z-index: 1;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.hero-desc {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero-btn {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.work-section {
+  padding: 3rem 0 2rem 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.work-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+.work-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+.work-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.work-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+.success-section {
+  background: var(--q-primary);
+  padding: 3rem 0 2rem 0;
+}
+.success-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .success-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.success-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+.success-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+.success-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.success-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+.faq-section {
+  padding: 3rem 0 2rem 0;
+}
+.faq-list {
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+}
+.contact-section {
+  padding: 3rem 0 2rem 0;
+}
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contact-input {
+  margin-bottom: 0.5rem;
+}
+.contact-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+</style>
