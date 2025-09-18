@@ -25,10 +25,10 @@
           </q-list>
         </q-btn-dropdown>
         <q-btn rounded @click="toggleTheme" class="theme-btn">
-          {{ themeStore.currentTheme === 'light' ? '🌞' : '🌙' }}
+          {{ configStore.currentTheme === 'light' ? '🌞' : '🌙' }}
         </q-btn>
-        <q-btn rounded class="login-btn">Iniciar sesión</q-btn>
-        <q-btn round>
+        <q-btn v-if="!login" rounded class="login-btn">Iniciar sesión</q-btn>
+        <q-btn round v-if="login">
           <q-avatar>
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1CSyUmV26H7RN9ZJuiZxsACrSnZWiW5m-KPlo5Bv4IpcGsQl4VgFFvDyKGIEeGmu4I3KGCGwLAzB9xHSRoP_88Efw5JJifeYJV80ojP8R4b0VyMOetIF7DINeY59tSt0ZgTpV25IfRqhl6xYDsWGsChvn3lmACApzgHM5OQck11pOSrkc2A4i6oZSFh7m7XwXh-l1aJeK48z4pxDjVX2GLpe06ytb0h5G-kTx1tYeLUI1ceoDW1f6o4vTe8xnBqzOC1uGLGmz4fg"
@@ -50,10 +50,11 @@ import { ref } from 'vue';
 import { useConfigStore } from '../stores/settingsStore';
 
 const language = ref('es');
-const themeStore = useConfigStore();
+const configStore = useConfigStore();
+const login = configStore.login;
 
 function toggleTheme() {
-  themeStore.toggleTheme();
+  configStore.toggleTheme();
 }
 
 function setLanguage(lang: string) {
