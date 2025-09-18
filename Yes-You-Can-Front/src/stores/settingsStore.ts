@@ -1,8 +1,10 @@
 import { defineStore } from 'pinia';
 import type { ThemeName } from 'src/themes';
 
-export const useThemeStore = defineStore('theme', {
+export const useConfigStore = defineStore('config', {
   state: () => ({
+    login: false as boolean,
+    loading: false as boolean,
     currentTheme: 'light' as ThemeName, // ahora 'light' en vez de 'classic'
     darkMode: false as boolean,
   }),
