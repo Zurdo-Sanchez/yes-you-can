@@ -47,10 +47,10 @@ export default {
 </script>
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useThemeStore } from '../stores/theme';
+import { useConfigStore } from '../stores/settingsStore';
 
 const language = ref('es');
-const themeStore = useThemeStore();
+const themeStore = useConfigStore();
 
 function toggleTheme() {
   themeStore.toggleTheme();

@@ -1,7 +1,7 @@
 import { boot } from 'quasar/wrappers';
 import { watch } from 'vue';
 import { setCssVar, Dark } from 'quasar';
-import { useThemeStore } from 'src/stores/theme';
+import { useConfigStore } from 'src/stores/settingsStore';
 import { THEMES } from 'src/themes';
 
 type BrandKey =
@@ -15,7 +15,7 @@ type BrandKey =
   | 'warning';
 
 export default boot(() => {
-  const theme = useThemeStore();
+  const theme = useConfigStore();
 
   const applyTheme = () => {
     const palette = THEMES[theme.currentTheme];
