@@ -10,7 +10,7 @@
           especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
           cachorros.
         </p>
-        <q-btn color="primary" class="hero-btn" label="Empezar" />
+        <q-btn class="hero-btn" label="Empezar" />
       </div>
     </section>
     <!-- Nuestro Trabajo -->
@@ -231,6 +231,7 @@ const autoplay = ref(true);
 .hero-btn {
   font-weight: bold;
   font-size: 1.1rem;
+  background: var(--q-backgroundOrange80);
 }
 .work-section {
   padding: 3rem 0 2rem 0;

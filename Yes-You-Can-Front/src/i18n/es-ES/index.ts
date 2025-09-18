@@ -4,4 +4,5 @@
 export default {
   failed: 'Acción fallida',
   success: 'La acción se realizó con éxito',
+  send_message: 'Enviar Mensaje',
 };

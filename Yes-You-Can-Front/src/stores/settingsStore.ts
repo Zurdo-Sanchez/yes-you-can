@@ -5,6 +5,7 @@ export const useConfigStore = defineStore('config', {
   state: () => ({
     login: false as boolean,
     loading: false as boolean,
+    language: 'es' as string,
     currentTheme: 'light' as ThemeName, // ahora 'light' en vez de 'classic'
     darkMode: false as boolean,
   }),

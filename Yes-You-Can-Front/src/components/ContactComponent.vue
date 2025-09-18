@@ -28,7 +28,7 @@
         v-model="message"
       />
       <div class="contact-actions">
-        <q-btn color="primary" label="Enviar Mensaje" />
+        <q-btn class="send-btn" :label="t('send_message')" />
       </div>
     </q-form>
   </section>
@@ -40,6 +40,10 @@ export default {
 </script>
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 const name = ref('');
 const email = ref('');
 const telefono = ref('');
@@ -69,5 +73,10 @@ const message = ref('');
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+.send-btn {
+  background: var(--q-backgroundOrange80);
+  color: var(--q-white);
+  font-weight: bold;
 }
 </style>
