@@ -1,4 +1,5 @@
 export default {
+  backgroundOrange80: 'rgba(214, 147, 39, 0.8)', // Naranja apagado con 80% transparencia
   primary: '#d69327', //Naranja apagado
   secondary: '#654216', //  Marrón apagado oscuro
   accent: '#ca5614', // Naranja

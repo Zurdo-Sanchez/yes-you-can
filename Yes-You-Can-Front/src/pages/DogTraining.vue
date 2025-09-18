@@ -152,6 +152,11 @@
     <ContactComponent />
   </q-page-container>
 </template>
+<script lang="ts">
+export default {
+  name: 'DogTraining',
+};
+</script>
 <script setup lang="ts">
 import ContactComponent from '../components/ContactComponent.vue';
 import { ref } from 'vue';

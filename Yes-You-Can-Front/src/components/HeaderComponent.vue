@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated>
+  <q-header elevated class="header">
     <q-toolbar class="toolbar">
       <div class="header-left">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
@@ -68,8 +68,8 @@ function setLanguage(lang: string) {
   height: min-content;
 }
 .header {
-  background: var(--q-primary);
-  border-bottom: 1px solid var(--q-primary);
+  background: var(--q-backgroundOrange80);
+  backdrop-filter: blur(10px);
 }
 .avatar {
   height: 2.5rem;
@@ -103,13 +103,11 @@ function setLanguage(lang: string) {
   margin-right: 1rem;
   padding: 0.1rem;
   border: 1px solid var(--q-primary -contrast);
-  background: var(--q-primary);
 }
 .theme-btn {
   margin-right: 1rem;
   padding: 1 rem;
   border: 1px solid var(--q-primary -contrast);
-  background: var(--q-primary);
 }
 .nav-link {
   color: var(--q-primary -contrast);
