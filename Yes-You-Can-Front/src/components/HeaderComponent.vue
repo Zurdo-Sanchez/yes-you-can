@@ -3,31 +3,34 @@
     <q-toolbar class="toolbar">
       <div class="header-left">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
-        <span class="app-name centered-secondary">Yes You Can</span>
+  <span class="app-name centered-secondary">{{ t('header.app_name') }}</span>
       </div>
       <div class="header-center">
         <nav class="header-nav">
-          <a class="nav-link">Nuestro Trabajo</a>
-          <a class="nav-link">Casos de Éxito</a>
-          <a class="nav-link">Preguntas Frecuentes</a>
-          <a class="nav-link">Contáctanos</a>
+          <a class="nav-link">{{ t('header.our_work') }}</a>
+          <a class="nav-link">{{ t('header.success_cases') }}</a>
+          <a class="nav-link">{{ t('header.faq') }}</a>
+          <a class="nav-link">{{ t('header.contact') }}</a>
         </nav>
       </div>
       <div class="header-right">
         <q-btn-dropdown split rounded icon="language" class="language-select">
           <q-list>
-            <q-item clickable v-close-popup @click="setLanguage('es')">
-              <q-item-section>ES</q-item-section>
+            <q-item clickable v-close-popup @click="setLanguage('es-ES')">
+              <q-item-section>{{ t('header.lang_es') }}</q-item-section>
             </q-item>
-            <q-item clickable v-close-popup @click="setLanguage('ca')">
-              <q-item-section>CA</q-item-section>
+            <q-item clickable v-close-popup @click="setLanguage('ca-ES')">
+              <q-item-section>{{ t('header.lang_ca') }}</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup @click="setLanguage('en-US')">
+              <q-item-section>{{ t('header.lang_en') }}</q-item-section>
             </q-item>
           </q-list>
         </q-btn-dropdown>
         <q-btn rounded @click="toggleTheme" class="theme-btn">
-          {{ configStore.currentTheme === 'light' ? '🌞' : '🌙' }}
+          {{ configStore.currentTheme === 'light' ? t('header.sun') : t('header.moon') }}
         </q-btn>
-        <q-btn v-if="!login" rounded class="login-btn">Iniciar sesión</q-btn>
+  <q-btn v-if="!login" rounded class="login-btn">{{ t('header.login') }}</q-btn>
         <q-btn round v-if="login">
           <q-avatar>
             <img
@@ -40,16 +43,11 @@
     </q-toolbar>
   </q-header>
 </template>
-<script lang="ts">
-export default {
-  name: 'HeaderComponent',
-};
-</script>
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useConfigStore } from '../stores/settingsStore';
+import { useI18n } from 'vue-i18n';
 
-const language = ref('es');
+const { t } = useI18n();
 const configStore = useConfigStore();
 const login = configStore.login;
 
@@ -58,7 +56,7 @@ function toggleTheme() {
 }
 
 function setLanguage(lang: string) {
-  language.value = lang;
+  configStore.language = lang;
 }
 </script>
 <style scoped>

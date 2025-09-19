@@ -10,12 +10,12 @@
           especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
           cachorros.
         </p>
-        <q-btn class="hero-btn" label="Empezar" />
+        <q-btn class="hero-btn" :label="t('content.start')" />
       </div>
     </section>
     <!-- Nuestro Trabajo -->
     <section class="work-section">
-      <h2 class="section-title">Nuestro Trabajo</h2>
+      <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <div class="work-card">
           <div
@@ -56,7 +56,7 @@
     </section>
     <!-- Casos de Éxito -->
     <section class="success-section">
-      <h2 class="section-title">Casos de Éxito</h2>
+      <h2 class="section-title">{{ t('header.success_cases') }}</h2>
       <div class="q-pa-md flex flex-center">
         <q-carousel
           swipeable
@@ -118,7 +118,7 @@
     </section>
     <!-- Preguntas Frecuentes -->
     <section class="faq-section">
-      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
         <q-expansion-item label="¿Qué tipo de métodos de adiestramiento utilizan?">
           <div>
@@ -160,6 +160,9 @@ export default {
 <script setup lang="ts">
 import ContactComponent from '../components/ContactComponent.vue';
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const slide = ref(0);
 const autoplay = ref(true);
 </script>
