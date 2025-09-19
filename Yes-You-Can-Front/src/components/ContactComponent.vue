@@ -33,16 +33,22 @@
     </q-form>
   </section>
 </template>
-<script lang="ts">
-export default {
-  name: 'ContactComponent',
-};
-</script>
-<script setup lang="ts">
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
+<script setup lang="ts">
+import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useConfigStore } from '../stores/settingsStore';
+
+const store = useConfigStore();
+const { t, locale } = useI18n();
+
+watch(
+  () => store.language,
+  (newLang) => {
+    locale.value = newLang;
+  },
+  { immediate: true }
+);
 
 const name = ref('');
 const email = ref('');
