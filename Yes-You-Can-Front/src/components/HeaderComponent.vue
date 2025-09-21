@@ -17,6 +17,11 @@
       </div>
       <div class="header-right">
         <q-btn-dropdown split rounded icon="language" class="language-select">
+          <template #label>
+            <span class="label">
+              {{ configStore.language === 'es-ES' ? 'ES' : configStore.language === 'ca-ES' ? 'CA' : 'EN' }}
+            </span>
+          </template>
           <q-list>
             <q-item clickable v-close-popup @click="setLanguage('es-ES')">
               <q-item-section>{{ t('header.lang_es') }}</q-item-section>
@@ -50,12 +55,12 @@ import { useConfigStore } from '../stores/settingsStore';
 import { useI18n } from 'vue-i18n';
 import { useRouter, useRoute } from 'vue-router';
 
+
 const { t } = useI18n();
 const configStore = useConfigStore();
 const login = configStore.login;
 const router = useRouter();
 const route = useRoute();
-
 function toggleTheme() {
   configStore.toggleTheme();
 }
@@ -69,7 +74,7 @@ function handleNavClick(id: string, event: MouseEvent) {
   if (route.path === '/') {
     scrollTo(id);
   } else {
-  void router.push('/').then(() => {
+    void router.push('/').then(() => {
       setTimeout(() => {
         scrollTo(id);
       }, 300);
@@ -136,5 +141,10 @@ function scrollTo(id: string) {
   text-decoration: none;
   margin: 0 1rem;
   font-weight: 500;
+}
+.label {
+  color: var(--q-white);
+  text-decoration: none;
+  margin-left: 0.5rem;
 }
 </style>
