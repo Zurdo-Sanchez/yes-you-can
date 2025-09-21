@@ -7,10 +7,12 @@
       </div>
       <div class="header-center">
         <nav class="header-nav">
-          <a class="nav-link">{{ t('header.our_work') }}</a>
-          <a class="nav-link">{{ t('header.success_cases') }}</a>
-          <a class="nav-link">{{ t('header.faq') }}</a>
-          <a class="nav-link">{{ t('header.contact') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('home', $event)">{{ t('header.home') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('work', $event)">{{ t('header.our_work') }}</a>
+          <router-link class="nav-link" to="/whoami">{{ t('header.who_am_i') }}</router-link>
+          <a class="nav-link" href="" @click="handleNavClick('success', $event)">{{ t('header.success_cases') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('faq', $event)">{{ t('header.faq') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('contact', $event)">{{ t('header.contact') }}</a>
         </nav>
       </div>
       <div class="header-right">
@@ -46,10 +48,13 @@
 <script setup lang="ts">
 import { useConfigStore } from '../stores/settingsStore';
 import { useI18n } from 'vue-i18n';
+import { useRouter, useRoute } from 'vue-router';
 
 const { t } = useI18n();
 const configStore = useConfigStore();
 const login = configStore.login;
+const router = useRouter();
+const route = useRoute();
 
 function toggleTheme() {
   configStore.toggleTheme();
@@ -57,6 +62,24 @@ function toggleTheme() {
 
 function setLanguage(lang: string) {
   configStore.language = lang;
+}
+
+function handleNavClick(id: string, event: MouseEvent) {
+  event.preventDefault();
+  if (route.path === '/') {
+    scrollTo(id);
+  } else {
+  void router.push('/').then(() => {
+      setTimeout(() => {
+        scrollTo(id);
+      }, 300);
+    });
+  }
+}
+
+function scrollTo(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 <style scoped>
@@ -109,7 +132,7 @@ function setLanguage(lang: string) {
   border: 1px solid var(--q-primary -contrast);
 }
 .nav-link {
-  color: var(--q-primary -contrast);
+  color: var(--q-white);
   text-decoration: none;
   margin: 0 1rem;
   font-weight: 500;

@@ -1,7 +1,7 @@
 <template>
   <q-page-container>
-    <!-- Hero Section -->
-    <section class="hero-section">
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
       <div class="hero-bg"></div>
       <div class="hero-content">
         <h1 class="hero-title">Transformando el Comportamiento Canino</h1>
@@ -13,8 +13,8 @@
         <q-btn class="hero-btn" :label="t('content.start')" />
       </div>
     </section>
-    <!-- Nuestro Trabajo -->
-    <section class="work-section">
+  <!-- Nuestro Trabajo -->
+  <section id="work" class="work-section">
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
@@ -34,8 +34,8 @@
         />
       </div>
     </section>
-    <!-- Casos de Éxito -->
-    <section class="success-section">
+  <!-- Casos de Éxito -->
+  <section id="success" class="success-section">
       <h2 class="section-title">{{ t('header.success_cases') }}</h2>
       <div class="q-pa-md flex flex-center">
         <q-carousel
@@ -96,8 +96,8 @@
         </q-carousel>
       </div>
     </section>
-    <!-- Preguntas Frecuentes -->
-    <section class="faq-section">
+  <!-- Preguntas Frecuentes -->
+  <section id="faq" class="faq-section">
       <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
         <q-expansion-item label="¿Qué tipo de métodos de adiestramiento utilizan?">
@@ -129,7 +129,9 @@
       </div>
     </section>
     <!-- Contacto -->
-    <ContactComponent />
+    <section id="contact">
+      <ContactComponent />
+    </section>
   </q-page-container>
 </template>
 <script lang="ts">

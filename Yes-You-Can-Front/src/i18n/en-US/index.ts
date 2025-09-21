@@ -16,7 +16,9 @@ export default {
     lang_en: 'English',
     sun: '🌞',
     moon: '🌙',
-    login: 'Login',
+  login: 'Login',
+  home: 'Home',
+  who_am_i: 'Who I am',
   },
   content: {
     start: 'Start',
