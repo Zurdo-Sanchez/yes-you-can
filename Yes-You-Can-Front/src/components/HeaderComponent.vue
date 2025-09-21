@@ -56,7 +56,7 @@ import { useI18n } from 'vue-i18n';
 import { useRouter, useRoute } from 'vue-router';
 
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const configStore = useConfigStore();
 const login = configStore.login;
 const router = useRouter();
@@ -67,6 +67,7 @@ function toggleTheme() {
 
 function setLanguage(lang: string) {
   configStore.language = lang;
+  locale.value = lang; // <-- Esto fuerza el cambio en vue-i18n
 }
 
 function handleNavClick(id: string, event: MouseEvent) {

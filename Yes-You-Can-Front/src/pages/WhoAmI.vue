@@ -2,23 +2,31 @@
     <div class="biography-page">
         <h1>¿Quién soy?</h1>
         <div class="bio-content">
-            <!-- <img src="../assets/profile.jpg" alt="Foto de perfil" class="profile-img" /> -->
+            <img src="../assets/Xavi1.png" class="profile-img" />
             <div class="bio-text">
-                <h2>Juan Pérez</h2>
-                <p>
-                    Soy desarrollador web apasionado por la tecnología y el aprendizaje constante.
-                    Me especializo en Vue.js y disfruto creando aplicaciones que ayudan a las personas.
-                    En mi tiempo libre, me gusta leer, practicar deportes y colaborar en proyectos open source.
-                </p>
+                <h2>Xavi Burgos</h2>
+                <p>{{ t('profile.paraf.1') }}</p>
+                <img src="../assets/Xavi-bruna-bb.png" class="other-img " />
+                <p>{{ t('profile.paraf.2') }}</p>
+                <img src="../assets/Xavi-bruna-joc.png" class="other-img " />
+                <p>{{ t('profile.paraf.3') }}</p>
+                <p>{{ t('profile.paraf.4') }}</p>
+                <p>{{ t('profile.paraf.5') }}</p>
+                <p>{{ t('profile.paraf.6') }}</p>
+                <img src="../assets/Xavi-bruna-grande.png" class="other-img " />
+                <p>{{ t('profile.paraf.7') }}</p>
                 <ul>
-                    <li><strong>Ubicación:</strong> Ciudad de México</li>
-                    <li><strong>Profesión:</strong> Desarrollador Frontend</li>
-                    <li><strong>Intereses:</strong> Programación, diseño, innovación</li>
+                    <li><strong>{{ t('profile.ubicacion.title') }}:</strong> {{ t('profile.ubicacion.description') }}</li>
+                    <li><strong>{{ t('profile.profesion.title') }}:</strong> {{ t('profile.profesion.description') }}</li>
                 </ul>
             </div>
         </div>
     </div>
 </template>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+</script>
 <style scoped>
 .biography-page {
     max-width: 700px;
@@ -39,6 +47,12 @@
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #4caf50;
+}
+.other-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 16px 0;
 }
 .bio-text {
     flex: 1;
