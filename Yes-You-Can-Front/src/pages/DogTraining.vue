@@ -1,7 +1,7 @@
 <template>
   <q-page-container>
-    <!-- Hero Section -->
-    <section class="hero-section">
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
       <div class="hero-bg"></div>
       <div class="hero-content">
         <h1 class="hero-title">Transformando el Comportamiento Canino</h1>
@@ -10,53 +10,33 @@
           especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
           cachorros.
         </p>
-        <q-btn color="primary" class="hero-btn" label="Empezar" />
+        <q-btn class="hero-btn" :label="t('content.start')" />
       </div>
     </section>
-    <!-- Nuestro Trabajo -->
-    <section class="work-section">
-      <h2 class="section-title">Nuestro Trabajo</h2>
+  <!-- Nuestro Trabajo -->
+  <section id="work" class="work-section">
+      <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
-        <div class="work-card">
-          <div
-            class="work-img"
-            style="
-              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApsJKoPhQACDnJtaz3fETpFuHHNSYR3rk9eISgjxwuli9J4G-a7ovnllZrlYowTRIwom8f6tAYnJIVmCfRzugMQ7Aa_NqO8sDhh4JdxK5L7XhbCvJ1iEyc_MjmHWnqCurH4AUcLdWa9h5-zXOK3OFR5f5tEgogWUFL-isSIYRSCTt6KINCKTn-JA8Hbwzqv3XWMo9y4JaR7-aeQk9dNintMgspE8hmXYhsM21dApf-F6SOR9Qp1gAdePYWIfqbCtfxegki5oSzL00');
-            "
-          ></div>
-          <h3 class="work-title">Modificación de Conducta</h3>
-          <p class="work-desc">
-            Abordamos problemas de comportamiento como agresividad, ansiedad y ladridos excesivos.
-          </p>
-        </div>
-        <div class="work-card">
-          <div
-            class="work-img"
-            style="
-              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAL0m_x3zK5xO44B6Uz-rmcjTpuxBN2WDPMHaaU66zleiY2kob2D9XYKVWNHRRIAIWhh_A7zflgMVX_hRXizf-P5JxPjzqXds_G1HZBFA7huqOIaWFTnOEreT87ovA1VaTeLEOtP_qRirroLlgkEtp5KkOHhMFSEWZQpx0PQ0Bgk5VMFCI-8bVANpiahOsTRICoOta4D-zN7fPJhUoGvFPFioJH9dpJzkkE8SnbtVzoJgtcmDV-rm6W8AyaZgbNxfSOenCFccRyRWU');
-            "
-          ></div>
-          <h3 class="work-title">Entrenamiento de Obediencia</h3>
-          <p class="work-desc">Enseñamos comandos básicos y mejoramos la obediencia general.</p>
-        </div>
-        <div class="work-card">
-          <div
-            class="work-img"
-            style="
-              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6P_47MPV52ZQrMr6kFBaPj9h8Fy1gd48pfYlTObLd0UuI7CDK2jyQ7fbmF19s5jy5xreqeSJEX-_TOUAtUQ47T81ZSfflgeoTULTzqFyc6WGCUxv3jSaNSPKmYlHFFYAaja6EgEwpPMYuxdDTeuTptfo9422fX9O1InCNR8JQz9x4Et3YtbbnTsmj9AIK2HanFREB91tQR-2NGP-nEaAMkp8h-H7vo2QsbE-EXLndo4BqpvmO6PGzQuc0pFso2mMxR9cu9yYqjDI');
-            "
-          ></div>
-          <h3 class="work-title">Desarrollo de Cachorros</h3>
-          <p class="work-desc">
-            Socialización temprana y entrenamiento para cachorros para asegurar un perro adulto bien
-            adaptado.
-          </p>
-        </div>
+        <CardComponent
+          title="Modificación de Conducta"
+          img="https://lh3.googleusercontent.com/aida-public/AB6AXuApsJKoPhQACDnJtaz3fETpFuHHNSYR3rk9eISgjxwuli9J4G-a7ovnllZrlYowTRIwom8f6tAYnJIVmCfRzugMQ7Aa_NqO8sDhh4JdxK5L7XhbCvJ1iEyc_MjmHWnqCurH4AUcLdWa9h5-zXOK3OFR5f5tEgogWUFL-isSIYRSCTt6KINCKTn-JA8Hbwzqv3XWMo9y4JaR7-aeQk9dNintMgspE8hmXYhsM21dApf-F6SOR9Qp1gAdePYWIfqbCtfxegki5oSzL00"
+          description="Abordamos problemas de comportamiento como agresividad, ansiedad y ladridos excesivos."
+        />
+        <CardComponent
+          title="Entrenamiento de Obediencia"
+          img="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0m_x3zK5xO44B6Uz-rmcjTpuxBN2WDPMHaaU66zleiY2kob2D9XYKVWNHRRIAIWhh_A7zflgMVX_hRXizf-P5JxPjzqXds_G1HZBFA7huqOIaWFTnOEreT87ovA1VaTeLEOtP_qRirroLlgkEtp5KkOHhMFSEWZQpx0PQ0Bgk5VMFCI-8bVANpiahOsTRICoOta4D-zN7fPJhUoGvFPFioJH9dpJzkkE8SnbtVzoJgtcmDV-rm6W8AyaZgbNxfSOenCFccRyRWU"
+          description="Enseñamos comandos básicos y mejoramos la obediencia general." 
+        />
+        <CardComponent
+          title="Desarrollo de Cachorros"
+          img="https://lh3.googleusercontent.com/aida-public/AB6AXuB6P_47MPV52ZQrMr6kFBaPj9h8Fy1gd48pfYlTObLd0UuI7CDK2jyQ7fbmF19s5jy5xreqeSJEX-_TOUAtUQ47T81ZSfflgeoTULTzqFyc6WGCUxv3jSaNSPKmYlHFFYAaja6EgEwpPMYuxdDTeuTptfo9422fX9O1InCNR8JQz9x4Et3YtbbnTsmj9AIK2HanFREB91tQR-2NGP-nEaAMkp8h-H7vo2QsbE-EXLndo4BqpvmO6PGzQuc0pFso2mMxR9cu9yYqjDI"
+          description="Socialización temprana y entrenamiento para cachorros para asegurar un perro adulto bien adaptado."
+        />
       </div>
     </section>
-    <!-- Casos de Éxito -->
-    <section class="success-section">
-      <h2 class="section-title">Casos de Éxito</h2>
+  <!-- Casos de Éxito -->
+  <section id="success" class="success-section">
+      <h2 class="section-title">{{ t('header.success_cases') }}</h2>
       <div class="q-pa-md flex flex-center">
         <q-carousel
           swipeable
@@ -116,9 +96,9 @@
         </q-carousel>
       </div>
     </section>
-    <!-- Preguntas Frecuentes -->
-    <section class="faq-section">
-      <h2 class="section-title">Preguntas Frecuentes</h2>
+  <!-- Preguntas Frecuentes -->
+  <section id="faq" class="faq-section">
+      <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
         <q-expansion-item label="¿Qué tipo de métodos de adiestramiento utilizan?">
           <div>
@@ -149,7 +129,9 @@
       </div>
     </section>
     <!-- Contacto -->
-    <ContactComponent />
+    <section id="contact">
+      <ContactComponent />
+    </section>
   </q-page-container>
 </template>
 <script lang="ts">
@@ -159,7 +141,11 @@ export default {
 </script>
 <script setup lang="ts">
 import ContactComponent from '../components/ContactComponent.vue';
+import CardComponent from '../components/CardComponent.vue';
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const slide = ref(0);
 const autoplay = ref(true);
 </script>
@@ -231,6 +217,7 @@ const autoplay = ref(true);
 .hero-btn {
   font-weight: bold;
   font-size: 1.1rem;
+  background: var(--q-backgroundOrange80);
 }
 .work-section {
   padding: 3rem 0 2rem 0;
@@ -241,43 +228,7 @@ const autoplay = ref(true);
   font-weight: bold;
   margin-bottom: 2rem;
 }
-.work-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.work-card {
-  background: var(--q-white);
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px var(--q-primary);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-}
-.work-img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 1rem;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 1rem;
-}
-.work-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.work-desc {
-  font-size: 0.95rem;
-  color: var(--q-black);
-}
+
 .success-section {
   background: var(--q-white);
   padding: 3rem 0 2rem 0;
@@ -326,5 +277,15 @@ const autoplay = ref(true);
 .faq-list {
   max-width: 700px;
   margin: 2rem auto 0 auto;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>

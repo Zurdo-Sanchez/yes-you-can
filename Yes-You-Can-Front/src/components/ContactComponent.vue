@@ -28,18 +28,28 @@
         v-model="message"
       />
       <div class="contact-actions">
-        <q-btn color="primary" label="Enviar Mensaje" />
+        <q-btn class="send-btn" :label="t('send_message')" />
       </div>
     </q-form>
   </section>
 </template>
-<script lang="ts">
-export default {
-  name: 'ContactComponent',
-};
-</script>
+
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useConfigStore } from '../stores/settingsStore';
+
+const store = useConfigStore();
+const { t, locale } = useI18n();
+
+watch(
+  () => store.language,
+  (newLang) => {
+    locale.value = newLang;
+  },
+  { immediate: true }
+);
+
 const name = ref('');
 const email = ref('');
 const telefono = ref('');
@@ -69,5 +79,10 @@ const message = ref('');
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+.send-btn {
+  background: var(--q-backgroundOrange80);
+  color: var(--q-white);
+  font-weight: bold;
 }
 </style>

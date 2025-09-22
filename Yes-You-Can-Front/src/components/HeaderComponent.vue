@@ -3,31 +3,41 @@
     <q-toolbar class="toolbar">
       <div class="header-left">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
-        <span class="app-name centered-secondary">Yes You Can</span>
+  <span class="app-name centered-secondary">{{ t('header.app_name') }}</span>
       </div>
       <div class="header-center">
         <nav class="header-nav">
-          <a class="nav-link">Nuestro Trabajo</a>
-          <a class="nav-link">Casos de Éxito</a>
-          <a class="nav-link">Preguntas Frecuentes</a>
-          <a class="nav-link">Contáctanos</a>
+          <a class="nav-link" href="" @click="handleNavClick('home', $event)">{{ t('header.home') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('work', $event)">{{ t('header.our_work') }}</a>
+          <router-link class="nav-link" to="/whoami">{{ t('header.who_am_i') }}</router-link>
+          <a class="nav-link" href="" @click="handleNavClick('success', $event)">{{ t('header.success_cases') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('faq', $event)">{{ t('header.faq') }}</a>
+          <a class="nav-link" href="" @click="handleNavClick('contact', $event)">{{ t('header.contact') }}</a>
         </nav>
       </div>
       <div class="header-right">
         <q-btn-dropdown split rounded icon="language" class="language-select">
+          <template #label>
+            <span class="label">
+              {{ configStore.language === 'es-ES' ? 'ES' : configStore.language === 'ca-ES' ? 'CA' : 'EN' }}
+            </span>
+          </template>
           <q-list>
-            <q-item clickable v-close-popup @click="setLanguage('es')">
-              <q-item-section>ES</q-item-section>
+            <q-item clickable v-close-popup @click="setLanguage('es-ES')">
+              <q-item-section>{{ t('header.lang_es') }}</q-item-section>
             </q-item>
-            <q-item clickable v-close-popup @click="setLanguage('ca')">
-              <q-item-section>CA</q-item-section>
+            <q-item clickable v-close-popup @click="setLanguage('ca-ES')">
+              <q-item-section>{{ t('header.lang_ca') }}</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup @click="setLanguage('en-US')">
+              <q-item-section>{{ t('header.lang_en') }}</q-item-section>
             </q-item>
           </q-list>
         </q-btn-dropdown>
         <q-btn rounded @click="toggleTheme" class="theme-btn">
-          {{ configStore.currentTheme === 'light' ? '🌞' : '🌙' }}
+          {{ configStore.currentTheme === 'light' ? t('header.sun') : t('header.moon') }}
         </q-btn>
-        <q-btn v-if="!login" rounded class="login-btn">Iniciar sesión</q-btn>
+  <q-btn v-if="!login" rounded class="login-btn">{{ t('header.login') }}</q-btn>
         <q-btn round v-if="login">
           <q-avatar>
             <img
@@ -40,25 +50,42 @@
     </q-toolbar>
   </q-header>
 </template>
-<script lang="ts">
-export default {
-  name: 'HeaderComponent',
-};
-</script>
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useConfigStore } from '../stores/settingsStore';
+import { useI18n } from 'vue-i18n';
+import { useRouter, useRoute } from 'vue-router';
 
-const language = ref('es');
+
+const { t, locale } = useI18n();
 const configStore = useConfigStore();
 const login = configStore.login;
-
+const router = useRouter();
+const route = useRoute();
 function toggleTheme() {
   configStore.toggleTheme();
 }
 
 function setLanguage(lang: string) {
-  language.value = lang;
+  configStore.language = lang;
+  locale.value = lang; // <-- Esto fuerza el cambio en vue-i18n
+}
+
+function handleNavClick(id: string, event: MouseEvent) {
+  event.preventDefault();
+  if (route.path === '/') {
+    scrollTo(id);
+  } else {
+    void router.push('/').then(() => {
+      setTimeout(() => {
+        scrollTo(id);
+      }, 300);
+    });
+  }
+}
+
+function scrollTo(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 <style scoped>
@@ -111,9 +138,14 @@ function setLanguage(lang: string) {
   border: 1px solid var(--q-primary -contrast);
 }
 .nav-link {
-  color: var(--q-primary -contrast);
+  color: var(--q-white);
   text-decoration: none;
   margin: 0 1rem;
   font-weight: 500;
+}
+.label {
+  color: var(--q-white);
+  text-decoration: none;
+  margin-left: 0.5rem;
 }
 </style>
