@@ -11,10 +11,11 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:-miclave}
     volumes:
       - db_data:/var/lib/mysql
-    networks: [internal]
+    networks:
+      - internal # SOLO internal
     restart: unless-stopped
     ports:
-      - "127.0.0.1:3306:3306" # <-- solo accesible desde el propio server
+      - "127.0.0.1:3306:3306" # solo local en el server
 
   api:
     container_name: yesyoucan-api
@@ -29,8 +30,13 @@ services:
       DB_NAME: ${MYSQL_DATABASE:-miapp}
       DB_USER: ${MYSQL_USER:-miusuario}
       DB_PASSWORD: ${MYSQL_PASSWORD:-miclave}
-    depends_on: [db]
-    networks: [internal]
+      VIRTUAL_HOST: yesyoucan-api.local
+      VIRTUAL_PORT: 5000
+    depends_on:
+      - db
+    networks:
+      - internal # comparte red con DB
+      - proxy_net # visible por el proxy
     restart: unless-stopped
 
   app:
@@ -40,14 +46,21 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
-    depends_on: [api]
-    networks: [internal]
+      VIRTUAL_HOST: yesyoucan.local
+      VIRTUAL_PORT: 3000
+    depends_on:
+      - api
+    networks:
+      - proxy_net # no necesita internal
     restart: unless-stopped
 
 networks:
   internal:
-    name: yesyoucan-net
+    name: yesyoucan-net # tu red interna (donde está la DB)
     driver: bridge
+  proxy_net:
+    external: true
+    name: docker-net # red donde está el contenedor proxy
 
 volumes:
   db_data:
