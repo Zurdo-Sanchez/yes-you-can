@@ -1,0 +1,27 @@
+# ---- Build de Quasar
+FROM node:20-alpine AS build
+WORKDIR /app
+
+# 1) Instalar deps SIN correr scripts (evita 'quasar prepare' antes de tiempo)
+COPY package*.json ./
+RUN npm ci --ignore-scripts
+
+# 2) Copiar el resto del proyecto (ahora sí existe quasar.config.* y demás)
+COPY . .
+
+# 3) Ejecutar scripts (si hay 'postinstall' con 'quasar prepare')
+RUN npm run postinstall --if-present
+
+# 4) Build SPA
+RUN npx quasar build
+
+# ---- Runtime: servir estático con Node
+FROM node:20-alpine
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
+RUN npm i -g serve
+COPY --from=build /app/dist/spa ./dist
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
+
