@@ -13,6 +13,8 @@ services:
       - db_data:/var/lib/mysql
     networks: [internal]
     restart: unless-stopped
+    ports:
+      - "127.0.0.1:3306:3306" # <-- solo accesible desde el propio server
 
   api:
     container_name: yesyoucan-api
@@ -42,19 +44,9 @@ services:
     networks: [internal]
     restart: unless-stopped
 
-  proxy:
-    container_name: yesyoucan-proxy
-    image: nginx:alpine
-    depends_on: [app, api]
-    ports:
-      - "8080:80" # ÚNICO puerto público
-    volumes:
-      - ./proxy/nginx/conf.d:/etc/nginx/conf.d:ro
-    networks: [internal]
-    restart: unless-stopped
-
 networks:
   internal:
+    name: yesyoucan-net
     driver: bridge
 
 volumes:
