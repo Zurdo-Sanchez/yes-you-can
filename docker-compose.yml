@@ -49,6 +49,8 @@ services:
       PORT: 3000
       VIRTUAL_HOST: yesyoucan.local,yesyoucan.cat,www.yesyoucan.cat
       VIRTUAL_PORT: 3000
+    # 'serve -s dist' reescribe rutas desconocidas a index.html para Vue Router en modo history
+    command: ["serve", "-s", "dist", "-l", "3000"]
     depends_on:
       - api
     networks:
