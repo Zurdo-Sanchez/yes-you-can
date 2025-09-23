@@ -12,11 +12,11 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     networks:
-      - internal # SOLO internal
-      - proxy_net
+      - internal # SOLO red interna
     restart: unless-stopped
+    # Sólo si necesitas acceder localmente desde el host:
     ports:
-      - "127.0.0.1:3306:3306" # solo local en el server
+      - "127.0.0.1:3306:3306"
 
   api:
     container_name: yesyoucan-api
@@ -31,13 +31,16 @@ services:
       DB_NAME: ${MYSQL_DATABASE:-miapp}
       DB_USER: ${MYSQL_USER:-miusuario}
       DB_PASSWORD: ${MYSQL_PASSWORD:-miclave}
-      VIRTUAL_HOST: yesyoucan-api.local
+      # Exponer API por subdominio público con HTTPS automático
+      VIRTUAL_HOST: api.yesyoucan.cat
       VIRTUAL_PORT: 5000
+      LETSENCRYPT_HOST: api.yesyoucan.cat
+      LETSENCRYPT_EMAIL: tu-email@dominio.com
     depends_on:
       - db
     networks:
-      - internal # comparte red con DB
-      - proxy_net # visible por el proxy
+      - internal # habla con la DB
+      - proxy_net # visible para el proxy
     restart: unless-stopped
 
   app:
@@ -47,13 +50,13 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
-      VIRTUAL_HOST: yesyoucan.local,yesyoucan.cat,www.yesyoucan.cat
+      # Dominios públicos del sitio
+      VIRTUAL_HOST: yesyoucan.cat,www.yesyoucan.cat,yesyoucan.local
       VIRTUAL_PORT: 3000
-      VIRTUAL_PROTO: https
-    # 'serve -s dist' reescribe rutas desconocidas a index.html para Vue Router en modo history
-    command: ["serve", "-s", "dist", "-l", "3000", "--ssl-cert", "/certs/fullchain.pem", "--ssl-key", "/certs/privkey.pem"]
-    volumes:
-      - ./deploy/certs:/certs:ro
+      LETSENCRYPT_HOST: yesyoucan.cat,www.yesyoucan.cat
+      LETSENCRYPT_EMAIL: tu-email@dominio.com
+    # Si es SPA: servir estático en 3000 (sin TLS dentro del contenedor)
+    command: ["serve", "-s", "dist", "-l", "3000"]
     depends_on:
       - api
     networks:
@@ -62,11 +65,11 @@ services:
 
 networks:
   internal:
-    name: yesyoucan-net # tu red interna (donde está la DB)
+    name: yesyoucan-net
     driver: bridge
   proxy_net:
     external: true
-    name: docker-net # red donde está el contenedor proxy
+    name: docker-net # misma red donde corre nginx-proxy
 
 volumes:
   db_data:
