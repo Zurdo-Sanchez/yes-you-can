@@ -1,0 +1,50 @@
+# Archivo para configurar proxy con Let's Encrypt
+# Ejecutar: docker-compose -f proxy-setup.yml up -d
+
+version: "3.9"
+
+services:
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:alpine
+    container_name: proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - ./proxy/uploadsize.conf:/etc/nginx/conf.d/uploadsize.conf
+    labels:
+      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+    networks:
+      - docker-net
+    restart: unless-stopped
+
+  letsencrypt:
+    image: nginxproxy/acme-companion
+    container_name: letsencrypt
+    depends_on:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - certs:/etc/nginx/certs
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - acme:/etc/acme.sh
+    environment:
+      - DEFAULT_EMAIL=tu-email@dominio.com
+    networks:
+      - docker-net
+    restart: unless-stopped
+
+volumes:
+  certs:
+  vhost:
+  html:
+  acme:
+
+networks:
+  docker-net:
+    external: true

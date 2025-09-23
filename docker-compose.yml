@@ -35,7 +35,7 @@ services:
       VIRTUAL_HOST: api.yesyoucan.cat
       VIRTUAL_PORT: 5000
       LETSENCRYPT_HOST: api.yesyoucan.cat
-      LETSENCRYPT_EMAIL: tu-email@dominio.com
+      LETSENCRYPT_EMAIL: juanmanuel.sanchez@innovait.cat
     depends_on:
       - db
     networks:
@@ -54,7 +54,7 @@ services:
       VIRTUAL_HOST: yesyoucan.cat,www.yesyoucan.cat
       VIRTUAL_PORT: 3000
       LETSENCRYPT_HOST: yesyoucan.cat,www.yesyoucan.cat
-      LETSENCRYPT_EMAIL: tu-email@dominio.com
+      LETSENCRYPT_EMAIL: juanmanuel.sanchez@innovait.cat
     # Si es SPA: servir estático en 3000 con rewrite para Vue Router
     command: ["serve", "-s", "dist", "-l", "3000", "--single"]
     depends_on:
