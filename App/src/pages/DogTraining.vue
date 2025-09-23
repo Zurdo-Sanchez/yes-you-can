@@ -1,20 +1,20 @@
 <template>
   <q-page-container>
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
       <div class="hero-bg"></div>
       <div class="hero-content">
-        <h1 class="hero-title">Transformando el Comportamiento Canino</h1>
+        <h1 class="hero-title">Adiestramiento Canino Profesional en Girona</h1>
         <p class="hero-desc">
           Servicios expertos de adiestramiento canino adaptados a las necesidades de tu mascota. Nos
           especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
-          cachorros.
+          cachorros con más de 10 años de experiencia.
         </p>
         <q-btn class="hero-btn" :label="t('content.start')" />
       </div>
-    </section>
-  <!-- Nuestro Trabajo -->
-  <section id="work" class="work-section">
+    </header>
+    <!-- Nuestro Trabajo -->
+    <section id="work" class="work-section">
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
@@ -25,7 +25,7 @@
         <CardComponent
           title="Entrenamiento de Obediencia"
           img="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0m_x3zK5xO44B6Uz-rmcjTpuxBN2WDPMHaaU66zleiY2kob2D9XYKVWNHRRIAIWhh_A7zflgMVX_hRXizf-P5JxPjzqXds_G1HZBFA7huqOIaWFTnOEreT87ovA1VaTeLEOtP_qRirroLlgkEtp5KkOHhMFSEWZQpx0PQ0Bgk5VMFCI-8bVANpiahOsTRICoOta4D-zN7fPJhUoGvFPFioJH9dpJzkkE8SnbtVzoJgtcmDV-rm6W8AyaZgbNxfSOenCFccRyRWU"
-          description="Enseñamos comandos básicos y mejoramos la obediencia general." 
+          description="Enseñamos comandos básicos y mejoramos la obediencia general."
         />
         <CardComponent
           title="Desarrollo de Cachorros"
@@ -34,8 +34,8 @@
         />
       </div>
     </section>
-  <!-- Casos de Éxito -->
-  <section id="success" class="success-section">
+    <!-- Casos de Éxito -->
+    <section id="success" class="success-section">
       <h2 class="section-title">{{ t('header.success_cases') }}</h2>
       <div class="q-pa-md flex flex-center">
         <q-carousel
@@ -96,8 +96,8 @@
         </q-carousel>
       </div>
     </section>
-  <!-- Preguntas Frecuentes -->
-  <section id="faq" class="faq-section">
+    <!-- Preguntas Frecuentes -->
+    <section id="faq" class="faq-section">
       <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
         <q-expansion-item label="¿Qué tipo de métodos de adiestramiento utilizan?">
@@ -190,6 +190,40 @@ const buildMeta = () => ({
 
 const metaState = ref(buildMeta());
 useMeta(() => metaState.value);
+
+// JSON-LD structured data para SEO
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Yes YouCan - Adiestramiento Canino',
+  description: 'Servicios profesionales de adiestramiento canino en Girona',
+  url: 'https://yesyoucan.cat',
+  telephone: '+34-XXX-XXX-XXX',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Girona',
+    addressCountry: 'ES',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Xavi Burgos',
+    jobTitle: 'Educador Canino Profesional',
+  },
+  serviceArea: 'Girona',
+  services: [
+    'Modificación de conducta canina',
+    'Entrenamiento de obediencia',
+    'Desarrollo de cachorros',
+  ],
+};
+
+// Agregar JSON-LD al head
+if (typeof window !== 'undefined') {
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(structuredData);
+  document.head.appendChild(script);
+}
 
 watch([locale, () => route.fullPath], () => {
   metaState.value = buildMeta();

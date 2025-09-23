@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yesyoucan.cat/sitemap.xml
+
+# Optimización para motores de búsqueda
+Crawl-delay: 1
