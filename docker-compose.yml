@@ -13,6 +13,7 @@ services:
       - db_data:/var/lib/mysql
     networks:
       - internal # SOLO internal
+      - proxy_net
     restart: unless-stopped
     ports:
       - "127.0.0.1:3306:3306" # solo local en el server
@@ -46,7 +47,7 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
-      VIRTUAL_HOST: yesyoucan.local
+      VIRTUAL_HOST: yesyoucan.local,yesyoucan.cat,www.yesyoucan.cat
       VIRTUAL_PORT: 3000
     depends_on:
       - api
