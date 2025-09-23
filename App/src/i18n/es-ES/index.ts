@@ -41,4 +41,33 @@ export default {
   content: {
     start: 'Empezar',
   },
+  meta: {
+    dogTraining: {
+      title: 'Adiestramiento canino personalizado en Girona | Yes YouCan',
+      description:
+        'Descubre programas de modificación de conducta, obediencia y desarrollo de cachorros guiados por un educador canino certificado.',
+      ogTitle: 'Yes YouCan · Expertos en educación canina',
+      ogDescription:
+        'Acompañamos a las familias con planes de adiestramiento adaptados para mejorar la convivencia con sus perros.',
+      ogImageAlt: 'Perro entrenando junto a su guía durante una sesión de Yes YouCan.',
+    },
+    whoAmI: {
+      title: 'Conoce a Xavi Burgos | Educador Canino de Yes YouCan',
+      description:
+        'Explora la trayectoria y la vocación de Xavi Burgos, especialista en educación canina a domicilio en Girona.',
+      ogTitle: 'Xavi Burgos · Educador canino en Yes YouCan',
+      ogDescription:
+        'Descubre cómo nació la vocación de Xavi y su experiencia ayudando a personas y perros a convivir en armonía.',
+      ogImageAlt: 'Retrato de Xavi Burgos con su perra Bruna.',
+    },
+    notFound: {
+      title: 'Página no encontrada | Yes YouCan',
+      description:
+        'La página que buscas no existe o ha cambiado de dirección. Vuelve al inicio para seguir explorando Yes YouCan.',
+      ogTitle: 'Yes YouCan · Página no encontrada',
+      ogDescription:
+        'Utiliza nuestro menú para volver a los servicios de adiestramiento canino y recursos disponibles.',
+      ogImageAlt: 'Perro buscando el camino de vuelta a casa.',
+    },
+  },
 };

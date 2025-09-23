@@ -142,10 +142,59 @@ export default {
 <script setup lang="ts">
 import ContactComponent from '../components/ContactComponent.vue';
 import CardComponent from '../components/CardComponent.vue';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+import { useMeta } from 'quasar';
 import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const route = useRoute();
+
+const dogTrainingOgImage =
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRPb5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+
+const buildMeta = () => ({
+  title: t('meta.dogTraining.title'),
+  meta: {
+    description: {
+      name: 'description',
+      content: t('meta.dogTraining.description'),
+    },
+    'og:title': {
+      property: 'og:title',
+      content: t('meta.dogTraining.ogTitle'),
+    },
+    'og:description': {
+      property: 'og:description',
+      content: t('meta.dogTraining.ogDescription'),
+    },
+    'og:type': {
+      property: 'og:type',
+      content: 'website',
+    },
+    'og:url': {
+      property: 'og:url',
+      content: `${origin}${route.fullPath}`,
+    },
+    'og:image': {
+      property: 'og:image',
+      content: dogTrainingOgImage,
+    },
+    'og:image:alt': {
+      property: 'og:image:alt',
+      content: t('meta.dogTraining.ogImageAlt'),
+    },
+  },
+});
+
+const metaState = ref(buildMeta());
+useMeta(() => metaState.value);
+
+watch([locale, () => route.fullPath], () => {
+  metaState.value = buildMeta();
+});
+
 const slide = ref(0);
 const autoplay = ref(true);
 </script>

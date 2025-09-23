@@ -41,4 +41,33 @@ export default {
     },
     ubicacion: { title: 'Ubicació', description: 'Ciutat de Girona' },
   },
+  meta: {
+    dogTraining: {
+      title: 'Educació canina personalitzada a Girona | Yes YouCan',
+      description:
+        'Descobreix programes de modificació de conducta, obediència i desenvolupament de cadells amb un educador caní certificat.',
+      ogTitle: 'Yes YouCan · Experts en educació canina',
+      ogDescription:
+        'Ajudem les famílies a millorar la convivència amb els seus gossos amb assessorament a mida i casos d’èxit reals.',
+      ogImageAlt: 'Gos entrenant amb el seu guia en una sessió de Yes YouCan.',
+    },
+    whoAmI: {
+      title: 'Coneix en Xavi Burgos | Educador caní de Yes YouCan',
+      description:
+        'Coneix el recorregut i la vocació d’en Xavi Burgos, especialista en educació canina a domicili a Girona.',
+      ogTitle: 'Xavi Burgos · Educador caní a Yes YouCan',
+      ogDescription:
+        'Descobreix com va néixer la vocació d’en Xavi i com acompanya persones i gossos a viure en harmonia.',
+      ogImageAlt: 'Retrat d’en Xavi Burgos amb la seva gossa Bruna.',
+    },
+    notFound: {
+      title: 'Pàgina no trobada | Yes YouCan',
+      description:
+        'La pàgina que busques no existeix o ha canviat d’adreça. Torna a l’inici per continuar explorant Yes YouCan.',
+      ogTitle: 'Yes YouCan · Pàgina no trobada',
+      ogDescription:
+        'Utilitza el nostre menú per tornar als serveis d’educació canina i als recursos disponibles.',
+      ogImageAlt: 'Gos intentant trobar el camí de tornada a casa.',
+    },
+  },
 };

@@ -39,4 +39,33 @@ export default {
     },
     ubicacion: { title: 'Location', description: 'Girona City' },
   },
+  meta: {
+    dogTraining: {
+      title: 'Personalized Dog Training in Girona | Yes YouCan',
+      description:
+        'Discover behaviour modification, obedience and puppy development programs guided by a certified dog trainer.',
+      ogTitle: 'Yes YouCan · Dog Training Experts',
+      ogDescription:
+        'We help families improve life with their dogs through tailored coaching and proven success stories.',
+      ogImageAlt: 'Dog training with its handler during a Yes YouCan session.',
+    },
+    whoAmI: {
+      title: 'Meet Xavi Burgos | Yes YouCan Dog Trainer',
+      description:
+        'Learn about the journey and vocation of Xavi Burgos, an in-home dog training specialist based in Girona.',
+      ogTitle: 'Xavi Burgos · Dog trainer at Yes YouCan',
+      ogDescription:
+        'Discover how Xavi found his calling and supports people and dogs to live together in harmony.',
+      ogImageAlt: 'Portrait of Xavi Burgos with his dog Bruna.',
+    },
+    notFound: {
+      title: 'Page not found | Yes YouCan',
+      description:
+        'The page you are looking for does not exist or has moved. Return to the home page to keep exploring Yes YouCan.',
+      ogTitle: 'Yes YouCan · Page not found',
+      ogDescription:
+        'Use our menu to return to dog training services and available resources.',
+      ogImageAlt: 'Dog trying to find its way back home.',
+    },
+  },
 };
