@@ -1,8 +1,6 @@
 // This is just an example,
 // so you can safely delete all default props below
 
-
-
 export default {
   failed: 'Acció fallida',
   success: "L'acció s'ha realitzat amb èxit",
@@ -10,7 +8,7 @@ export default {
   header: {
     app_name: 'Yes YouCan',
     our_work: 'El Nostre Treball',
-    success_cases: 'Casos d’Èxit',
+    Transformation_Stories: 'Històries de Transformació',
     faq: 'Preguntes Freqüents',
     contact: 'Contacta’ns',
     lang_es: 'Castellà',
@@ -18,12 +16,16 @@ export default {
     lang_en: 'Anglès',
     sun: '🌞',
     moon: '🌙',
-  login: 'Iniciar sessió',
-  home: 'Inici',
-  who_am_i: 'Qui sóc',
+    login: 'Iniciar sessió',
+    home: 'Inici',
+    who_am_i: 'Qui sóc',
   },
   content: {
     start: 'Començar',
+  },
+  contact: {
+    email: 'contacte@yesyoucan.cat',
+    phone: '+34 667 67 63 05',
   },
   profile: {
     paraf: {

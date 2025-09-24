@@ -3,7 +3,17 @@
     <q-toolbar class="toolbar">
       <div class="header-left">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
-        <span class="app-name centered-secondary">{{ t('header.app_name') }}</span>
+        <span class="app-name centered-secondary">
+          <span style="color: var(--q-namePrimaryColor)">
+            {{ t('header.app_name').slice(0, 3) }}
+          </span>
+          <span style="color: var(--q-nameSecondaryColor)">
+            {{ t('header.app_name').slice(3, 7) }}
+          </span>
+          <span style="color: var(--q-namePrimaryColor)">
+            {{ t('header.app_name').slice(7, 10) }}
+          </span>
+        </span>
       </div>
       <div class="header-center">
         <nav class="header-nav">
@@ -15,7 +25,7 @@
           }}</a>
           <router-link class="nav-link" to="/whoami">{{ t('header.who_am_i') }}</router-link>
           <a class="nav-link" href="" @click="handleNavClick('success', $event)">{{
-            t('header.success_cases')
+            t('header.Transformation_Stories')
           }}</a>
           <a class="nav-link" href="" @click="handleNavClick('faq', $event)">{{
             t('header.faq')
@@ -26,7 +36,11 @@
         </nav>
       </div>
       <div class="header-right">
-        <q-btn-dropdown split rounded icon="language" class="language-select">
+        <div class="phone-container">
+          <q-icon name="phone" size="sm" class="phone-icon" />
+          <span class="phone-number">{{ t('contact.phone') }}</span>
+        </div>
+        <q-btn-dropdown split rounded dropdown-icon="" icon="language" class="language-select">
           <template #label>
             <span class="label">
               {{
@@ -77,6 +91,7 @@ const configStore = useConfigStore();
 const login = configStore.login;
 const router = useRouter();
 const route = useRoute();
+
 function toggleTheme() {
   configStore.toggleTheme();
 }
@@ -112,7 +127,7 @@ function scrollTo(id: string) {
   height: min-content;
 }
 .header {
-  background: var(--q-backgroundOrange80);
+  background: var(--q-backgroundHeader);
   backdrop-filter: blur(10px);
 }
 .avatar {
@@ -163,5 +178,24 @@ function scrollTo(id: string) {
   color: var(--q-white);
   text-decoration: none;
   margin-left: 0.5rem;
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.phone-icon {
+  color: var(--q-white);
+  margin-right: 0.5rem;
+}
+
+.phone-number {
+  color: var(--q-white);
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 </style>

@@ -1,5 +1,7 @@
 export default {
-  backgroundOrange80: 'rgba(214, 147, 39, 0.8)', // Naranja apagado con 80% transparencia
+  backgroundHeader: 'rgba(214, 147, 39, 0.8)', // Naranja apagado con 80% transparencia
+  namePrimaryColor: '#d69327',
+  nameSecondaryColor: '#654216',
   primary: '#d69327', //Naranja apagado
   secondary: '#654216', //  Marrón apagado oscuro
   accent: '#ca5614', // Naranja

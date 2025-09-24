@@ -36,7 +36,7 @@
     </section>
     <!-- Casos de Éxito -->
     <section id="success" class="success-section">
-      <h2 class="section-title">{{ t('header.success_cases') }}</h2>
+      <h2 class="section-title">{{ t('header.Transformation_Stories') }}</h2>
       <div class="q-pa-md flex flex-center">
         <q-carousel
           swipeable
@@ -300,7 +300,7 @@ const autoplay = ref(true);
 .hero-btn {
   font-weight: bold;
   font-size: 1.1rem;
-  background: var(--q-backgroundOrange80);
+  background: var(--q-backgroundHeader);
 }
 .work-section {
   padding: 3rem 0 2rem 0;

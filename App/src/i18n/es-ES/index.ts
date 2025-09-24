@@ -8,7 +8,7 @@ export default {
   header: {
     app_name: 'Yes YouCan',
     our_work: 'Nuestro Trabajo',
-    success_cases: 'Casos de Éxito',
+    Transformation_Stories: 'Historias de Transformación',
     faq: 'Preguntas Frecuentes',
     contact: 'Contáctanos',
     lang_es: 'Castellano',
@@ -16,9 +16,9 @@ export default {
     lang_en: 'Inglés',
     sun: '🌞',
     moon: '🌙',
-  login: 'Iniciar sesión',
-  home: 'Inicio',
-  who_am_i: 'Quién soy',
+    login: 'Iniciar sesión',
+    home: 'Inicio',
+    who_am_i: 'Quién soy',
   },
   profile: {
     paraf: {
@@ -30,16 +30,19 @@ export default {
       6: 'Hoy miro atrás con gratitud: a Bruna, que fue mi mejor maestra, y a Ken, que me mostró un camino de vida.',
       7: 'Gracias a ellos, puedo dedicarme a lo que realmente me apasiona: ayudar a personas y perros a vivir mejor juntos.',
     },
-    profesion:{
+    profesion: {
       title: 'Profesión',
       description: 'Educador Canino',
     },
 
-    ubicacion:{ title: 'Ubicación', description: 'Ciudad de Girona' },
-
+    ubicacion: { title: 'Ubicación', description: 'Ciudad de Girona' },
   },
   content: {
     start: 'Empezar',
+  },
+  contact: {
+    email: 'contacto@yesyoucan.cat',
+    phone: '+34 667 67 63 05',
   },
   meta: {
     dogTraining: {

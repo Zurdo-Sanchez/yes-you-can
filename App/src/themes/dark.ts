@@ -1,15 +1,12 @@
-import light from './light';
-
-function invertColor(hex: string): string {
-  const c = hex.substring(1);
-  const num = parseInt(c, 16);
-  const inverted = 0xffffff ^ num;
-  return `#${inverted.toString(16).padStart(6, '0')}`;
-}
-
-const darkTheme: Record<string, string> = {};
-for (const [key, value] of Object.entries(light)) {
-  darkTheme[key] = invertColor(value);
-}
-
-export default darkTheme;
+export default {
+  backgroundHeader: 'rgba(214, 147, 39, 0.8)', // Mismo color que el tema claro
+  primary: '#28d8a0', // Inversión automática del naranja apagado
+  secondary: '#9abde9', // Inversión automática del marrón apagado oscuro
+  accent: '#35a9eb', // Inversión automática del naranja
+  positive: '#21BA45',
+  negative: '#C10015',
+  info: '#4d9ce9', // Inversión automática del marrón
+  warning: '#0e3993', // Inversión automática del naranja claro
+  white: '#000000',
+  black: '#FFFFFF',
+};

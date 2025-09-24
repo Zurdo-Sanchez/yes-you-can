@@ -8,7 +8,7 @@ export default {
   header: {
     app_name: 'Yes YouCan',
     our_work: 'Our Work',
-    success_cases: 'Success Stories',
+    Transformation_Stories: 'Transformation Stories',
     faq: 'FAQ',
     contact: 'Contact Us',
     lang_es: 'Spanish',
@@ -16,12 +16,16 @@ export default {
     lang_en: 'English',
     sun: '🌞',
     moon: '🌙',
-  login: 'Login',
-  home: 'Home',
-  who_am_i: 'Who I am',
+    login: 'Login',
+    home: 'Home',
+    who_am_i: 'Who I am',
   },
   content: {
     start: 'Start',
+  },
+  contact: {
+    email: 'contact@yesyoucan.cat',
+    phone: '+34 667 67 63 05',
   },
   profile: {
     paraf: {
@@ -63,8 +67,7 @@ export default {
       description:
         'The page you are looking for does not exist or has moved. Return to the home page to keep exploring Yes YouCan.',
       ogTitle: 'Yes YouCan · Page not found',
-      ogDescription:
-        'Use our menu to return to dog training services and available resources.',
+      ogDescription: 'Use our menu to return to dog training services and available resources.',
       ogImageAlt: 'Dog trying to find its way back home.',
     },
   },

@@ -4,16 +4,6 @@ import { setCssVar, Dark } from 'quasar';
 import { useConfigStore } from 'src/stores/settingsStore';
 import { THEMES } from 'src/themes';
 
-type BrandKey =
-  | 'primary'
-  | 'secondary'
-  | 'accent'
-  | 'dark'
-  | 'positive'
-  | 'negative'
-  | 'info'
-  | 'warning';
-
 export default boot(() => {
   const theme = useConfigStore();
 
@@ -21,8 +11,26 @@ export default boot(() => {
     const palette = THEMES[theme.currentTheme];
 
     // aplica los brand colors permitidos
-    (Object.keys(palette) as BrandKey[]).forEach((k) => {
-      setCssVar(k, (palette as Record<BrandKey, string>)[k]);
+    (Object.keys(palette) as (keyof typeof palette)[]).forEach((k) => {
+      if (
+        [
+          'backgroundHeader',
+          'namePrimaryColor',
+          'nameSecondaryColor',
+          'primary',
+          'secondary',
+          'accent',
+          'dark',
+          'positive',
+          'negative',
+          'info',
+          'warning',
+          'white',
+          'black',
+        ].includes(k)
+      ) {
+        setCssVar(k, palette[k]);
+      }
     });
 
     // modo oscuro sincronizado con el store
