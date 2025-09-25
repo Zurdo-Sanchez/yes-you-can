@@ -275,7 +275,17 @@ const autoplay = ref(true);
   gap: 2rem;
 }
 .hero-section {
-  background-color: var(--q-backgroundHero);
+  background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRP6b5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px var(--q-primary);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 0 1rem;
 }
 
 .hero-grid {
@@ -334,6 +344,7 @@ const autoplay = ref(true);
 .work-section {
   padding: 3rem 0 2rem 0;
   display: grid;
+  margin: 0 1rem;
 }
 .section-title {
   text-align: center;
