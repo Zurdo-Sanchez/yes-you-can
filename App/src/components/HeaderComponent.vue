@@ -4,13 +4,13 @@
       <div class="header-left">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
         <span class="app-name centered-secondary">
-          <span style="color: var(--q-namePrimaryColor)">
+          <span class="logo-first-Color">
             {{ t('header.app_name').slice(0, 3) }}
           </span>
-          <span style="color: var(--q-nameSecondaryColor)">
+          <span class="logo-second-Color">
             {{ t('header.app_name').slice(3, 7) }}
           </span>
-          <span style="color: var(--q-namePrimaryColor)">
+          <span class="logo-first-Color">
             {{ t('header.app_name').slice(7, 10) }}
           </span>
         </span>
@@ -197,5 +197,12 @@ function scrollTo(id: string) {
   color: var(--q-white);
   font-weight: 500;
   font-size: 0.9rem;
+}
+
+.logo-first-Color {
+  color: var(--q-namePrimary);
+}
+.logo-second-Color {
+  color: var(--q-nameSecondary);
 }
 </style>

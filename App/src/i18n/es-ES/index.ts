@@ -35,7 +35,7 @@ export default {
       description: 'Educador Canino',
     },
 
-    ubicacion: { title: 'Ubicación', description: 'Ciudad de Girona' },
+    ubicacion: { title: 'Ubicación', description: 'Ciudad de Celrà' },
   },
   content: {
     start: 'Empezar',

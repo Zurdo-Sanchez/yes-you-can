@@ -41,7 +41,7 @@ export default {
       title: 'Profession',
       description: 'Dog Trainer',
     },
-    ubicacion: { title: 'Location', description: 'Girona City' },
+    ubicacion: { title: 'Location', description: 'Celrà City' },
   },
   meta: {
     dogTraining: {

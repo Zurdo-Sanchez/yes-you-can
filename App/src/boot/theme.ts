@@ -16,8 +16,8 @@ export default boot(() => {
         [
           'backgroundHeader',
           'backgroundHero',
-          'namePrimaryColor',
-          'nameSecondaryColor',
+          'namePrimary',
+          'nameSecondary',
           'primary',
           'secondary',
           'accent',

@@ -1,8 +1,8 @@
 export default {
   backgroundHeader: '#d69327cc', // Naranja apagado con 80% transparencia
-  namePrimaryColor: '#d69327',
+  namePrimary: '#d69327',
+  nameSecondary: '#654216',
   backgroundHero: '#fdf1ce',
-  nameSecondaryColor: '#654216',
   primary: '#d69327', // Naranja apagado
   secondary: '#654216', // Marrón apagado oscuro
   accent: '#ca5614', // Naranja

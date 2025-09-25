@@ -41,7 +41,7 @@ export default {
       title: 'Professió',
       description: 'Educador Caní',
     },
-    ubicacion: { title: 'Ubicació', description: 'Ciutat de Girona' },
+    ubicacion: { title: 'Ubicació', description: 'Ciutat de Celrà' },
   },
   meta: {
     dogTraining: {

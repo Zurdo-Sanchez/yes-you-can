@@ -1,7 +1,7 @@
 <template>
-  <q-page-container>
+  <q-page-container id="home">
     <!-- Hero Section -->
-    <header id="home" class="hero-section">
+    <header class="hero-section">
       <div class="hero-content">
         <h1 class="hero-title">Adiestramiento Canino Profesional en Girona</h1>
         <p class="hero-desc">
@@ -281,7 +281,6 @@ const autoplay = ref(true);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  color: var(--q-white);
 }
 .hero-content {
   text-align: center;
@@ -291,6 +290,7 @@ const autoplay = ref(true);
   font-size: 2.5rem;
   font-weight: 900;
   margin-bottom: 1rem;
+  color: var(--q-nameSecondary);
 }
 .hero-desc {
   font-size: 1.2rem;
