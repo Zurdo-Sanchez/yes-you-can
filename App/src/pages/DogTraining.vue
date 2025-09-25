@@ -1,15 +1,19 @@
 <template>
-  <q-page-container id="home">
+  <q-page-container class="page-container" id="home">
     <!-- Hero Section -->
     <header class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">Adiestramiento Canino Profesional en Girona</h1>
-        <p class="hero-desc">
-          Servicios expertos de adiestramiento canino adaptados a las necesidades de tu mascota. Nos
-          especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
-          cachorros con más de 10 años de experiencia.
-        </p>
-        <q-btn class="hero-btn" :label="t('content.start')" />
+      <div class="hero-grid">
+        <div class="hero-image">
+          <img src="../assets/logoSinFondo.png" alt="Yes YouCan Logo" class="hero-logo" />
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">¿Listo para entender a tu perro?</h1>
+          <p class="hero-desc">En Yes YouCan la educación canina se vuelve simple</p>
+          <q-btn class="hero-btn" :label="t('content.start')" />
+        </div>
+        <div class="hero-image">
+          <img src="../assets/logoSinFondo.png" alt="Yes YouCan Logo" class="hero-logo" />
+        </div>
       </div>
     </header>
     <!-- Nuestro Trabajo -->
@@ -271,25 +275,51 @@ const autoplay = ref(true);
   gap: 2rem;
 }
 .hero-section {
-  position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url('../assets/logoSinFondo.png');
   background-color: var(--q-backgroundHero);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 400px auto 400px;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .hero-content {
-  text-align: center;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-logo {
+    max-width: 300px;
+  }
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 1rem;
+  margin: 0px;
   color: var(--q-nameSecondary);
 }
 .hero-desc {
@@ -303,6 +333,7 @@ const autoplay = ref(true);
 }
 .work-section {
   padding: 3rem 0 2rem 0;
+  display: grid;
 }
 .section-title {
   text-align: center;
@@ -369,5 +400,8 @@ const autoplay = ref(true);
   .work-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+.page-container {
+  padding: 0px;
 }
 </style>
