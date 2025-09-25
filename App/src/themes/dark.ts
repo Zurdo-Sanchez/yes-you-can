@@ -1,5 +1,6 @@
 export default {
   backgroundHeader: 'rgba(214, 147, 39, 0.8)', // Mismo color que el tema claro
+  backgroundHero: '#fdf1ce', // Mismo color que el tema claro
   primary: '#28d8a0', // Inversión automática del naranja apagado
   secondary: '#9abde9', // Inversión automática del marrón apagado oscuro
   accent: '#35a9eb', // Inversión automática del naranja

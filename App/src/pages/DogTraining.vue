@@ -2,7 +2,6 @@
   <q-page-container>
     <!-- Hero Section -->
     <header id="home" class="hero-section">
-      <div class="hero-bg"></div>
       <div class="hero-content">
         <h1 class="hero-title">Adiestramiento Canino Profesional en Girona</h1>
         <p class="hero-desc">
@@ -277,12 +276,12 @@ const autoplay = ref(true);
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRP6b5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc');
-  background-size: cover;
+  background: url('../assets/logoSinFondo.png');
+  background-color: var(--q-backgroundHero);
+  background-size: contain;
   background-position: center;
-  color: #fff;
+  background-repeat: no-repeat;
+  color: var(--q-white);
 }
 .hero-content {
   text-align: center;

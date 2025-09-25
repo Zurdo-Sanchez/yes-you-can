@@ -15,6 +15,7 @@ export default boot(() => {
       if (
         [
           'backgroundHeader',
+          'backgroundHero',
           'namePrimaryColor',
           'nameSecondaryColor',
           'primary',
