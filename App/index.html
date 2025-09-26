@@ -30,6 +30,10 @@
       content="Transforma el comportamiento de tu perro con nuestros servicios especializados de adiestramiento canino en Girona. Contacta con Xavi Burgos."
     />
     <meta property="og:image" content="https://yesyoucan.cat/icons/favicon-128x128.png" />
+    <meta property="og:image:width" content="128" />
+    <meta property="og:image:height" content="128" />
+    <meta property="og:site_name" content="Yes YouCan" />
+    <meta property="og:locale" content="es_ES" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -41,12 +45,74 @@
     />
     <meta property="twitter:image" content="https://yesyoucan.cat/icons/favicon-128x128.png" />
 
+    <!-- Schema.org structured data for better SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Yes YouCan",
+        "description": "Educación canina profesional en Girona. Modificación de conducta, obediencia y desarrollo de cachorros.",
+        "url": "https://yesyoucan.cat",
+        "logo": "https://yesyoucan.cat/icons/favicon-128x128.png",
+        "image": "https://yesyoucan.cat/icons/favicon-128x128.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Celrà",
+          "addressRegion": "Girona",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34 667 67 63 05",
+        "email": "contacto@yesyoucan.cat",
+        "priceRange": "$$",
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.9658",
+            "longitude": "2.8282"
+          },
+          "geoRadius": "25000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Adiestramiento Canino",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Modificación de Conducta Canina",
+                "description": "Corrección de problemas de comportamiento en perros"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Obediencia Básica",
+                "description": "Entrenamiento básico de obediencia para perros"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo de Cachorros",
+                "description": "Educación temprana y socialización de cachorros"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
     <link rel="canonical" href="https://yesyoucan.cat/" />
     <link rel="icon" type="image/png" sizes="128x128" href="icons/favicon-128x128.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/favicon-128x128.png" />
   </head>
   <body>
     <!-- quasar:entry-point -->
