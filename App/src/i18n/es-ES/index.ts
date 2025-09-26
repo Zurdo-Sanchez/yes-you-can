@@ -42,7 +42,7 @@ export default {
   },
   meta: {
     dogTraining: {
-      title: 'Educación canina personalizada en Girona | Yes YouCan',
+      title: 'Educación canina personalizada en Cataluña | Yes YouCan',
       description:
         'Descubre programas de modificación de conducta, obediencia y desarrollo de cachorros guiados por un educador canino certificado.',
       ogTitle: 'Yes YouCan · Expertos en educación canina',
