@@ -18,7 +18,7 @@ export default {
     moon: '🌙',
     login: 'Login',
     home: 'Home',
-    who_am_i: 'Who I am',
+    who_am_i: 'Who am I?',
   },
   content: {
     start: 'Start',
@@ -28,9 +28,10 @@ export default {
     phone: '+34 667 67 63 05',
   },
   profile: {
+    name: 'Xavi Burgos',
     paraf: {
       1: 'My name is Xavi Burgos and my story with dogs began when I was 18. At home arrived a “little furry bug” named Bruna, a German shepherd full of energy, nobility, and character.',
-      2: 'Bruna taught me many things: the joy of the first games, the excitement of pulling on walks, nerves with visitors, disobedience… situations that gradually became part of our daily life. Pulling on walks, nerves with visitors, disobedience… situations that gradually became part of our daily life.',
+      2: 'Bruna taught me many things: the joy of sharing life with a dog, the first games... But also the difficulties that arise when proper education is lacking, pulling on walks, nervousness with visitors, disobedience... situations that gradually became part of our daily life.',
       3: 'One day, an unexpected accident marked a before and after: Bruna was run over and, in her fear, she ran away. Those were very tough moments, but we finally got her back.',
       4: 'That experience opened our eyes: we needed help. And that’s how I met Ken Sewell, a dog trainer with more than 30 years of experience, who guided us on the path to understanding Bruna and learning to live in balance with her. With Ken, we not only solved our problems, but I discovered a true vocation.',
       5: 'Later I decided to train directly with him, and in 2011 I took the step to dedicate myself professionally to home dog training. Since then, I have accompanied many families and dogs in their own learning processes, with the goal of building a calmer, happier, and more harmonious coexistence.',
@@ -41,7 +42,7 @@ export default {
       title: 'Profession',
       description: 'Dog Trainer',
     },
-    ubicacion: { title: 'Location', description: 'Celrà City' },
+    ubicacion: { title: 'Location', description: 'Celrà' },
   },
   meta: {
     dogTraining: {

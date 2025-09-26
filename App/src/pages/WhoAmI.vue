@@ -1,10 +1,10 @@
 <template>
   <div class="biography-page">
-    <h1>¿Quién soy?</h1>
+    <h1 style="color: var(--q-title)">{{ t('header.who_am_i') }}</h1>
     <div class="bio-content">
       <img src="../assets/xavi ahora.jpeg" class="profile-img" />
       <div class="bio-text">
-        <h2>Xavi Burgos</h2>
+        <h2 style="color: var(--q-text)">{{ t('profile.name') }}</h2>
         <p>{{ t('profile.paraf.1') }}</p>
         <img src="../assets/Xavi-bruna-bb.png" class="other-img" />
         <p>{{ t('profile.paraf.2') }}</p>
@@ -17,11 +17,11 @@
         <p>{{ t('profile.paraf.7') }}</p>
         <ul>
           <li>
-            <strong>{{ t('profile.ubicacion.title') }}:</strong>
+            <strong style="color: var(--q-text)">{{ t('profile.ubicacion.title') }}:</strong>
             {{ t('profile.ubicacion.description') }}
           </li>
           <li>
-            <strong>{{ t('profile.profesion.title') }}:</strong>
+            <strong style="color: var(--q-text)">{{ t('profile.profesion.title') }}:</strong>
             {{ t('profile.profesion.description') }}
           </li>
         </ul>
@@ -89,7 +89,7 @@ watch([locale, () => route.fullPath], () => {
   padding: 24px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px var(--q-text);
 }
 .bio-content {
   display: flex;
@@ -101,12 +101,13 @@ watch([locale, () => route.fullPath], () => {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #4caf50;
+  border: 3px solid var(--q-text);
 }
 .other-img {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  border: 2px solid var(--q-text);
   margin: 16px 0;
 }
 .bio-text {

@@ -1,5 +1,7 @@
 export default {
   backgroundHeader: '#d69327cc', // Naranja apagado con 80% transparencia
+  title: '#654216',
+  text: '#d69327',
   namePrimary: '#d69327',
   nameSecondary: '#654216',
   backgroundHero: '#fdf1ce',
