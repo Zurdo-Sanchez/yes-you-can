@@ -16,9 +16,9 @@ export default {
     lang_en: 'Inglés',
     sun: '🌞',
     moon: '🌙',
-  login: 'Iniciar sesión',
-  home: 'Inicio',
-  who_am_i: 'Quién soy',
+    login: 'Iniciar sesión',
+    home: 'Inicio',
+    who_am_i: 'Quién soy',
   },
   profile: {
     paraf: {
@@ -30,20 +30,19 @@ export default {
       6: 'Hoy miro atrás con gratitud: a Bruna, que fue mi mejor maestra, y a Ken, que me mostró un camino de vida.',
       7: 'Gracias a ellos, puedo dedicarme a lo que realmente me apasiona: ayudar a personas y perros a vivir mejor juntos.',
     },
-    profesion:{
+    profesion: {
       title: 'Profesión',
       description: 'Educador Canino',
     },
 
-    ubicacion:{ title: 'Ubicación', description: 'Ciudad de Girona' },
-
+    ubicacion: { title: 'Ubicación', description: 'Ciudad de Girona' },
   },
   content: {
     start: 'Empezar',
   },
   meta: {
     dogTraining: {
-      title: 'Adiestramiento canino personalizado en Girona | Yes YouCan',
+      title: 'Educación canina personalizada en Girona | Yes YouCan',
       description:
         'Descubre programas de modificación de conducta, obediencia y desarrollo de cachorros guiados por un educador canino certificado.',
       ogTitle: 'Yes YouCan · Expertos en educación canina',
