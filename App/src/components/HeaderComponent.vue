@@ -196,7 +196,7 @@ function scrollTo(id: string) {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
 }
-header-nav {
+.header-nav {
   display: flex;
   align-items: center;
 }

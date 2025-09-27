@@ -18,7 +18,7 @@ export default {
     who_am_i: 'Qui sóc?',
   },
   content: {
-    start: 'Començar',
+    btn: 'Començar',
   },
   contact: {
     email: 'contacte@yesyoucan.cat',

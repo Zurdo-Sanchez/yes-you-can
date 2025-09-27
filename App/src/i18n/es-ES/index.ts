@@ -36,7 +36,7 @@ export default {
     ubicacion: { title: 'Ubicación', description: 'Celrà' },
   },
   content: {
-    start: 'Empezar',
+    btn: 'Nuestro método de trabajo',
   },
   contact: {
     email: 'contacto@yesyoucan.cat',
