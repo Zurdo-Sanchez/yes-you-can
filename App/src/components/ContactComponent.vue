@@ -47,7 +47,7 @@ watch(
   (newLang) => {
     locale.value = newLang;
   },
-  { immediate: true }
+  { immediate: true },
 );
 
 const name = ref('');
@@ -81,7 +81,7 @@ const message = ref('');
   margin-bottom: 2rem;
 }
 .send-btn {
-  background: var(--q-backgroundOrange80);
+  background: var(--q-backgroundHeader);
   color: var(--q-white);
   font-weight: bold;
 }

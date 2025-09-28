@@ -39,19 +39,10 @@ services:
       DB_USER: ${MYSQL_USER:-miusuario}
       DB_PASSWORD: ${MYSQL_PASSWORD:-miclave}
     depends_on:
-      db:
-        condition: service_healthy
-    networks: [internal, zet4soft-net]
-    restart: unless-stopped
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.api.rule=Host(`api.yesyoucan.cat`)
-      - traefik.http.routers.api.entrypoints=websecure
-      - traefik.http.routers.api.tls.certresolver=le
-      - traefik.docker.network=zet4soft-net
-      - traefik.http.routers.api.service=api
-      - traefik.http.services.api.loadbalancer.server.port=5000
-
+      - db
+    networks:
+      - internal # habla con la DB
+      - zet4soft-net # visible para el proxy (CORREGIDO)
   app:
     build:
       context: ./App
@@ -59,8 +50,10 @@ services:
       NODE_ENV: production
       PORT: 3000
     command: ["serve", "-s", "dist", "-l", "3000", "--single"]
-    depends_on: [api]
-    networks: [zet4soft-net]
+    depends_on:
+      - api
+    networks:
+      - zet4soft-net # CORREGIDO: usar la misma red del proxy
     restart: unless-stopped
     labels:
       - traefik.enable=true
@@ -75,9 +68,9 @@ networks:
   internal:
     name: yesyoucan-internal # deja que Compose la cree (no external)
     driver: bridge
-    internal: true
   zet4soft-net:
     external: true
+    # CORREGIDO: usar la red correcta donde está el proxy
 
 volumes:
   db_data:

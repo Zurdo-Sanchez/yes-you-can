@@ -1,16 +1,26 @@
 <template>
-  <q-page-container>
+  <q-page-container class="page-container" id="home">
     <!-- Hero Section -->
-    <header id="home" class="hero-section">
-      <div class="hero-bg"></div>
-      <div class="hero-content">
-        <h1 class="hero-title">Adiestramiento Canino Profesional en Girona</h1>
-        <p class="hero-desc">
-          Servicios expertos de adiestramiento canino adaptados a las necesidades de tu mascota. Nos
-          especializamos en modificación de conducta, entrenamiento de obediencia y desarrollo de
-          cachorros con más de 10 años de experiencia.
-        </p>
-        <q-btn class="hero-btn" :label="t('content.start')" />
+    <header class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-image">
+          <img src="../assets/logoSinFondo.png" alt="Yes YouCan Logo" class="hero-logo" />
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">¿Listo para entender a tu perro?</h1>
+          <p class="hero-desc">
+            Yes YouCan, un método simple que te conecta con tu perro y convierte la obediencia en
+            amistad
+          </p>
+          <q-btn class="hero-btn" :label="t('content.btn')" @click="$router.push('/method')" />
+        </div>
+        <div class="hero-image">
+          <img
+            src="../assets/youcan caminando sin fondo.png"
+            alt="Yes YouCan Logo"
+            class="hero-logo"
+          />
+        </div>
       </div>
     </header>
     <!-- Nuestro Trabajo -->
@@ -18,25 +28,34 @@
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
-          title="Modificación de Conducta"
+          title="Explorador"
+          subTitle="Seguridad y confianza"
           img="https://lh3.googleusercontent.com/aida-public/AB6AXuApsJKoPhQACDnJtaz3fETpFuHHNSYR3rk9eISgjxwuli9J4G-a7ovnllZrlYowTRIwom8f6tAYnJIVmCfRzugMQ7Aa_NqO8sDhh4JdxK5L7XhbCvJ1iEyc_MjmHWnqCurH4AUcLdWa9h5-zXOK3OFR5f5tEgogWUFL-isSIYRSCTt6KINCKTn-JA8Hbwzqv3XWMo9y4JaR7-aeQk9dNintMgspE8hmXYhsM21dApf-F6SOR9Qp1gAdePYWIfqbCtfxegki5oSzL00"
-          description="Abordamos problemas de comportamiento como agresividad, ansiedad y ladridos excesivos."
+          description='"El inicio de la aventura". Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal.
+            Beneficio clave: construir confianza y comunicación desde cero.'
+          @click="$router.push('/explorer')"
         />
         <CardComponent
-          title="Entrenamiento de Obediencia"
+          title="Compañero"
+          subTitle="Cooperación y convivencia."
           img="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0m_x3zK5xO44B6Uz-rmcjTpuxBN2WDPMHaaU66zleiY2kob2D9XYKVWNHRRIAIWhh_A7zflgMVX_hRXizf-P5JxPjzqXds_G1HZBFA7huqOIaWFTnOEreT87ovA1VaTeLEOtP_qRirroLlgkEtp5KkOHhMFSEWZQpx0PQ0Bgk5VMFCI-8bVANpiahOsTRICoOta4D-zN7fPJhUoGvFPFioJH9dpJzkkE8SnbtVzoJgtcmDV-rm6W8AyaZgbNxfSOenCFccRyRWU"
-          description="Enseñamos comandos básicos y mejoramos la obediencia general."
+          description="“El vínculo que se fortalece”
+            Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos.
+            Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo."
         />
         <CardComponent
-          title="Desarrollo de Cachorros"
+          title="Maestro"
+          subTitle="Excelencia y libertad con control."
           img="https://lh3.googleusercontent.com/aida-public/AB6AXuB6P_47MPV52ZQrMr6kFBaPj9h8Fy1gd48pfYlTObLd0UuI7CDK2jyQ7fbmF19s5jy5xreqeSJEX-_TOUAtUQ47T81ZSfflgeoTULTzqFyc6WGCUxv3jSaNSPKmYlHFFYAaja6EgEwpPMYuxdDTeuTptfo9422fX9O1InCNR8JQz9x4Et3YtbbnTsmj9AIK2HanFREB91tQR-2NGP-nEaAMkp8h-H7vo2QsbE-EXLndo4BqpvmO6PGzQuc0pFso2mMxR9cu9yYqjDI"
-          description="Socialización temprana y entrenamiento para cachorros para asegurar un perro adulto bien adaptado."
+          description="“De compañero fiel a compañero excepcional.”
+          Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total.
+          Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto."
         />
       </div>
     </section>
     <!-- Casos de Éxito -->
     <section id="success" class="success-section">
-      <h2 class="section-title">{{ t('header.success_cases') }}</h2>
+      <h2 class="section-title">{{ t('header.Transformation_Stories') }}</h2>
       <div class="q-pa-md flex flex-center">
         <q-carousel
           swipeable
@@ -100,30 +119,33 @@
     <section id="faq" class="faq-section">
       <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
-        <q-expansion-item label="¿Qué tipo de métodos de adiestramiento utilizan?">
+        <q-expansion-item label="¿Qué tipo de métodos de educación utilizan?">
           <div>
-            Utilizamos métodos de refuerzo positivo, centrándonos en recompensar los buenos
-            comportamientos en lugar de castigar los malos. Creemos que este enfoque construye un
-            vínculo fuerte y de confianza entre usted y su perro.
+            La educación canina ha pasado del castigo físico al uso exclusivo de premios, dos
+            extremos que no siempre funcionan. En Yes YouCan apostamos por un método equilibrado:
+            refuerzos variados (voz, caricias, libertad), coherencia en la comunicación, constancia
+            y un vínculo emocional sólido. Más que educar, se trata de convivir: enseñar con
+            respeto, límites claros y afecto para lograr perros estables, confiados y felices.
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Cuánto dura cada sesión de adiestramiento?">
+        <q-expansion-item label="¿Cuánto dura cada sesión de educación?">
           <div>
-            Nuestras sesiones de adiestramiento suelen durar entre 45 y 60 minutos. Esto nos permite
-            mantener al perro concentrado y comprometido sin agotarlo.
+            Nuestras sesiones de educación dura 60 minutos. Esto nos permite mantener al perro
+            concentrado y comprometido sin agotarlo.
           </div>
         </q-expansion-item>
         <q-expansion-item label="¿Ofrecen adiestramiento en grupo o individual?">
           <div>
-            Ofrecemos ambas opciones. Las clases en grupo son excelentes para la socialización,
-            mientras que las sesiones individuales proporcionan una atención personalizada para
-            abordar problemas de comportamiento específicos.
+            El entrenamiento comienza de forma individual, adaptado al nivel y a las necesidades
+            específicas de tu perro. Según su progreso y el tipo de comportamiento que trabajemos,
+            se podrá dar el paso a sesiones grupales, siempre priorizando el bienestar y la
+            efectividad del aprendizaje.
           </div>
         </q-expansion-item>
         <q-expansion-item label="¿Qué debo llevar a la sesión de adiestramiento?">
           <div>
-            Debe traer a su perro con correa, sus premios favoritos y cualquier juguete que le
-            motive. También es útil traer agua para su perro.
+            No necesitas ningún material específico para comenzar, solo predisposición, constancia y
+            ganas de disfrutar el proceso junto a tu perro.
           </div>
         </q-expansion-item>
       </div>
@@ -272,26 +294,56 @@ const autoplay = ref(true);
   gap: 2rem;
 }
 .hero-section {
-  position: relative;
-  min-height: 60vh;
-  display: flex;
+  box-shadow: 0 2px 8px var(--q-primary);
+  overflow: hidden;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRP6b5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  padding: 1.5rem;
+  margin: 1rem 1rem 0 1rem;
+  height: 32rem;
 }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 400px auto 400px;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .hero-content {
-  text-align: center;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-logo {
+    max-width: 300px;
+  }
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 1rem;
+  margin: 0px;
+  color: var(--q-nameSecondary);
 }
 .hero-desc {
   font-size: 1.2rem;
@@ -300,10 +352,13 @@ const autoplay = ref(true);
 .hero-btn {
   font-weight: bold;
   font-size: 1.1rem;
-  background: var(--q-backgroundOrange80);
+  background: var(--q-backgroundHeader);
+  color: var(--q-white);
 }
 .work-section {
   padding: 3rem 0 2rem 0;
+  display: grid;
+  margin: 0 1rem;
 }
 .section-title {
   text-align: center;
@@ -370,5 +425,8 @@ const autoplay = ref(true);
   .work-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+.page-container {
+  padding: 0px;
 }
 </style>

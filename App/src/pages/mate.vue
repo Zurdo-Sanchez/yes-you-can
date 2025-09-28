@@ -29,6 +29,13 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  name: 'MatePage',
+};
+</script>
+
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';

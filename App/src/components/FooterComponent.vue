@@ -13,7 +13,7 @@ export default {
 </script>
 <style scoped>
 .footer {
-  background-color: var(--q-backgroundOrange80);
+  background-color: var(--q-backgroundHeader);
   border-top: 1px solid var(--q-primary);
   padding: 0.5rem 0;
   width: 100%;
