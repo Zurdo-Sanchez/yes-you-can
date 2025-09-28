@@ -40,7 +40,7 @@ services:
       - db
     networks:
       - internal # habla con la DB
-      - proxy_net # visible para el proxy
+      - zet4soft-net # visible para el proxy (CORREGIDO)
     restart: unless-stopped
 
   app:
@@ -60,16 +60,16 @@ services:
     depends_on:
       - api
     networks:
-      - proxy_net # no necesita internal
+      - zet4soft-net # CORREGIDO: usar la misma red del proxy
     restart: unless-stopped
 
 networks:
   internal:
     name: yesyoucan-net
     driver: bridge
-  proxy_net:
+  zet4soft-net:
     external: true
-    name: docker-net # misma red donde corre nginx-proxy
+    # CORREGIDO: usar la red correcta donde está el proxy
 
 volumes:
   db_data:
