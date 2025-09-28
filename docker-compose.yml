@@ -1,8 +1,8 @@
+name: yesyoucan
 version: "3.9"
 
 services:
   db:
-    container_name: yesyoucan-db
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-supersecreto}
@@ -12,14 +12,21 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     networks:
-      - internal # SOLO red interna
+      - internal
     restart: unless-stopped
-    # Sólo si necesitas acceder localmente desde el host:
     ports:
       - "127.0.0.1:3306:3306"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mysqladmin ping -h 127.0.0.1 -u$$MYSQL_USER -p$$MYSQL_PASSWORD || exit 1",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
 
   api:
-    container_name: yesyoucan-api
     build:
       context: ./Api
       dockerfile: Dockerfile
@@ -31,41 +38,35 @@ services:
       DB_NAME: ${MYSQL_DATABASE:-miapp}
       DB_USER: ${MYSQL_USER:-miusuario}
       DB_PASSWORD: ${MYSQL_PASSWORD:-miclave}
-      # Exponer API por subdominio público con HTTPS automático
-      VIRTUAL_HOST: api.yesyoucan.cat
-      VIRTUAL_PORT: 5000
-      LETSENCRYPT_HOST: api.yesyoucan.cat
-      LETSENCRYPT_EMAIL: juanmanuel.sanchez@innovait.cat
     depends_on:
       - db
     networks:
       - internal # habla con la DB
       - zet4soft-net # visible para el proxy (CORREGIDO)
-    restart: unless-stopped
-
   app:
-    container_name: yesyoucan-app
     build:
       context: ./App
     environment:
       NODE_ENV: production
       PORT: 3000
-      # Dominios públicos del sitio
-      VIRTUAL_HOST: yesyoucan.cat,www.yesyoucan.cat
-      VIRTUAL_PORT: 3000
-      LETSENCRYPT_HOST: yesyoucan.cat,www.yesyoucan.cat
-      LETSENCRYPT_EMAIL: juanmanuel.sanchez@innovait.cat
-    # Si es SPA: servir estático en 3000 con rewrite para Vue Router
     command: ["serve", "-s", "dist", "-l", "3000", "--single"]
     depends_on:
       - api
     networks:
       - zet4soft-net # CORREGIDO: usar la misma red del proxy
     restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.app.rule=Host(`yesyoucan.cat`) || Host(`www.yesyoucan.cat`)
+      - traefik.http.routers.app.entrypoints=websecure
+      - traefik.http.routers.app.tls.certresolver=le
+      - traefik.docker.network=zet4soft-net
+      - traefik.http.routers.app.service=app
+      - traefik.http.services.app.loadbalancer.server.port=3000
 
 networks:
   internal:
-    name: yesyoucan-net
+    name: yesyoucan-internal # deja que Compose la cree (no external)
     driver: bridge
   zet4soft-net:
     external: true

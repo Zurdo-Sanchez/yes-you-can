@@ -32,7 +32,6 @@ export default {
       title: 'Profesión',
       description: 'Educador Canino',
     },
-
     ubicacion: { title: 'Ubicación', description: 'Celrà' },
   },
   content: {
@@ -44,7 +43,7 @@ export default {
   },
   meta: {
     dogTraining: {
-      title: 'Adiestramiento canino personalizado en Girona | Yes YouCan',
+      title: 'Educación canina personalizada en Cataluña | Yes YouCan',
       description:
         'Descubre programas de modificación de conducta, obediencia y desarrollo de cachorros guiados por un educador canino certificado.',
       ogTitle: 'Yes YouCan · Expertos en educación canina',
