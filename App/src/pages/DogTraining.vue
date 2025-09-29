@@ -30,7 +30,7 @@
         <CardComponent
           title="Explorador"
           subTitle="Seguridad y confianza"
-          img="https://lh3.googleusercontent.com/aida-public/AB6AXuApsJKoPhQACDnJtaz3fETpFuHHNSYR3rk9eISgjxwuli9J4G-a7ovnllZrlYowTRIwom8f6tAYnJIVmCfRzugMQ7Aa_NqO8sDhh4JdxK5L7XhbCvJ1iEyc_MjmHWnqCurH4AUcLdWa9h5-zXOK3OFR5f5tEgogWUFL-isSIYRSCTt6KINCKTn-JA8Hbwzqv3XWMo9y4JaR7-aeQk9dNintMgspE8hmXYhsM21dApf-F6SOR9Qp1gAdePYWIfqbCtfxegki5oSzL00"
+          img="../public/img/home/explorador.png"
           description='"El inicio de la aventura". Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal.
             Beneficio clave: construir confianza y comunicación desde cero.'
           @click="$router.push('/explorer')"
@@ -38,7 +38,7 @@
         <CardComponent
           title="Compañero"
           subTitle="Cooperación y convivencia."
-          img="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0m_x3zK5xO44B6Uz-rmcjTpuxBN2WDPMHaaU66zleiY2kob2D9XYKVWNHRRIAIWhh_A7zflgMVX_hRXizf-P5JxPjzqXds_G1HZBFA7huqOIaWFTnOEreT87ovA1VaTeLEOtP_qRirroLlgkEtp5KkOHhMFSEWZQpx0PQ0Bgk5VMFCI-8bVANpiahOsTRICoOta4D-zN7fPJhUoGvFPFioJH9dpJzkkE8SnbtVzoJgtcmDV-rm6W8AyaZgbNxfSOenCFccRyRWU"
+          img="../public/img/home/compañero.png"
           description="“El vínculo que se fortalece”
             Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos.
             Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo."
@@ -46,7 +46,7 @@
         <CardComponent
           title="Maestro"
           subTitle="Excelencia y libertad con control."
-          img="https://lh3.googleusercontent.com/aida-public/AB6AXuB6P_47MPV52ZQrMr6kFBaPj9h8Fy1gd48pfYlTObLd0UuI7CDK2jyQ7fbmF19s5jy5xreqeSJEX-_TOUAtUQ47T81ZSfflgeoTULTzqFyc6WGCUxv3jSaNSPKmYlHFFYAaja6EgEwpPMYuxdDTeuTptfo9422fX9O1InCNR8JQz9x4Et3YtbbnTsmj9AIK2HanFREB91tQR-2NGP-nEaAMkp8h-H7vo2QsbE-EXLndo4BqpvmO6PGzQuc0pFso2mMxR9cu9yYqjDI"
+          img="../public/img/home/maestro.png"
           description="“De compañero fiel a compañero excepcional.”
           Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total.
           Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto."
