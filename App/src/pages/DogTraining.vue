@@ -218,12 +218,12 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Yes YouCan - Adiestramiento Canino',
-  description: 'Servicios profesionales de adiestramiento canino en Girona',
+  description: 'Servicios profesionales de adiestramiento canino en Cataluña',
   url: 'https://yesyoucan.cat',
   telephone: '+34-XXX-XXX-XXX',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Girona',
+    addressLocality: 'Cataluña',
     addressCountry: 'ES',
   },
   founder: {
@@ -231,7 +231,7 @@ const structuredData = {
     name: 'Xavi Burgos',
     jobTitle: 'Educador Canino Profesional',
   },
-  serviceArea: 'Girona',
+  serviceArea: 'Cataluña',
   services: [
     'Modificación de conducta canina',
     'Entrenamiento de obediencia',

@@ -43,7 +43,7 @@ export default {
   },
   meta: {
     dogTraining: {
-      title: 'Educació canina personalitzada a Girona | Yes YouCan',
+      title: 'Educació canina personalitzada a Catalunya | Yes YouCan',
       description:
         'Descobreix programes de modificació de conducta, obediència i desenvolupament de cadells amb un educador caní certificat.',
       ogTitle: 'Yes YouCan · Experts en educació canina',
@@ -54,7 +54,7 @@ export default {
     whoAmI: {
       title: 'Coneix en Xavi Burgos | Educador caní de Yes YouCan',
       description:
-        'Coneix el recorregut i la vocació d’en Xavi Burgos, especialista en educació canina a domicili a Girona.',
+        'Coneix el recorregut i la vocació d’en Xavi Burgos, especialista en educació canina a domicili a Catalunya.',
       ogTitle: 'Xavi Burgos · Educador caní a Yes YouCan',
       ogDescription:
         'Descobreix com va néixer la vocació d’en Xavi i com acompanya persones i gossos a viure en harmonia.',

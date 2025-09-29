@@ -46,7 +46,7 @@ export default {
   },
   meta: {
     dogTraining: {
-      title: 'Personalized Dog Training in Girona | Yes YouCan',
+      title: 'Personalized Dog Training in Cataluña | Yes YouCan',
       description:
         'Discover behaviour modification, obedience and puppy development programs guided by a certified dog trainer.',
       ogTitle: 'Yes YouCan · Dog Training Experts',
@@ -57,7 +57,7 @@ export default {
     whoAmI: {
       title: 'Meet Xavi Burgos | Yes YouCan Dog Trainer',
       description:
-        'Learn about the journey and vocation of Xavi Burgos, an in-home dog training specialist based in Girona.',
+        'Learn about the journey and vocation of Xavi Burgos, an in-home dog training specialist based in Cataluña.',
       ogTitle: 'Xavi Burgos · Dog trainer at Yes YouCan',
       ogDescription:
         'Discover how Xavi found his calling and supports people and dogs to live together in harmony.',

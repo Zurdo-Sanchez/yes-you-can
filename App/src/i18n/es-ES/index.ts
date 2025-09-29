@@ -54,7 +54,7 @@ export default {
     whoAmI: {
       title: 'Conoce a Xavi Burgos | Educador Canino de Yes YouCan',
       description:
-        'Explora la trayectoria y la vocación de Xavi Burgos, especialista en educación canina a domicilio en Girona.',
+        'Explora la trayectoria y la vocación de Xavi Burgos, especialista en educación canina a domicilio en Cataluña.',
       ogTitle: 'Xavi Burgos · Educador canino en Yes YouCan',
       ogDescription:
         'Descubre cómo nació la vocación de Xavi y su experiencia ayudando a personas y perros a convivir en armonía.',
