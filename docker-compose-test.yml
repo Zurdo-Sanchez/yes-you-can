@@ -29,7 +29,7 @@ services:
       - proxy_net
 
   test-db:
-    container_name: yesyoucan-db
+    container_name: zet4soft-db
     image: mysql:8.0
     restart: unless-stopped
     environment:
