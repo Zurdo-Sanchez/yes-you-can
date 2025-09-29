@@ -1,5 +1,7 @@
+name: yesyoucan-prod
+
 services:
-  test-api:
+  api:
     container_name: yesyoucan-api
     build:
       context: ./Api

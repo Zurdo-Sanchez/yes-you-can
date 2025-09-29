@@ -1,3 +1,5 @@
+name: zet4soft-test
+
 services:
   test-api:
     container_name: zet4soft-api
