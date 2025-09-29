@@ -62,7 +62,7 @@ services:
 
 networks:
   internal:
-    name: yesyoucan-net
+    name: zet4soft-net
     driver: bridge
   zet4soft-net:
     external: true
