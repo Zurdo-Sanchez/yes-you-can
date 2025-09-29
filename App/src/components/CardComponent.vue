@@ -1,6 +1,6 @@
 <template>
   <div class="work-card">
-    <div class="work-img" :style="{ backgroundImage: `url('${img}')` }"></div>
+    <img :src="img" :alt="title" class="work-img" />
     <h3 class="work-title">{{ title }}</h3>
     <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
     <p class="work-desc">
@@ -31,8 +31,8 @@ defineProps<{
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 1rem;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  object-position: center;
   margin-bottom: 1rem;
 }
 .work-title {

@@ -30,15 +30,14 @@
         <CardComponent
           title="Explorador"
           subTitle="Seguridad y confianza"
-          img="../public/img/home/explorador.png"
-          description='"El inicio de la aventura". Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal.
-            Beneficio clave: construir confianza y comunicación desde cero.'
+          :img="exploradorImg"
+          description='"El inicio de la aventura". Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal. Beneficio clave: construir confianza y comunicación desde cero.'
           @click="$router.push('/explorer')"
         />
         <CardComponent
           title="Compañero"
           subTitle="Cooperación y convivencia."
-          img="../public/img/home/compañero.png"
+          :img="compañeroImg"
           description="“El vínculo que se fortalece”
             Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos.
             Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo."
@@ -46,7 +45,7 @@
         <CardComponent
           title="Maestro"
           subTitle="Excelencia y libertad con control."
-          img="../public/img/home/maestro.png"
+          :img="maestroImg"
           description="“De compañero fiel a compañero excepcional.”
           Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total.
           Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto."
@@ -168,6 +167,11 @@ import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useMeta } from 'quasar';
 import { useI18n } from 'vue-i18n';
+
+// URLs de imágenes estáticas desde public/img/home/
+const exploradorImg = '/img/home/explorador.png';
+const compañeroImg = '/img/home/compañero.png';
+const maestroImg = '/img/home/maestro.png';
 
 const { t, locale } = useI18n();
 const route = useRoute();
