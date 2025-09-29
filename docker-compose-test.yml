@@ -4,6 +4,8 @@ services:
     image: zet4soft-api:latest
     restart: unless-stopped
     expose:
+      - "5000"
+    ports:
       - "5001:5000"
     environment:
       - NODE_ENV=production
@@ -18,6 +20,8 @@ services:
     image: zet4soft-app:latest
     restart: unless-stopped
     expose:
+      - "3000"
+    ports:
       - "3001:3000"
     environment:
       - NODE_ENV=production
