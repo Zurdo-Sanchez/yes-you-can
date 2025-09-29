@@ -1,6 +1,8 @@
 <template>
   <div class="work-card">
     <img :src="img" :alt="title" class="work-img" />
+    <!-- Debug: mostrar la URL de la imagen -->
+    <small style="color: red; font-size: 10px">Debug: {{ img }}</small>
     <h3 class="work-title">{{ title }}</h3>
     <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
     <p class="work-desc">
