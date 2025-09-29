@@ -9,7 +9,7 @@ services:
       - NODE_ENV=production
       - VIRTUAL_HOST=api.zet4soft-test.com
       - LETSENCRYPT_HOST=api.zet4soft-test.com
-      - VIRTUAL_PORT=5001
+      - VIRTUAL_PORT=5000
     networks:
       - proxy_net
 
@@ -23,7 +23,7 @@ services:
       - NODE_ENV=production
       - VIRTUAL_HOST=www.zet4soft-test.com,zet4soft-test.com
       - LETSENCRYPT_HOST=www.zet4soft-test.com,zet4soft-test.com
-      - VIRTUAL_PORT=3001
+      - VIRTUAL_PORT=3000
       - HSTS=on
     networks:
       - proxy_net
