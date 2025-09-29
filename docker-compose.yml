@@ -1,27 +1,71 @@
 services:
-  app:
-    container_name: yesyoucan-app
-    image: yesyoucan-app:latest
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:latest
+    container_name: nginx-proxy
     restart: unless-stopped
-    expose: ["3000"]
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - proxy_net
+    volumes:
+      - proxy_certs:/etc/nginx/certs:rw
+      - proxy_vhost:/etc/nginx/vhost.d
+      - proxy_html:/usr/share/nginx/html
+      - proxy_dhparam:/etc/nginx/dhparam
+      - /var/run/docker.sock:/tmp/docker.sock:ro
     environment:
-      - NODE_ENV=production
-      - VIRTUAL_HOST=www.yesyoucan.cat,yesyoucan.cat
-      - LETSENCRYPT_HOST=www.yesyoucan.cat,yesyoucan.cat
-      - VIRTUAL_PORT=3000
-    networks: [proxy_net]
+      - HTTPS_METHOD=redirect
+      - CLIENT_MAX_BODY_SIZE=50m
+      - PROXY_READ_TIMEOUT=300
+      - PROXY_CONNECT_TIMEOUT=60
+      - PROXY_SEND_TIMEOUT=300
+
+  nginx-proxy-acme:
+    image: nginxproxy/acme-companion:latest
+    container_name: nginx-proxy-acme
+    restart: unless-stopped
+    depends_on:
+      - nginx-proxy
+    networks:
+      - proxy_net
+    environment:
+      - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL}
+      - ACME_CA_URI=${ACME_STAGING}
+    volumes:
+      - proxy_certs:/etc/nginx/certs:rw
+      - proxy_vhost:/etc/nginx/vhost.d
+      - proxy_html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 
   api:
     container_name: yesyoucan-api
-    image: yesyoucan-api:latest
+    image: yesyoucan-api:latest # o build: ./Api si quieres construir local
     restart: unless-stopped
-    expose: ["5000"]
+    expose:
+      - "5000"
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=api.yesyoucan.cat
       - LETSENCRYPT_HOST=api.yesyoucan.cat
       - VIRTUAL_PORT=5000
-    networks: [proxy_net]
+    networks:
+      - proxy_net
+
+  app:
+    container_name: yesyoucan-app
+    image: yesyoucan-app:latest # o build: ./App si quieres construir local
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=www.yesyoucan.cat,yesyoucan.cat
+      - LETSENCRYPT_HOST=www.yesyoucan.cat,yesyoucan.cat
+      - VIRTUAL_PORT=3000
+      - HSTS=on
+    networks:
+      - proxy_net
 
   db:
     container_name: yesyoucan-db
@@ -34,11 +78,16 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
-    networks: [proxy_net]
+    networks:
+      - proxy_net
+
+volumes:
+  proxy_certs:
+  proxy_vhost:
+  proxy_html:
+  proxy_dhparam:
+  db_data:
 
 networks:
   proxy_net:
-    external: true
-
-volumes:
-  db_data:
+    driver: bridge
