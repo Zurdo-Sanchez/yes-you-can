@@ -1,69 +1,42 @@
-version: "3.9"
-
 services:
-  db:
-    container_name: yesyoucan-db
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-supersecreto}
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-miapp}
-      MYSQL_USER: ${MYSQL_USER:-miusuario}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-miclave}
-    volumes:
-      - db_data:/var/lib/mysql
-    networks:
-      - internal
+  app:
+    container_name: yesyoucan-app
+    image: yesyoucan-app:latest
     restart: unless-stopped
-    # COMENTAR ESTA LÍNEA TEMPORALMENTE:
-    # ports:
-    #   - "127.0.0.1:3306:3306"
+    expose: ["3000"]
+    environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=www.yesyoucan.cat,yesyoucan.cat
+      - LETSENCRYPT_HOST=www.yesyoucan.cat,yesyoucan.cat
+      - VIRTUAL_PORT=3000
+    networks: [zet4soft-net]
 
   api:
     container_name: yesyoucan-api
-    build:
-      context: ./Api
-      dockerfile: Dockerfile
-    environment:
-      NODE_ENV: production
-      PORT: 5000
-      DB_HOST: db
-      DB_PORT: 3306
-      DB_NAME: ${MYSQL_DATABASE:-miapp}
-      DB_USER: ${MYSQL_USER:-miusuario}
-      DB_PASSWORD: ${MYSQL_PASSWORD:-miclave}
-      VIRTUAL_HOST: api.yesyoucan.cat
-      VIRTUAL_PORT: 5000
-      LETSENCRYPT_HOST: api.yesyoucan.cat
-      LETSENCRYPT_EMAIL: juanmanuel.sanchez@innovait.cat
-    depends_on:
-      - db
-    networks:
-      - internal
-      - zet4soft-net
+    image: yesyoucan-api:latest
     restart: unless-stopped
+    expose: ["5000"]
+    environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=api.yesyoucan.cat
+      - LETSENCRYPT_HOST=api.yesyoucan.cat
+      - VIRTUAL_PORT=5000
+    networks: [zet4soft-net]
 
-  app:
-    container_name: yesyoucan-app
-    build:
-      context: ./App
-    environment:
-      NODE_ENV: production
-      PORT: 3000
-      VIRTUAL_HOST: yesyoucan.cat,www.yesyoucan.cat
-      VIRTUAL_PORT: 3000
-      LETSENCRYPT_HOST: yesyoucan.cat,www.yesyoucan.cat
-      LETSENCRYPT_EMAIL: juanmanuel.sanchez@innovait.cat
-    command: ["serve", "-s", "dist", "-l", "3000", "--single"]
-    depends_on:
-      - api
-    networks:
-      - zet4soft-net
+  db:
+    container_name: yesyoucan-db
+    image: mysql:8.0
     restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks: [zet4soft-net]
 
 networks:
-  internal:
-    name: zet4soft-net
-    driver: bridge
   zet4soft-net:
     external: true
 
