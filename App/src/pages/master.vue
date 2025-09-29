@@ -29,6 +29,13 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  name: 'MasterPage',
+};
+</script>
+
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';

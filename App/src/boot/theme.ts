@@ -28,6 +28,8 @@ export default boot(() => {
           'warning',
           'white',
           'black',
+          'title',
+          'text',
         ].includes(k)
       ) {
         setCssVar(k, palette[k]);

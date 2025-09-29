@@ -1,6 +1,3 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
   failed: 'Acción fallida',
   success: 'La acción se realizó con éxito',
@@ -18,12 +15,13 @@ export default {
     moon: '🌙',
     login: 'Iniciar sesión',
     home: 'Inicio',
-    who_am_i: 'Quién soy',
+    who_am_i: '¿Quién soy?',
   },
   profile: {
+    name: 'Xavi Burgos',
     paraf: {
       1: 'Me llamo Xavi Burgos y mi historia con los perros comenzó cuando tenía 18 años. En casa llegó un “bichito peludo” llamado Bruna, una pastora alemana llena de energía, nobleza y carácter.',
-      2: 'Bruna me enseñó muchas cosas: la alegría de los primeros juegos, la emoción de los tirones en los paseos, nervios con las visitas, desobediencia… situaciones que poco a poco se hicieron parte de nuestro día a día. Tirones en los paseos, nervios con las visitas, desobediencia… situaciones que poco a poco se hicieron parte de nuestro día a día.',
+      2: 'Bruna me enseñó muchas cosas: la alegría de compartir la vida con un perro, los primeros juegos... Pero tambien las dificultades que surgen cuando falta la educacion adecuada, tirones en los paseos, nervios con las visitas, desobediencia… situaciones que poco a poco se hicieron parte de nuestro día a día.',
       3: 'Un día, un accidente inesperado marcó un antes y un después: Bruna fue atropellada y, en su miedo, se escapó. Fueron momentos muy duros, pero finalmente la recuperamos.',
       4: 'Aquella experiencia nos abrió los ojos: necesitábamos ayuda. Y fue así como conocí a Ken Sewell, un educador canino con más de 30 años de experiencia, que nos guió en el camino de entender a Bruna y aprender a vivir en equilibrio con ella. Con Ken no solo resolvimos nuestros problemas, sino que descubrí una auténtica vocación.',
       5: 'Tiempo después decidí formarme directamente con él, y en 2011 di el paso de dedicarme profesionalmente a la educación canina a domicilio. Desde entonces he acompañado a muchas familias y perros en sus propios procesos de aprendizaje, con el objetivo de construir una convivencia más tranquila, feliz y armoniosa.',
@@ -34,11 +32,10 @@ export default {
       title: 'Profesión',
       description: 'Educador Canino',
     },
-
-    ubicacion: { title: 'Ubicación', description: 'Ciudad de Celrà' },
+    ubicacion: { title: 'Ubicación', description: 'Celrà' },
   },
   content: {
-    start: 'Empezar',
+    btn: 'Nuestro método de trabajo',
   },
   contact: {
     email: 'contacto@yesyoucan.cat',
@@ -46,7 +43,7 @@ export default {
   },
   meta: {
     dogTraining: {
-      title: 'Adiestramiento canino personalizado en Girona | Yes YouCan',
+      title: 'Educación canina personalizada en Cataluña | Yes YouCan',
       description:
         'Descubre programas de modificación de conducta, obediencia y desarrollo de cachorros guiados por un educador canino certificado.',
       ogTitle: 'Yes YouCan · Expertos en educación canina',
@@ -57,7 +54,7 @@ export default {
     whoAmI: {
       title: 'Conoce a Xavi Burgos | Educador Canino de Yes YouCan',
       description:
-        'Explora la trayectoria y la vocación de Xavi Burgos, especialista en educación canina a domicilio en Girona.',
+        'Explora la trayectoria y la vocación de Xavi Burgos, especialista en educación canina a domicilio en Cataluña.',
       ogTitle: 'Xavi Burgos · Educador canino en Yes YouCan',
       ogDescription:
         'Descubre cómo nació la vocación de Xavi y su experiencia ayudando a personas y perros a convivir en armonía.',

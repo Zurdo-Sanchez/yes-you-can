@@ -1,20 +1,20 @@
 <template>
-     <div class="work-card">
-          <div
-            class="work-img"
-            :style="{ backgroundImage: `url('${img}')` }"
-          ></div>
-          <h3 class="work-title">{{ title }}</h3>
-          <p class="work-desc">
-            {{ description }}
-          </p>
-        </div>
-</template><script setup lang="ts">
+  <div class="work-card">
+    <div class="work-img" :style="{ backgroundImage: `url('${img}')` }"></div>
+    <h3 class="work-title">{{ title }}</h3>
+    <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
+    <p class="work-desc">
+      {{ description }}
+    </p>
+  </div>
+</template>
+<script setup lang="ts">
 defineProps<{
-  title: string
-  img: string
-  description?: string
-}>()
+  title: string;
+  subTitle?: string;
+  img: string;
+  description?: string;
+}>();
 </script>
 <style scoped>
 .work-card {
@@ -36,9 +36,19 @@ defineProps<{
   margin-bottom: 1rem;
 }
 .work-title {
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 600;
+  padding: 0;
+  margin: 0;
+  color: var(--q-title);
+}
+.work-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
   margin-bottom: 0.5rem;
+  color: var(--q-black);
 }
 .work-desc {
   font-size: 0.95rem;
