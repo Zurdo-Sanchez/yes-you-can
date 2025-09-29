@@ -1,10 +1,17 @@
+name: yesyoucan-prod
+
 services:
   api:
     container_name: yesyoucan-api
+    build:
+      context: ./Api
+      dockerfile: dockerfile
     image: yesyoucan-api:latest
     restart: unless-stopped
     expose:
       - "5000"
+    ports:
+      - "5000:5000"
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=api.yesyoucan.cat
@@ -13,12 +20,17 @@ services:
     networks:
       - proxy_net
 
-  app:
+  test-app:
     container_name: yesyoucan-app
+    build:
+      context: ./App
+      dockerfile: dockerfile
     image: yesyoucan-app:latest
     restart: unless-stopped
     expose:
       - "3000"
+    ports:
+      - "3000:3000"
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=www.yesyoucan.cat,yesyoucan.cat
@@ -28,7 +40,7 @@ services:
     networks:
       - proxy_net
 
-  db:
+  test-db:
     container_name: yesyoucan-db
     image: mysql:8.0
     restart: unless-stopped
@@ -47,4 +59,4 @@ volumes:
 
 networks:
   proxy_net:
-    external: true # 👈 apunta a la misma red que el proxy
+    external: true

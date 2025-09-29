@@ -1,9 +1,16 @@
+name: zet4soft-test
+
 services:
   test-api:
     container_name: zet4soft-api
-    image: yesyoucan-api:latest
+    build:
+      context: ./Api
+      dockerfile: dockerfile
+    image: zet4soft-api:latest
     restart: unless-stopped
     expose:
+      - "5000"
+    ports:
       - "5001:5000"
     environment:
       - NODE_ENV=production
@@ -15,9 +22,14 @@ services:
 
   test-app:
     container_name: zet4soft-app
-    image: yesyoucan-app:latest
+    build:
+      context: ./App
+      dockerfile: dockerfile
+    image: zet4soft-app:latest
     restart: unless-stopped
     expose:
+      - "3000"
+    ports:
       - "3001:3000"
     environment:
       - NODE_ENV=production
