@@ -1,7 +1,7 @@
 services:
   test-api:
     container_name: zet4soft-api
-    image: yesyoucan-api:latest
+    image: zet4soft-api:latest
     restart: unless-stopped
     expose:
       - "5001:5000"
@@ -15,7 +15,7 @@ services:
 
   test-app:
     container_name: zet4soft-app
-    image: yesyoucan-app:latest
+    image: zet4soft-app:latest
     restart: unless-stopped
     expose:
       - "3001:3000"
