@@ -2,15 +2,11 @@
   <div class="work-card" :class="`work-card--${type || 'default'}`">
     <img :src="img" :alt="title" class="work-img" />
     <div v-if="type" class="course-badge">{{ courseTypeLabel }}</div>
-    <div class="work-card" :class="`work-card--${type || 'default'}`">
-      <img :src="img" :alt="title" class="work-img" />
-      <div v-if="type" class="course-badge">{{ courseTypeLabel }}</div>
-      <h3 class="work-title">{{ title }}</h3>
-      <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
-      <p class="work-desc">
-        {{ description }}
-      </p>
-    </div>
+    <h3 class="work-title">{{ title }}</h3>
+    <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
+    <p class="work-desc">
+      {{ description }}
+    </p>
   </div>
 </template>
 <script setup lang="ts">

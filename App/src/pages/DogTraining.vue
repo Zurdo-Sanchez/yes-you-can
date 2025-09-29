@@ -30,6 +30,7 @@
         <CardComponent
           title="Explorador"
           subTitle="Seguridad y confianza"
+          type="explorer"
           img="/images/home/explorador.png"
           description='"El inicio de la aventura". Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal. Beneficio clave: construir confianza y comunicación desde cero.'
           @click="$router.push('/explorer')"
