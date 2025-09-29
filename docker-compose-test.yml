@@ -1,6 +1,9 @@
 services:
   test-api:
     container_name: zet4soft-api
+    build:
+      context: ./Api
+      dockerfile: dockerfile
     image: zet4soft-api:latest
     restart: unless-stopped
     expose:
@@ -17,6 +20,9 @@ services:
 
   test-app:
     container_name: zet4soft-app
+    build:
+      context: ./App
+      dockerfile: dockerfile
     image: zet4soft-app:latest
     restart: unless-stopped
     expose:
