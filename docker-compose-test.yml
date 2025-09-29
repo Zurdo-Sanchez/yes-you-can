@@ -7,8 +7,8 @@ services:
       - "5001"
     environment:
       - NODE_ENV=production
-      - VIRTUAL_HOST=api.zet4soft.com
-      - LETSENCRYPT_HOST=api.zet4soft.com
+      - VIRTUAL_HOST=api.zet4soft-test.com
+      - LETSENCRYPT_HOST=api.zet4soft-test.com
       - VIRTUAL_PORT=5001
     networks:
       - proxy_net
@@ -21,8 +21,8 @@ services:
       - "3001"
     environment:
       - NODE_ENV=production
-      - VIRTUAL_HOST=www.zet4soft.com,zet4soft.com
-      - LETSENCRYPT_HOST=www.zet4soft.com,zet4soft.com
+      - VIRTUAL_HOST=www.zet4soft-test.com,zet4soft-test.com
+      - LETSENCRYPT_HOST=www.zet4soft-test.com,zet4soft-test.com
       - VIRTUAL_PORT=3001
       - HSTS=on
     networks:
@@ -47,4 +47,4 @@ volumes:
 
 networks:
   proxy_net:
-    external: true # 👈 apunta a la misma red que el proxy
+    external: true
