@@ -89,6 +89,11 @@
     </q-toolbar>
   </q-header>
 </template>
+<script lang="ts">
+export default {
+  name: 'FooterComponent',
+};
+</script>
 <script setup lang="ts">
 import { useConfigStore } from '../stores/settingsStore';
 import { useI18n } from 'vue-i18n';
