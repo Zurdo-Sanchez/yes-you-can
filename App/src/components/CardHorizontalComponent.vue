@@ -13,6 +13,11 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+export default {
+  name: 'CardHorizontalComponent',
+};
+</script>
 <script setup lang="ts">
 defineProps<{
   title: string;

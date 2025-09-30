@@ -1,9 +1,16 @@
 <template>
   <div class="explorer-page">
-    <span class="level-badge">Básico</span>
+    <span class="level-badge">Nivel Básico</span>
     <div class="page-header">
       <h1 class="main-title">Explorer</h1>
     </div>
+    <h1 class="subtitle">Primer paso hacia una convivencia en armonía</h1>
+    <p class="description">
+      El nivel Explorador es el primer escalón en el camino hacia una convivencia equilibrada y
+      feliz con tu perro. En esta etapa, abordamos las necesidades básicas de educación canina,
+      tanto dentro del hogar como en los espacios públicos, a través de dos programas
+      complementarios y divertidos que fortalecen el vínculo entre humanos y perros.
+    </p>
     <CardHorizontalComponent
       title="Patas Afuera"
       subTitle="¡Disfruta los paseos sin tirones ni estrés!"
@@ -62,6 +69,14 @@ Ideal para quienes quieren que su perro sea un compañero educado en la calle."
         paso a paso, creando las bases de una convivencia feliz tanto dentro como fuera de casa.
       </p>
     </div>
+
+    <!-- FAB expandible para ir a Compañero -->
+    <FloatArrow
+      text="Nivel Siguiente"
+      icon="keyboard_double_arrow_right"
+      position="right"
+      to="/mate"
+    />
   </div>
 </template>
 
@@ -77,6 +92,7 @@ import { useRoute } from 'vue-router';
 import { useMeta } from 'quasar';
 import { useI18n } from 'vue-i18n';
 import CardHorizontalComponent from '../components/CardHorizontalComponent.vue';
+import FloatArrow from '../components/FloatArrow.vue';
 
 const { locale } = useI18n();
 const route = useRoute();
@@ -158,7 +174,6 @@ watch([locale, () => route.fullPath], () => {
 
 .page-header {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
 .main-title {
@@ -195,13 +210,12 @@ watch([locale, () => route.fullPath], () => {
 .subtitle {
   font-size: 1.5rem;
   color: var(--q-primary);
-  margin-bottom: 1.5rem;
+  margin: 0;
   font-weight: 600;
 }
 
 .description {
   font-size: 1.1rem;
-  color: var(--q-text);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;

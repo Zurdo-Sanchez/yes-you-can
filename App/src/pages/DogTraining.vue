@@ -41,6 +41,7 @@
           img="/images/home/compañero.png"
           type="companion"
           description="El vínculo que se fortalece. Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos. Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo."
+          @click="$router.push('/mate')"
         />
         <CardComponent
           title="Maestro"
@@ -48,6 +49,7 @@
           img="/images/home/maestro.png"
           type="master"
           description="De compañero fiel a compañero excepcional. Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total. Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto."
+          @click="$router.push('/mate')"
         />
       </div>
     </section>
