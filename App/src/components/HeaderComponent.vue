@@ -26,6 +26,7 @@
               >{{ t('header.home') }}</a
             >
           </div>
+
           <a
             class="nav-link"
             :class="{ 'nav-link-active': isActive('work') }"
