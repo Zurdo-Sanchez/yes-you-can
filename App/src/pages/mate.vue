@@ -27,12 +27,40 @@ Con este programa, trabajamos paso a paso para que aprenda a quedarse solo sin a
       imagePosition="left"
     />
     <CardHorizontalComponent
-      title="Dog & Chill"
-      subTitle="Armonía dentro del hogar, desde el cariño y la calma"
-      img="/images/home/explorador-N2.png"
+      title="¿Vamos de Bares?"
+      subTitle="El perro sociable que te acompaña a todas partes"
+      img="/images/home/compañero-bares.png"
       type="Nivel 2"
-      description="Diseñado para fortalecer la convivencia en casa, Dog & Chill enseña a tu perro a relajarse, respetar espacios y rutinas, y a responder de forma positiva a las reglas del hogar. Este programa promueve una relación basada en el respeto mutuo y la comunicación, ayudando a construir un ambiente tranquilo y equilibrado en el día a día."
+      description="¿Sueñas con llevar a tu perro a una terraza o a casa de amigos sin que se altere?
+En este programa enseñamos a tu perro a relajarse en entornos sociales, rodeado de personas, ruido y otros estímulos. ¡Perfecto para perros y familias con una agenda llena de aventuras! "
       imagePosition="right"
+    />
+    <CardHorizontalComponent
+      title="¡Uy… qué miedo!"
+      subTitle="Ayudamos a tu perro a superar sus temores"
+      img="/images/home/explorador-N1.png"
+      type="Nivel 3"
+      description="¿Le cuesta salir a la calle, acercarse a personas o se asusta con ruidos fuertes?
+Trabajamos con delicadeza y paciencia para que gane seguridad y confianza en sí mismo. Cada pequeño avance es un gran paso hacia una vida más feliz."
+      imagePosition="left"
+    />
+    <CardHorizontalComponent
+      title="Dogtor"
+      subTitle="Visitas al veterinario sin dramas"
+      img="/images/home/compañero-bares.png"
+      type="Nivel 4"
+      description="Convertimos el miedo al veterinario en una experiencia mucho más calmada y positiva.
+Tu perro aprenderá a manejar mejor la manipulación, el entorno clínico y las rutinas médicas, lo que hace que cada visita sea menos estresante para él... y para ti."
+      imagePosition="right"
+    />
+    <CardHorizontalComponent
+      title="¡Sube al Coche!"
+      subTitle="Viajes tranquilos, seguros y sin ansiedad"
+      img="/images/home/compañero-coche.png"
+      type="Nivel 5"
+      description="Si tu perro odia el coche, llora o se agita al viajar, este programa es para ti.
+Te enseñamos cómo preparar al perro para que los trayectos sean agradables, seguros y sin sobresaltos, ya sea para una escapada o para ir al parque."
+      imagePosition="left"
     />
 
     <div class="programs-info">
@@ -40,39 +68,30 @@ Con este programa, trabajamos paso a paso para que aprenda a quedarse solo sin a
       <div class="benefits-list">
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
-          <span>Son el punto de partida ideal para cualquier tutor canino</span>
+          <span>Soluciones prácticas para problemas reales</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Refuerzan el vínculo entre tú y tu perro</span>
+          <span>Métodos respetuosos y basados en el bienestar del perro</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Utilizan técnicas prácticas y efectivas</span>
+          <span>Acompañamiento profesional adaptado a cada caso</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Te ayudan a mejorar la convivencia</span>
-        </div>
-        <div class="benefit-item">
-          <q-icon class="check-icon" :name="'done_all'" />
-
-          <span>Son programas complementarios</span>
-        </div>
-        <div class="benefit-item">
-          <q-icon class="check-icon" :name="'done_all'" />
-
-          <span>Están pensados para enseñar a ambos: humano y perro</span>
+          <span>Más tranquilidad para ti, más seguridad para tu perro</span>
         </div>
       </div>
     </div>
     <div class="final-message">
       <p>
-        Ambos programas del nivel Explorador están pensados para que tú y tu perro aprendáis juntos,
-        paso a paso, creando las bases de una convivencia feliz tanto dentro como fuera de casa.
+        Perfecto para fortalecer el vínculo con tu perro logrando un compañero confiable,
+        equilibrado y capaz de cooperar contigo en cualquier contexto de la vida diaria. Tú conoces
+        a tu perro. Nosotros te damos las herramientas para entenderlo, ayudarlo y avanzar juntos.
       </p>
     </div>
 
