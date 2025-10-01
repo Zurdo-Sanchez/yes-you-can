@@ -2,24 +2,27 @@
   <div class="explorer-page">
     <span class="level-badge">Nivel Avanzado</span>
     <div class="page-header">
-      <h1 class="main-title">Maestro</h1>
+      <h1 class="main-title">Compañero</h1>
     </div>
+    <h1 class="subtitle">
+      Porque la verdadera libertad no es soltar la correa… es saber que tu perro siempre volverá a
+      ti.
+    </h1>
+    <p class="description">FALTA ALGUNA DESCRIPCION</p>
+
     <CardHorizontalComponent
-      title="Patas Afuera"
-      subTitle="¡Disfruta los paseos sin tirones ni estrés!"
-      img="/images/home/explorador-N1.png"
+      title="Yes YouCan Free"
+      subTitle="El nivel más avanzado de educación canina
+Obediencia sin correa. Conexión total. Libertad compartida."
+      img="/images/home/maestro-N1.png"
       type="Nivel 1"
-      description="Este programa está enfocado en el comportamiento de tu perro fuera de casa. Aprenderás, de manera práctica, cómo lograr paseos tranquilos y agradables, enseñándole a tu perro a caminar a tu lado, sentarse en diferentes situaciones y mantener la calma en entornos variados.
-Ideal para quienes quieren que su perro sea un compañero educado en la calle."
+      description="¿Te imaginas poder soltar a tu perro y que te obedezca con alegría, seguridad y confianza, sin necesidad de correa?
+      <br>
+      Con Yes YouCan Free, ese nivel de conexión es posible.
+      <br>
+      Este programa está diseñado para quienes ya han recorrido el camino de la educación canina y quieren dar el salto hacia una relación más libre, equilibrada y fluida con su perro. 
+      Trabajamos la obediencia avanzada en libertad, con foco en la conexión real, el control emocional y la confianza mutua."
       imagePosition="left"
-    />
-    <CardHorizontalComponent
-      title="Dog & Chill"
-      subTitle="Armonía dentro del hogar, desde el cariño y la calma"
-      img="/images/home/explorador-N2.png"
-      type="Nivel 2"
-      description="Diseñado para fortalecer la convivencia en casa, Dog & Chill enseña a tu perro a relajarse, respetar espacios y rutinas, y a responder de forma positiva a las reglas del hogar. Este programa promueve una relación basada en el respeto mutuo y la comunicación, ayudando a construir un ambiente tranquilo y equilibrado en el día a día."
-      imagePosition="right"
     />
 
     <div class="programs-info">
@@ -27,41 +30,40 @@ Ideal para quienes quieren que su perro sea un compañero educado en la calle."
       <div class="benefits-list">
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
-          <span>Son el punto de partida ideal para cualquier tutor canino</span>
+          <span
+            >A que tu perro responda a la llamada con fiabilidad, incluso con distracciones</span
+          >
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Refuerzan el vínculo entre tú y tu perro</span>
+          <span>A pasear sin correa de forma segura y controlada</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Utilizan técnicas prácticas y efectivas</span>
+          <span>A reforzar el vínculo para que tu perro elija estar contigo</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Te ayudan a mejorar la convivencia</span>
+          <span>A mejorar su autocontrol</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Son programas complementarios</span>
-        </div>
-        <div class="benefit-item">
-          <q-icon class="check-icon" :name="'done_all'" />
-
-          <span>Están pensados para enseñar a ambos: humano y perro</span>
+          <span>A disfrutar juntos de una libertad responsable y segura</span>
         </div>
       </div>
     </div>
     <div class="final-message">
       <p>
-        Ambos programas del nivel Explorador están pensados para que tú y tu perro aprendáis juntos,
-        paso a paso, creando las bases de una convivencia feliz tanto dentro como fuera de casa.
+        Yes YouCan Free, el nivel más avanzado de educación canina: logra que tu perro te obedezca y
+        disfrute contigo sin necesidad de correa, con confianza, seguridad y una conexión única.
       </p>
     </div>
+
+    <!-- FAB expandible para ir a Compañero -->
     <FloatArrow
       text="Nivel Anterior"
       icon="keyboard_double_arrow_left"
@@ -73,7 +75,7 @@ Ideal para quienes quieren que su perro sea un compañero educado en la calle."
 
 <script lang="ts">
 export default {
-  name: 'MasterPage',
+  name: 'ExplorerPage',
 };
 </script>
 
@@ -165,7 +167,6 @@ watch([locale, () => route.fullPath], () => {
 
 .page-header {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
 .main-title {
@@ -202,14 +203,11 @@ watch([locale, () => route.fullPath], () => {
 .subtitle {
   font-size: 1.5rem;
   color: var(--q-primary);
-  margin-bottom: 1.5rem;
+  margin: 0;
   font-weight: 600;
 }
 
 .description {
-  font-size: 1.1rem;
-  color: var(--q-text);
-  line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;
 }

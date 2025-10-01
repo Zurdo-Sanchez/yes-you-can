@@ -4,9 +4,7 @@
     <div v-if="type" class="course-badge">{{ courseTypeLabel }}</div>
     <h3 class="work-title">{{ title }}</h3>
     <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
-    <p class="work-desc">
-      {{ description }}
-    </p>
+    <p class="work-desc" v-html="description"></p>
   </div>
 </template>
 <script lang="ts">

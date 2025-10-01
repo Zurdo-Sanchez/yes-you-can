@@ -49,7 +49,7 @@
           img="/images/home/maestro.png"
           type="master"
           description="De compañero fiel a compañero excepcional. Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total. Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto."
-          @click="$router.push('/mate')"
+          @click="$router.push('/master')"
         />
       </div>
     </section>
