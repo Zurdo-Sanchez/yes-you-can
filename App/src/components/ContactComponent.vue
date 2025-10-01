@@ -84,6 +84,7 @@ const message = ref('');
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: var(--q-text);
 }
 .send-btn {
   background: var(--q-backgroundHeader);

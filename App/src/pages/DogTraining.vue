@@ -119,8 +119,16 @@
     <section id="faq" class="faq-section">
       <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
-        <q-expansion-item label="¿Qué tipo de métodos de educación utilizan?">
-          <div>
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          label="¿Qué tipo de métodos de educación utilizan?"
+        >
+          <div class="faq-content">
             La educación canina ha pasado del castigo físico al uso exclusivo de premios, dos
             extremos que no siempre funcionan. En Yes YouCan apostamos por un método equilibrado:
             refuerzos variados (voz, caricias, libertad), coherencia en la comunicación, constancia
@@ -128,22 +136,46 @@
             respeto, límites claros y afecto para lograr perros estables, confiados y felices.
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Cuánto dura cada sesión de educación?">
-          <div>
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          label="¿Cuánto dura cada sesión de educación?"
+        >
+          <div class="faq-content">
             Nuestras sesiones de educación dura 60 minutos. Esto nos permite mantener al perro
             concentrado y comprometido sin agotarlo.
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Ofrecen adiestramiento en grupo o individual?">
-          <div>
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          label="¿Ofrecen adiestramiento en grupo o individual?"
+        >
+          <div class="faq-content">
             El entrenamiento comienza de forma individual, adaptado al nivel y a las necesidades
             específicas de tu perro. Según su progreso y el tipo de comportamiento que trabajemos,
             se podrá dar el paso a sesiones grupales, siempre priorizando el bienestar y la
             efectividad del aprendizaje.
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Qué debo llevar a la sesión de adiestramiento?">
-          <div>
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          label="¿Qué debo llevar a la sesión de adiestramiento?"
+        >
+          <div class="faq-content">
             No necesitas ningún material específico para comenzar, solo predisposición, constancia y
             ganas de disfrutar el proceso junto a tu perro.
           </div>
@@ -259,13 +291,16 @@ const autoplay = ref(true);
 .section-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--q-primary);
+  color: var(--q-text);
 }
 .centered-secondary {
   display: block;
   text-align: center;
   color: var(--q-secondary);
   width: 100%;
+}
+.q-carousel {
+  box-shadow: 0 2px 8px var(--q-primary);
 }
 .nav {
   display: flex;
@@ -428,5 +463,11 @@ const autoplay = ref(true);
 }
 .page-container {
   padding: 0px;
+}
+.faq-content {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: justify;
 }
 </style>
