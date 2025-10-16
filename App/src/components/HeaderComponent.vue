@@ -1,7 +1,7 @@
 <template>
   <q-header elevated class="header">
     <q-toolbar class="toolbar">
-      <div class="header-left">
+      <div class="header-left" @click="handleNavClick('home', $event)">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
         <span class="app-name centered-secondary">
           <span class="logo-second-Color">
@@ -17,46 +17,44 @@
       </div>
       <div class="header-center hide-mobile">
         <nav class="header-nav">
-          <div>
-            <a
-              class="nav-link"
-              :class="{ 'nav-link-active': isActive('home') }"
-              href=""
-              @click="handleNavClick('home', $event)"
-              >{{ t('header.home') }}</a
-            >
+          <div
+            class="nav-link"
+            :class="{ 'nav-link-active': isActive('home') }"
+            href=""
+            @click="handleNavClick('home', $event)"
+          >
+            {{ t('header.home') }}
           </div>
-
-          <a
+          <div
             class="nav-link"
             :class="{ 'nav-link-active': isActive('work') }"
             href=""
             @click="handleNavClick('work', $event)"
-            >{{ t('header.our_work') }}</a
           >
-          <div>
-            <router-link
-              class="nav-link"
-              :class="{ 'nav-link-active': isActive('whoami') }"
-              to="/whoami"
-              >{{ t('header.who_am_i') }}</router-link
-            >
-            <a
-              class="nav-link"
-              :class="{ 'nav-link-active': isActive('success') }"
-              href=""
-              @click="handleNavClick('success', $event)"
-              >{{ t('header.Transformation_Stories') }}</a
-            >
+            {{ t('header.our_work') }}
           </div>
           <div>
-            <a
-              class="nav-link"
-              :class="{ 'nav-link-active': isActive('faq') }"
-              href=""
-              @click="handleNavClick('faq', $event)"
-              >{{ t('header.faq') }}</a
-            >
+            <router-link to="/whoami" style="text-decoration: none">
+              <div class="nav-link" :class="{ 'nav-link-active': isActive('whoami') }">
+                {{ t('header.who_am_i') }}
+              </div>
+            </router-link>
+          </div>
+          <div
+            class="nav-link"
+            :class="{ 'nav-link-active': isActive('success') }"
+            href=""
+            @click="handleNavClick('success', $event)"
+          >
+            {{ t('header.Transformation_Stories') }}
+          </div>
+          <div
+            class="nav-link"
+            :class="{ 'nav-link-active': isActive('faq') }"
+            href=""
+            @click="handleNavClick('faq', $event)"
+          >
+            {{ t('header.faq') }}
           </div>
           <div>
             <a
@@ -365,6 +363,7 @@ function scrollTo(id: string) {
 .header-left {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .header-center {
   display: flex;
@@ -394,6 +393,7 @@ function scrollTo(id: string) {
   border-radius: 4px;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  text-align: center;
 }
 
 .nav-link-active {
