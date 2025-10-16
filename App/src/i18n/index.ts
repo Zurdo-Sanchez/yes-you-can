@@ -3,7 +3,7 @@ import esES from './es-ES';
 import caES from './ca-ES';
 
 export default {
-  'en-US': enUS,
   'es-ES': esES,
+  'en-US': enUS,
   'ca-ES': caES,
 };

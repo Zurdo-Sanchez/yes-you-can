@@ -46,7 +46,8 @@ export default {
       paraf1: {
         title: 'Educación canina: del palo al premio',
         paraf:
-          'Hace no tanto tiempo, la educación canina se parecía más a un entrenamiento militar que a una convivencia entre especies. El perro aprendía a base de órdenes tajantes y, en muchos casos, castigos físicos. La lógica era simple (y equivocada): si obedeces, todo bien; si no, la mano dura te hará aprender. Cuarenta años después, el péndulo se ha movido al otro extremo. Hoy encontramos un enfoque casi opuesto: el adiestramiento basado en premios de comida. Trozos de frankfurt, pollo o galletas se convierten en la herramienta principal para enseñar a un perro a sentarse, tumbarse o acudir a la llamada. Ambos métodos representan extremos. Y como suele pasar en la vida, los extremos rara vez son la mejor respuesta.',
+          'Hace no tanto tiempo, la educación canina se parecía más a un entrenamiento militar que a una convivencia entre especies.' +
+          '<br /> El perro aprendía a base de órdenes tajantes y, en muchos casos, castigos físicos. La lógica era simple (y equivocada): si obedeces, todo bien; si no, la mano dura te hará aprender. <br />Cuarenta años después, el péndulo se ha movido al otro extremo. Hoy encontramos un enfoque casi opuesto: el adiestramiento basado en premios de comida. Trozos de frankfurt, pollo o galletas se convierten en la herramienta principal para enseñar a un perro a sentarse, tumbarse o acudir a la llamada. Ambos métodos representan extremos. Y como suele pasar en la vida, los extremos rara vez son la mejor respuesta.',
       },
       paraf2: {
         title: 'El problema del castigo',
@@ -61,7 +62,12 @@ export default {
       paraf4: {
         title: 'El camino del equilibrio',
         paraf:
-          'En Yes YouCan, estamos convencidos de que la clave está en el término medio. Nuestra experiencia, junto con más de 40 años de trayectoria de Ken Sewell, nos ha enseñado que ni la dureza ni la fe ciega en el premio resuelven por sí solas el reto de educar a un perro. Lo que proponemos es un sistema equilibrado que combina: • Refuerzos positivos variados: no todo es comida; la voz, el juego, la caricia o la libertad también son recompensas. • Coherencia en la comunicación: el perro necesita entender qué esperamos de él y que seamos consistentes en nuestro lenguaje corporal, tono y reglas. • Constancia: educar con constancia es sembrar hoy el comportamiento que disfrutaremos mañana y siempre. • Vínculo emocional: el perro aprende mejor cuando siente que su guía es alguien en quien confiar, no solo un repartidor de salchichas.',
+          'En Yes YouCan, estamos convencidos de que la clave está en el término medio. Nuestra experiencia, junto con más de 40 años de trayectoria de Ken Sewell, nos ha enseñado que ni la dureza ni la fe ciega en el premio resuelven por sí solas el reto de educar a un perro.<br />' +
+          ' Lo que proponemos es un sistema equilibrado que combina:<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Refuerzos positivos variados: no todo es comida; la voz, el juego, la caricia o la libertad también son recompensas.<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Coherencia en la comunicación: el perro necesita entender qué esperamos de él y que seamos consistentes en nuestro lenguaje corporal, tono y reglas.<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Constancia: educar con constancia es sembrar hoy el comportamiento que disfrutaremos mañana y siempre.<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Vínculo emocional: el perro aprende mejor cuando siente que su guía es alguien en quien confiar, no solo un repartidor de salchichas.',
       },
       paraf5: {
         title: 'Más que adiestramiento, convivencia',
@@ -73,7 +79,10 @@ export default {
       paraf1: {
         title: '¿Dónde es el mejor lugar para educar a tu perro?',
         paraf:
-          'Cuando pensamos en educar a nuestro perro, lo primero que suele venirnos a la mente es un centro de adiestramiento, con colchonetas, pistas y un profesional dando órdenes. Pero la realidad es que el mejor lugar para enseñarle a tu perro no está en un local... sino en tu casa y en tu barrio. ¿Por qué? Muy sencillo: la educación a domicilio permite que perro y humano aprendan juntos, en el contexto real de la convivencia. No necesitas separarte de tu mascota ni confiar en que otra persona “lo arregle” por ti. Al final, ¿quién necesita que el perro le haga caso? No el profesional, sino tú y tu familia.',
+          'Cuando pensamos en educar a nuestro perro, lo primero que suele venirnos a la mente es un centro de adiestramiento, con colchonetas, pistas y un profesional dando órdenes.' +
+          ' Pero la realidad es que el mejor lugar para enseñarle a tu perro no está en un local... sino en tu casa y en tu barrio.' +
+          ' ¿Por qué? Muy sencillo: la educación a domicilio permite que perro y humano aprendan juntos, en el contexto real de la convivencia.' +
+          'S No necesitas separarte de tu mascota ni confiar en que otra persona “lo arregle” por ti. Al final, ¿quién necesita que el perro le haga caso? No el profesional, sino tú y tu familia.',
       },
       paraf2: {
         title: 'El problema de educar en un local',
@@ -92,7 +101,7 @@ export default {
       },
       paraf5: {
         paraf:
-          'En definitiva: el mejor lugar para educar a tu perro es donde ocurren las situaciones reales: tu casa, tu barrio, tu día a día. Ahí es donde el aprendizaje tiene sentido y se convierte en convivencia. Piénsalo: ¿prefieres un perro que obedece solo en una pista de entrenamiento o uno que te entiende y te acompaña en tu vida cotidiana? La respuesta, como siempre, está en casa.',
+          'En definitiva: el mejor lugar para educar a tu perro es donde ocurren las situaciones reales: tu casa, tu barrio, tu día a día. Ahí es donde el aprendizaje tiene sentido y se convierte en convivencia. <br />Piénsalo: ¿prefieres un perro que obedece solo en una pista de entrenamiento o uno que te entiende y te acompaña en tu vida cotidiana? La respuesta, como siempre, está en casa.',
       },
     },
   },

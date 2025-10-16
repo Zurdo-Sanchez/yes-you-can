@@ -78,11 +78,11 @@
           <template #label>
             <span class="label">
               {{
-                configStore.language === 'es-ES'
-                  ? 'ES'
+                configStore.language === 'en-US'
+                  ? 'EN'
                   : configStore.language === 'ca-ES'
                     ? 'CA'
-                    : 'EN'
+                    : 'ES'
               }}
             </span>
           </template>

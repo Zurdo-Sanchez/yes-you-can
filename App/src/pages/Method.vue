@@ -1,76 +1,69 @@
 <template>
   <div class="title-section">
-    <h1 style="color: var(--q-title)">{{ t('content.btn') }}</h1>
+    <h1 class="title">{{ t('content.btn') }}</h1>
     <div class="content">
-      <div>
+      <div class="ImgMoreText">
         <img class="profile-img" src="../assets/yesyoucan-gordo.png" alt="" />
+        <div>
+          <div>
+            <h5 class="title-paraf">{{ t('method.block1.paraf1.title') }}</h5>
+            <p class="paraf" v-html="t('method.block1.paraf1.paraf')"></p>
+          </div>
+          <div>
+            <h5 class="title-paraf">{{ t('method.block1.paraf2.title') }}</h5>
+            <p class="paraf" v-html="t('method.block1.paraf2.paraf')"></p>
+          </div>
+          <div>
+            <h5 class="title-paraf">{{ t('method.block1.paraf3.title') }}</h5>
+            <p class="paraf" v-html="t('method.block1.paraf3.paraf')"></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="title-paraf">{{ t('method.block1.paraf4.title') }}</h5>
+        <p class="paraf" v-html="t('method.block1.paraf4.paraf')"></p>
       </div>
       <div>
-        <div></div>
-        <h5>{{ t('method.block1.paraf1.title') }}</h5>
-        <p>
-          {{ t('method.block1.paraf1.paraf') }}
-        </p>
-      </div>
-      <div>
-        <h5>{{ t('method.block1.paraf2.title') }}</h5>
-        <p>
-          {{ t('method.block1.paraf2.paraf') }}
-        </p>
-      </div>
-      <div>
-        <h5>{{ t('method.block1.paraf3.title') }}</h5>
-        <p>
-          {{ t('method.block1.paraf3.paraf') }}
-        </p>
-      </div>
-      <div>
-        <h5>{{ t('method.block1.paraf4.title') }}</h5>
-        <p>
-          {{ t('method.block1.paraf4.paraf') }}
-        </p>
-      </div>
-      <div>
-        <h5>{{ t('method.block1.paraf5.title') }}</h5>
-        <p>
-          {{ t('method.block1.paraf5.paraf') }}
-        </p>
+        <h5 class="title-paraf">{{ t('method.block1.paraf5.title') }}</h5>
+        <p class="paraf" v-html="t('method.block1.paraf5.paraf')"></p>
       </div>
     </div>
     <div class="content">
-      <div>
-        <img class="profile-img" src="../assets/youcan sentado en el sofa.png" alt="" />
+      <div class="ImgMoreText-reverse">
+        <div>
+          <div>
+            <h5 class="title-paraf">{{ t('method.block2.paraf1.title') }}</h5>
+            <p class="paraf">
+              {{ t('method.block2.paraf1.paraf') }}
+            </p>
+          </div>
+          <div>
+            <h5 class="title-paraf">{{ t('method.block2.paraf2.title') }}</h5>
+            <p class="paraf">
+              {{ t('method.block2.paraf2.paraf') }}
+            </p>
+          </div>
+        </div>
+        <div>
+          <img
+            class="profile-img"
+            style="margin: 8px"
+            src="../assets/youcan sentado en el sofa.png"
+            alt=""
+          />
+        </div>
       </div>
       <div>
-        <div>
-          <h5>{{ t('method.block2.paraf1.title') }}</h5>
-          <p>
-            {{ t('method.block2.paraf1.paraf') }}
-          </p>
-        </div>
-        <div>
-          <h5>{{ t('method.block2.paraf2.title') }}</h5>
-          <p>
-            {{ t('method.block2.paraf2.paraf') }}
-          </p>
-        </div>
-        <div>
-          <h5>{{ t('method.block2.paraf3.title') }}</h5>
-          <p>
-            {{ t('method.block2.paraf3.paraf') }}
-          </p>
-        </div>
-        <div>
-          <h5>{{ t('method.block2.paraf4.title') }}</h5>
-          <p>
-            {{ t('method.block2.paraf4.paraf') }}
-          </p>
-        </div>
-        <div>
-          <p>
-            {{ t('method.block2.paraf5.paraf') }}
-          </p>
-        </div>
+        <h5 class="title-paraf">{{ t('method.block2.paraf3.title') }}</h5>
+        <p class="paraf" v-html="t('method.block2.paraf3.paraf')"></p>
+      </div>
+      <div>
+        <h5 class="title-paraf">{{ t('method.block2.paraf4.title') }}</h5>
+        <p class="paraf" v-html="t('method.block2.paraf4.paraf')"></p>
+      </div>
+      <div>
+        <p class="paraf" v-html="t('method.block2.paraf5.paraf')"></p>
       </div>
     </div>
   </div>
@@ -136,6 +129,17 @@ watch([locale, () => route.fullPath], () => {
 });
 </script>
 <style scoped>
+.title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--q-title);
+  margin-bottom: 2rem !important;
+}
+.title-paraf {
+  margin: 0.5rem 0;
+  color: var(--q-text);
+}
 .title-section {
   margin: 4rem 1rem 1rem 1rem;
   min-height: 85vh;
@@ -147,12 +151,31 @@ watch([locale, () => route.fullPath], () => {
 .content {
   display: grid;
   grid-template-columns: 1fr, 1fr;
-  gap: 2rem;
-}
-.profile-img {
-  width: 30%;
-  height: auto;
+  gap: 0rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--q-text);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+.profile-img {
+  width: 28rem;
+  height: auto;
+}
+.ImgMoreText {
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.ImgMoreText-reverse {
+  display: grid;
+  grid-template-columns: 1fr 30rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.paraf {
+  text-align: justifyP;
 }
 </style>
