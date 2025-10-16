@@ -45,7 +45,8 @@
             </p>
           </div>
         </div>
-        <div>
+        <div style="display: flex; justify-content: center; align-items: center">
+          ">
           <img
             class="profile-img"
             style="margin: 8px"
@@ -177,5 +178,16 @@ watch([locale, () => route.fullPath], () => {
 }
 .paraf {
   text-align: justifyP;
+}
+@media (max-width: 1160px) {
+  .ImgMoreText,
+  .ImgMoreText-reverse {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-img {
+    width: 50%;
+    height: auto;
+  }
 }
 </style>
