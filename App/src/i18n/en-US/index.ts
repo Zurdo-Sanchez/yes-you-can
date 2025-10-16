@@ -7,7 +7,7 @@ export default {
   send_message: 'Send Message',
   header: {
     app_name: 'Yes YouCan',
-    our_work: 'Our Work',
+    our_work: 'Our training programs',
     Transformation_Stories: 'Transformation Stories',
     faq: 'FAQ',
     contact: 'Contact Us',

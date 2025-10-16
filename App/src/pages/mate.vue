@@ -13,14 +13,14 @@
     <p class="description">
       Aquí encontrarás programas personalizados que abordan situaciones reales del día a día —como
       la ansiedad por separación, los miedos, la socialización o los viajes— con técnicas prácticas,
-      amables y efectivas. feliz con tu perro. En esta etapa, abordamos las necesidades básicas de
-      educación canina, tanto dentro del hogar como en los espacios públicos, a través de dos
-      programas complementarios y divertidos que fortalecen el vínculo entre humanos y perros.
+      amables y efectivas. En esta etapa, abordamos las necesidades básicas de educación canina,
+      tanto dentro del hogar como en los espacios públicos, a través de dos programas
+      complementarios y divertidos que fortalecen el vínculo entre humanos y perros.
     </p>
     <CardHorizontalComponent
       title="Stay at Home"
       subTitle="Ansiedad por separación, ¡fuera estrés!"
-      img="/images/home/explorador-N1.png"
+      img="/images/home/Stay-at-home.png"
       type="Nivel 1"
       description="Tu perro puede aprender a estar tranquilo cuando tú no estás en casa.
 Con este programa, trabajamos paso a paso para que aprenda a quedarse solo sin angustia, ladridos ni destrozos. Tú recuperas tu libertad, y él su calma."
@@ -38,7 +38,7 @@ En este programa enseñamos a tu perro a relajarse en entornos sociales, rodeado
     <CardHorizontalComponent
       title="¡Uy… qué miedo!"
       subTitle="Ayudamos a tu perro a superar sus temores"
-      img="/images/home/explorador-N1.png"
+      img="/images/home/perro-miedo.png"
       type="Nivel 3"
       description="¿Le cuesta salir a la calle, acercarse a personas o se asusta con ruidos fuertes?
 Trabajamos con delicadeza y paciencia para que gane seguridad y confianza en sí mismo. Cada pequeño avance es un gran paso hacia una vida más feliz."
@@ -47,7 +47,7 @@ Trabajamos con delicadeza y paciencia para que gane seguridad y confianza en sí
     <CardHorizontalComponent
       title="Dogtor"
       subTitle="Visitas al veterinario sin dramas"
-      img="/images/home/compañero-bares.png"
+      img="/images/home/compañero.png"
       type="Nivel 4"
       description="Convertimos el miedo al veterinario en una experiencia mucho más calmada y positiva.
 Tu perro aprenderá a manejar mejor la manipulación, el entorno clínico y las rutinas médicas, lo que hace que cada visita sea menos estresante para él... y para ti."

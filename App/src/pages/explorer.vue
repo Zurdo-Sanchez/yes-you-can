@@ -39,7 +39,7 @@ Ideal para quienes quieren que su perro sea un compañero educado en la calle."
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Refuerzan el vínculo entre tú y tu perro</span>
+          <span>Refuerzan el vínculo entre tu perro y tú</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />

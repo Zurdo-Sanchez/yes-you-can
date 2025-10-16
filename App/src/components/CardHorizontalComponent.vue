@@ -1,6 +1,6 @@
 <template>
   <div class="work-card" :class="{ 'image-right': imagePosition === 'right' }">
-    <div v-if="type" class="course-badge">{{ type }}</div>
+    <!-- <div v-if="type" class="course-badge">{{ type }}</div> -->
     <div class="image-section">
       <div class="work-img" :style="{ backgroundImage: `url('${img}')` }"></div>
     </div>

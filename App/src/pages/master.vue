@@ -2,17 +2,16 @@
   <div class="explorer-page">
     <span class="level-badge">Nivel Avanzado</span>
     <div class="page-header">
-      <h1 class="main-title">Compañero</h1>
+      <h1 class="main-title">Maestro</h1>
     </div>
     <h1 class="subtitle">
       Porque la verdadera libertad no es soltar la correa… es saber que tu perro siempre volverá a
       ti.
     </h1>
-    <p class="description">FALTA ALGUNA DESCRIPCION</p>
 
     <CardHorizontalComponent
       title="Yes YouCan Free"
-      subTitle="El nivel más avanzado de educación canina
+      subTitle="El nivel más avanzado de educación canina. ---- abajoooo -----
 Obediencia sin correa. Conexión total. Libertad compartida."
       img="/images/home/maestro-N1.png"
       type="Nivel 1"
@@ -26,7 +25,7 @@ Obediencia sin correa. Conexión total. Libertad compartida."
     />
 
     <div class="programs-info">
-      <h3 class="info-title">¿Qué tienen en común todos estos programas?</h3>
+      <h3 class="info-title">¿Qué aprenderás en este programa?</h3>
       <div class="benefits-list">
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />

@@ -4,7 +4,7 @@ export default {
   send_message: 'Enviar Missatge',
   header: {
     app_name: 'Yes YouCan',
-    our_work: 'El Nostre Treball',
+    our_work: "Els Nostres Programes d'Educació",
     Transformation_Stories: 'Històries de Transformació',
     faq: 'Preguntes Freqüents',
     contact: 'Contacta’ns',
