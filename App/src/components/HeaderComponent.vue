@@ -26,6 +26,7 @@
             {{ t('header.home') }}
           </div>
           <div
+            style="min-width: 110px"
             class="nav-link"
             :class="{ 'nav-link-active': isActive('work') }"
             href=""
@@ -56,14 +57,13 @@
           >
             {{ t('header.faq') }}
           </div>
-          <div>
-            <a
-              class="nav-link"
-              :class="{ 'nav-link-active': isActive('contact') }"
-              href=""
-              @click="handleNavClick('contact', $event)"
-              >{{ t('header.contact') }}</a
-            >
+          <div
+            class="nav-link"
+            :class="{ 'nav-link-active': isActive('contact') }"
+            href=""
+            @click="handleNavClick('contact', $event)"
+          >
+            {{ t('header.contact') }}
           </div>
         </nav>
       </div>
@@ -72,33 +72,35 @@
           <q-icon name="phone" size="sm" class="phone-icon" />
           <span class="phone-number">{{ t('contact.phone') }}</span>
         </div>
-        <q-btn-dropdown split rounded dropdown-icon="" icon="language" class="language-select">
-          <template #label>
-            <span class="label">
-              {{
-                configStore.language === 'en-US'
-                  ? 'EN'
-                  : configStore.language === 'ca-ES'
-                    ? 'CA'
-                    : 'ES'
-              }}
-            </span>
-          </template>
-          <q-list>
-            <q-item clickable v-close-popup @click="setLanguage('es-ES')">
-              <q-item-section>{{ t('header.lang_es') }}</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup @click="setLanguage('ca-ES')">
-              <q-item-section>{{ t('header.lang_ca') }}</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup @click="setLanguage('en-US')">
-              <q-item-section>{{ t('header.lang_en') }}</q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
-        <q-btn rounded @click="toggleTheme" class="theme-btn">
-          {{ configStore.currentTheme === 'light' ? t('header.sun') : t('header.moon') }}
-        </q-btn>
+        <div style="min-width: 200px">
+          <q-btn-dropdown split rounded dropdown-icon="" icon="language" class="language-select">
+            <template #label>
+              <span class="label">
+                {{
+                  configStore.language === 'en-US'
+                    ? 'EN'
+                    : configStore.language === 'ca-ES'
+                      ? 'CA'
+                      : 'ES'
+                }}
+              </span>
+            </template>
+            <q-list>
+              <q-item clickable v-close-popup @click="setLanguage('es-ES')">
+                <q-item-section>{{ t('header.lang_es') }}</q-item-section>
+              </q-item>
+              <q-item clickable v-close-popup @click="setLanguage('ca-ES')">
+                <q-item-section>{{ t('header.lang_ca') }}</q-item-section>
+              </q-item>
+              <q-item clickable v-close-popup @click="setLanguage('en-US')">
+                <q-item-section>{{ t('header.lang_en') }}</q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn-dropdown>
+          <q-btn rounded @click="toggleTheme" class="theme-btn">
+            {{ configStore.currentTheme === 'light' ? t('header.sun') : t('header.moon') }}
+          </q-btn>
+        </div>
         <!-- TODO: proximo desarrollo de login -->
         <!-- <q-btn v-if="!login" rounded class="login-btn">{{ t('header.login') }}</q-btn> -->
         <q-btn round v-if="login">
@@ -443,6 +445,18 @@ function scrollTo(id: string) {
 @media (max-width: 768px) {
   .hide-mobile {
     display: none;
+  }
+}
+@media (max-width: 1468px) {
+  .header-right {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 1180px) {
+  .nav-link {
+    margin: 0 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
   }
 }
 </style>
