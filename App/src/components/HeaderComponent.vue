@@ -15,7 +15,7 @@
           </span>
         </span>
       </div>
-      <div class="header-center">
+      <div class="header-center hide-mobile">
         <nav class="header-nav">
           <div>
             <a
@@ -78,11 +78,11 @@
           <template #label>
             <span class="label">
               {{
-                configStore.language === 'es-ES'
-                  ? 'ES'
+                configStore.language === 'en-US'
+                  ? 'EN'
                   : configStore.language === 'ca-ES'
                     ? 'CA'
-                    : 'EN'
+                    : 'ES'
               }}
             </span>
           </template>
@@ -125,12 +125,26 @@ import { useConfigStore } from '../stores/settingsStore';
 import { useI18n } from 'vue-i18n';
 import { useRouter, useRoute } from 'vue-router';
 import { ref, onMounted, onUnmounted } from 'vue';
+// import { useBreakpoints } from '@vueuse/core';
 
 // Interface para extender Window
 interface ExtendedWindow extends Window {
   debugHeaderIntersection?: () => void;
   setDetectionOffset?: (offset: number) => void;
 }
+
+// Captura ancho y alto de la ventana
+// const { width, height } = useWindowSize();
+// Define tus breakpoints (puedes usar los de Tailwind, Material, etc.)
+// const breakpoints = useBreakpoints({
+//   sm: 640,
+//   md: 768,
+//   lg: 1024,
+//   xl: 1280,
+// });
+// const isMobile = breakpoints.smaller('md');
+// const isTablet = breakpoints.between('md', 'lg');
+// const isDesktop = breakpoints.greaterOrEqual('lg');
 
 const { t, locale } = useI18n();
 const configStore = useConfigStore();
@@ -422,5 +436,13 @@ function scrollTo(id: string) {
 }
 .logo-second-Color {
   color: var(--q-nameSecondary);
+}
+.hide-mobile {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
 }
 </style>
