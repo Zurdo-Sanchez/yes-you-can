@@ -1,8 +1,8 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <span>© 2025 Yes You Can. Todos los derechos reservados.</span>
-      <span class="footer-version">Versión 1.0</span>
+  <span>{{ t('footer.copyright') }}</span>
+  <span class="footer-version">{{ t('footer.version') }}{{ version }}</span>
     </div>
   </footer>
 </template>
@@ -10,6 +10,12 @@
 export default {
   name: 'FooterComponent',
 };
+</script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const version = import.meta.env.VITE_VERSION;
+const { t } = useI18n();
 </script>
 <style scoped>
 .footer {

@@ -17,6 +17,31 @@ export default {
     home: 'Inicio',
     who_am_i: '¿Quién soy?',
   },
+  hero: {
+    title: '¿Listo para entender a tu perro?',
+    matDescription:
+      'Yes YouCan, un método simple que te conecta con tu perro y convierte la obediencia en amistad.',
+  },
+  programs: {
+    1: {
+      title: 'Nivel Explorador',
+      subtitle: 'Seguridad y confianza',
+      description:
+        "El inicio de la aventura. Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: construir confianza y comunicación desde cero.</p>",
+    },
+    2: {
+      title: 'Nivel Compañero',
+      subtitle: 'Cooperación y convivencia',
+      description:
+        "El vínculo se fortalece. Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo.</p>",
+    },
+    3: {
+      title: 'Nivel Maestro',
+      subtitle: 'Excelencia y libertad con control',
+      description:
+        "De compañero fiel a compañero excepcional. Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto.</p>",
+    },
+  },
   profile: {
     name: 'Xavi Burgos',
     paraf: {
@@ -40,6 +65,12 @@ export default {
   contact: {
     email: 'contacto@yesyoucan.cat',
     phone: '+34 667 67 63 05',
+    contact_us: 'Contáctanos',
+    your_name: 'Tu nombre',
+    your_email: 'Tu correo electrónico',
+    your_phone: 'Tu teléfono',
+    your_message: 'Tu mensaje',
+    btn_send: 'Enviar Mensaje',
   },
   method: {
     block1: {
@@ -103,6 +134,36 @@ export default {
         paraf:
           'En definitiva: el mejor lugar para educar a tu perro es donde ocurren las situaciones reales: tu casa, tu barrio, tu día a día. Ahí es donde el aprendizaje tiene sentido y se convierte en convivencia. <br />Piénsalo: ¿prefieres un perro que obedece solo en una pista de entrenamiento o uno que te entiende y te acompaña en tu vida cotidiana? La respuesta, como siempre, está en casa.',
       },
+    },
+  },
+  faq: {
+    1: {
+      question: '¿Qué tipo de métodos de educación utilizan?',
+      answer:
+        'La educación canina ha pasado del castigo físico al uso exclusivo de premios, dos extremos que no siempre funcionan. En Yes YouCan apostamos por un método equilibrado: refuerzos variados (voz, caricias, libertad), coherencia en la comunicación, constancia y un vínculo emocional sólido. Más que educar, se trata de convivir: enseñar con respeto, límites claros y afecto para lograr perros estables, confiados y felices.',
+    },
+    2: {
+      question: '¿Cuánto dura cada sesión de educación?',
+      answer:
+        'Nuestras sesiones de educación dura 60 minutos. Esto nos permite mantener al perro concentrado y comprometido sin agotarlo.',
+    },
+    3: {
+      question: '¿Ofrecen adiestramiento en grupo o individual?',
+      answer:
+        'El entrenamiento comienza de forma individual, adaptado al nivel y a las necesidades específicas de tu perro. Según su progreso y el tipo de comportamiento que trabajemos, se podrá dar el paso a sesiones grupales, siempre priorizando el bienestar y la efectividad del aprendizaje.',
+    },
+    4: {
+      question: '¿Qué debo llevar a la sesión de adiestramiento?',
+      answer:
+        'No necesitas ningún material específico para comenzar, solo predisposición, constancia y ganas de disfrutar el proceso junto a tu perro.',
+    },
+  },
+  footer: {
+    copyright: '© 2025 Yes You Can. Todos los derechos reservados.',
+    version: 'Versión ',
+    links: {
+      privacyPolicy: 'Política de privacidad',
+      termsOfService: 'Términos de servicio',
     },
   },
   meta: {

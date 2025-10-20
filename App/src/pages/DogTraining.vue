@@ -7,10 +7,9 @@
           <img src="../assets/logoSinFondo.png" alt="Yes YouCan Logo" class="hero-logo" />
         </div>
         <div class="hero-content">
-          <h1 class="hero-title">¿Listo para entender a tu perro?</h1>
+          <h1 class="hero-title">{{ t('hero.title') }}</h1>
           <p class="hero-desc">
-            Yes YouCan, un método simple que te conecta con tu perro y convierte la obediencia en
-            amistad
+            {{ t('hero.matDescription') }}
           </p>
           <q-btn class="hero-btn" :label="t('content.btn')" @click="$router.push('/method')" />
         </div>
@@ -28,27 +27,27 @@
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
-          title="Nivel Explorador"
-          subTitle="Seguridad y confianza"
+          :title="t('programs.1.title')"
+          :subTitle="t('programs.1.subtitle')"
           type="explorer"
           img="/images/home/explorador.png"
-          description="El inicio de la aventura. Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: construir confianza y comunicación desde cero.</p>"
+          :description="t('programs.1.description')"
           @click="$router.push('/explorer')"
         />
         <CardComponent
-          title="Nivel Compañero"
-          subTitle="Cooperación y convivencia"
+          :title="t('programs.2.title')"
+          :subTitle="t('programs.2.subtitle')"
           img="/images/home/compañero.png"
           type="companion"
-          description="El vínculo se fortalece. Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo.</p>"
+          :description="t('programs.2.description')"
           @click="$router.push('/mate')"
         />
         <CardComponent
-          title="Nivel Maestro"
-          subTitle="Excelencia y libertad con control"
+          :title="t('programs.3.title')"
+          :subTitle="t('programs.3.subtitle')"
           img="/images/home/maestro.png"
           type="master"
-          description="De compañero fiel a compañero excepcional. Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto.</p>"
+          :description="t('programs.3.description')"
           @click="$router.push('/master')"
         />
       </div>
@@ -126,14 +125,10 @@
           icon="help_outline"
           header-class="bg-primary text-white"
           expand-icon-class="text-white"
-          label="¿Qué tipo de métodos de educación utilizan?"
+          :label="t('faq.1.question')"
         >
           <div class="faq-content">
-            La educación canina ha pasado del castigo físico al uso exclusivo de premios, dos
-            extremos que no siempre funcionan. En Yes YouCan apostamos por un método equilibrado:
-            refuerzos variados (voz, caricias, libertad), coherencia en la comunicación, constancia
-            y un vínculo emocional sólido. Más que educar, se trata de convivir: enseñar con
-            respeto, límites claros y afecto para lograr perros estables, confiados y felices.
+            {{ t('faq.1.answer') }}
           </div>
         </q-expansion-item>
         <q-expansion-item
@@ -143,11 +138,10 @@
           icon="help_outline"
           header-class="bg-primary text-white"
           expand-icon-class="text-white"
-          label="¿Cuánto dura cada sesión de educación?"
+          :label="t('faq.2.question')"
         >
           <div class="faq-content">
-            Nuestras sesiones de educación dura 60 minutos. Esto nos permite mantener al perro
-            concentrado y comprometido sin agotarlo.
+            {{ t('faq.2.answer') }}
           </div>
         </q-expansion-item>
         <q-expansion-item
@@ -157,13 +151,10 @@
           icon="help_outline"
           header-class="bg-primary text-white"
           expand-icon-class="text-white"
-          label="¿Ofrecen adiestramiento en grupo o individual?"
+          :label="t('faq.3.question')"
         >
           <div class="faq-content">
-            El entrenamiento comienza de forma individual, adaptado al nivel y a las necesidades
-            específicas de tu perro. Según su progreso y el tipo de comportamiento que trabajemos,
-            se podrá dar el paso a sesiones grupales, siempre priorizando el bienestar y la
-            efectividad del aprendizaje.
+            {{ t('faq.3.answer') }}
           </div>
         </q-expansion-item>
         <q-expansion-item
@@ -173,11 +164,10 @@
           icon="help_outline"
           header-class="bg-primary text-white"
           expand-icon-class="text-white"
-          label="¿Qué debo llevar a la sesión de adiestramiento?"
+          :label="t('faq.4.question')"
         >
           <div class="faq-content">
-            No necesitas ningún material específico para comenzar, solo predisposición, constancia y
-            ganas de disfrutar el proceso junto a tu perro.
+            {{ t('faq.4.answer') }}
           </div>
         </q-expansion-item>
       </div>
@@ -383,6 +373,7 @@ const autoplay = ref(true);
 .hero-desc {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .hero-btn {
   font-weight: bold;

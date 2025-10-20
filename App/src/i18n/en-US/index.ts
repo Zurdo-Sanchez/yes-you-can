@@ -20,12 +20,43 @@ export default {
     home: 'Home',
     who_am_i: 'Who am I?',
   },
+  hero: {
+    title: 'Ready to understand your dog?',
+    matDescription:
+      'Yes YouCan, a simple method that connects you with your dog and turns obedience into friendship.',
+  },
+  programs: {
+    1: {
+      title: 'Explorer Level',
+      subtitle: 'Safety and confidence',
+      description:
+        "The beginning of the adventure. Your dog starts discovering the world with you. This level works on the fundamentals: basic obedience, household rules and the first essential commands (sit, walk on a loose leash). Ideal for puppies or dogs that never had formal training. <p style='font-weight: bold; margin-top: 10px;'>Key benefit: build trust and communication from scratch.</p>",
+    },
+    2: {
+      title: 'Companion Level',
+      subtitle: 'Cooperation and coexistence',
+      description:
+        "The bond strengthens. Your dog not only obeys, it now understands and cooperates with you. This level develops intermediate skills such as control in distracting environments, impulse control exercises, advanced socialization and obedience in different contexts. <p style='font-weight: bold; margin-top: 10px;'>Key benefit: a reliable dog for daily life that shares and respects your rhythm.</p>",
+    },
+    3: {
+      title: 'Master Level',
+      subtitle: 'Excellence and freedom with control',
+      description:
+        "From loyal companion to exceptional partner. Here your dog reaches its full potential. Advanced skills are trained: off-leash obedience, complex commands, special tricks, responses in difficult situations and strengthening the bond for a total connection. <p style='font-weight: bold; margin-top: 10px;'>Key benefit: live with a balanced, obedient canine companion ready for any challenge.</p>",
+    },
+  },
   content: {
     btn: 'Start',
   },
   contact: {
     email: 'contact@yesyoucan.cat',
     phone: '+34 667 67 63 05',
+    contact_us: 'Contact Us',
+    your_name: 'Your Name',
+    your_email: 'Your Email',
+    your_phone: 'Your Phone',
+    your_message: 'Your Message',
+    btn_send: 'Send Message',
   },
   profile: {
     name: 'Xavi Burgos',
@@ -44,9 +75,40 @@ export default {
     },
     ubicacion: { title: 'Location', description: 'Celrà' },
   },
+  faq: {
+    1: {
+      question: 'What kind of training methods do you use?',
+      answer:
+        "Dog training has moved from physical punishment to exclusive food rewards, two extremes that don't always work. At Yes YouCan we follow a balanced method: varied reinforcements (voice, pets, freedom), coherent communication, consistency and an emotional bond. More than training, it is about living together: teaching with respect, clear boundaries and affection to achieve stable, confident and happy dogs.",
+    },
+    2: {
+      question: 'How long does each training session last?',
+      answer:
+        'Our training sessions last 60 minutes. This allows the dog to stay focused and engaged without getting tired.',
+    },
+    3: {
+      question: 'Do you offer group or individual training?',
+      answer:
+        'Training begins individually, adapted to the level and specific needs of your dog. Depending on progress and the behaviours we work on, we may move to group sessions, always prioritising welfare and effective learning.',
+    },
+    4: {
+      question: 'What should I bring to the training session?',
+      answer:
+        'You do not need any specific material to start, just willingness, consistency and the desire to enjoy the process with your dog.',
+    },
+  },
+  footer: {
+    copyright: '© 2025 YesYouCan. All rights reserved.',
+    version: 'Version ',
+    links: {
+      privacyPolicy: 'Privacy Policy',
+      termsOfService: 'Terms of Service',
+    },
+  },
+
   meta: {
     dogTraining: {
-      title: 'Personalized Dog Training in Cataluña | Yes YouCan',
+      title: 'Personalized Dog Training in Catalonia | Yes YouCan',
       description:
         'Discover behaviour modification, obedience and puppy development programs guided by a certified dog trainer.',
       ogTitle: 'Yes YouCan · Dog Training Experts',
@@ -57,7 +119,7 @@ export default {
     whoAmI: {
       title: 'Meet Xavi Burgos | Yes YouCan Dog Trainer',
       description:
-        'Learn about the journey and vocation of Xavi Burgos, an in-home dog training specialist based in Cataluña.',
+        'Learn about the journey and vocation of Xavi Burgos, an in-home dog training specialist based in Catalonia.',
       ogTitle: 'Xavi Burgos · Dog trainer at Yes YouCan',
       ogDescription:
         'Discover how Xavi found his calling and supports people and dogs to live together in harmony.',

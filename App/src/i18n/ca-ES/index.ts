@@ -4,9 +4,9 @@ export default {
   send_message: 'Enviar Missatge',
   header: {
     app_name: 'Yes YouCan',
-    our_work: "Els Nostres Programes d'Educació",
+    our_work: "Els nostres programes d'educació",
     Transformation_Stories: 'Històries de Transformació',
-    faq: 'Preguntes Freqüents',
+    faq: 'Preguntes freqüents',
     contact: 'Contacta’ns',
     lang_es: 'Castellà',
     lang_ca: 'Català',
@@ -17,12 +17,43 @@ export default {
     home: 'Inici',
     who_am_i: 'Qui sóc?',
   },
+  hero: {
+    title: 'Preparat per entendre el teu gos?',
+    matDescription:
+      "Yes YouCan, un mètode senzill que et connecta amb el teu gos i converteix l'obediència en amistat.",
+  },
+  programs: {
+    1: {
+      title: 'Nivell Explorador',
+      subtitle: 'Seguretat i confiança',
+      description:
+        "L'inici de l'aventura. El teu gos comença a descobrir el món amb tu. En aquest nivell es treballen les bases: obediència bàsica, normes de convivència i les primeres ordres essencials (seure, caminar sense tirar de la corretja). Ideal per a cadells o gossos que mai han tingut entrenament formal. <p style='font-weight: bold; margin-top: 10px;'>Benefici clau: construir confiança i comunicació des de zero.</p>",
+    },
+    2: {
+      title: 'Nivell Company',
+      subtitle: 'Cooperació i convivència',
+      description:
+        "El vincle es reforça. El teu gos ja no només obeeix, ara entén i coopera amb tu. En aquest nivell es desenvolupen habilitats intermèdies com control en entorns amb distraccions, exercicis d'autocontrol, socialització avançada i obediència en diferents contextos. <p style='font-weight: bold; margin-top: 10px;'>Benefici clau: tenir un gos de confiança en la vida diària, que comparteix i respecta el teu ritme.</p>",
+    },
+    3: {
+      title: 'Nivell Mestre',
+      subtitle: 'Excel·lència i llibertat amb control',
+      description:
+        "De company fidel a company excepcional. Aquí el teu gos arriba al seu màxim potencial. Es treballen habilitats avançades: obediència sense corretja, ordres complexes, trucs especials, resposta en situacions difícils i reforç del vincle per a una connexió total. <p style='font-weight: bold; margin-top: 10px;'>Benefici clau: viure amb un company caní equilibrat, obedient i llest per a qualsevol repte.</p>",
+    },
+  },
   content: {
-    btn: 'Començar',
+    btn: 'El nostre mètode de treball',
   },
   contact: {
     email: 'contacte@yesyoucan.cat',
     phone: '+34 667 67 63 05',
+    contact_us: 'Contacta’ns',
+    your_name: 'El teu nom',
+    your_email: 'El teu correu electrònic',
+    your_phone: 'El teu telèfon',
+    your_message: 'El teu missatge',
+    btn_send: 'Enviar Missatge',
   },
   profile: {
     name: 'Xavi Burgos',
@@ -40,6 +71,36 @@ export default {
       description: 'Educador Caní',
     },
     ubicacion: { title: 'Ubicació', description: 'Celrà' },
+  },
+  faq: {
+    1: {
+      question: "Quins m\u00e8todes d'educaci\u00f3 utilitzeu?",
+      answer:
+        "L'educaci\u00f3 canina ha passat del càstig físic a l'ús exclusiu de premis, dos extrems que no sempre funcionen. A Yes YouCan apostem per un mètode equilibrat: reforços variats (veu, carícies, llibertat), coherència en la comunicació, constància i un vincle emocional. Més que educar, es tracta de conviure: ensenyar amb respecte, límits clars i afecte per aconseguir gossos estables, confiats i feliços.",
+    },
+    2: {
+      question: "Quant dura cada sessió d'educació?",
+      answer:
+        "Les nostres sessions d'educació duren 60 minuts. Això ens permet mantenir el gos concentrat i compromès sense esgotar-lo.",
+    },
+    3: {
+      question: 'Oferiu entrenament en grup o individual?',
+      answer:
+        "L'entrenament comença de forma individual, adaptat al nivell i a les necessitats específiques del teu gos. Segons el seu progrés i el tipus de comportament que treballem, es podrà fer el pas a sessions grupals, sempre prioritzant el benestar i l'efectivitat de l'aprenentatge.",
+    },
+    4: {
+      question: "Què he de portar a la sessió d'adiestrament?",
+      answer:
+        'No necessites cap material específic per començar, només predisposició, constància i ganes de gaudir el procés juntament amb el teu gos.',
+    },
+  },
+  footer: {
+    copyright: '© 2025 Yes You Can. Tots els drets reservats.',
+    version: 'Versió ',
+    links: {
+      privacyPolicy: 'Política de privadesa',
+      termsOfService: 'Termes del servei',
+    },
   },
   meta: {
     dogTraining: {
@@ -64,7 +125,7 @@ export default {
       title: 'Pàgina no trobada | Yes YouCan',
       description:
         'La pàgina que busques no existeix o ha canviat d’adreça. Torna a l’inici per continuar explorant Yes YouCan.',
-      ogTitle: 'Yes YouCan · Pàgina no trobada',
+      ogTitle: 'YesYouCan · Pàgina no trobada',
       ogDescription:
         'Utilitza el nostre menú per tornar als serveis d’educació canina i als recursos disponibles.',
       ogImageAlt: 'Gos intentant trobar el camí de tornada a casa.',
