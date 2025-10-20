@@ -102,6 +102,129 @@ export default {
       termsOfService: 'Termes del servei',
     },
   },
+  pages: {
+    explorer: {
+      levelBadge: 'Nivell Bàsic',
+      mainTitle: 'Explorer',
+      subtitle: 'Primer pas cap a una convivència en harmonia',
+      description:
+        "El nivell Explorador és el primer graó en el camí cap a una convivència equilibrada i feliç amb el teu gos. En aquesta etapa, abordem les necessitats bàsiques d'educació canina, tant dins de la llar com en els espais públics, a través de dos programes complementaris i divertits que enforteixen el vincle entre humans i gossos.",
+      cards: {
+        1: {
+          title: 'Potes Fora',
+          subTitle: 'Gaudeix dels passejos sense estrebades ni estrès!',
+          type: 'Nivell 1',
+          description:
+            'Aquest programa està enfocat en el comportament del teu gos fora de casa. Aprendràs, de manera pràctica, com aconseguir passejos tranquils i agradables, ensenyant al teu gos a caminar al teu costat, seure en diferents situacions i mantenir la calma en entorns variats. Ideal per a aquells que volen que el seu gos sigui un company educat al carrer.',
+        },
+        2: {
+          title: 'Dog & Chill',
+          subTitle: "Harmonia dins de la llar, des de l'afecte i la calma",
+          type: 'Nivell 2',
+          description:
+            'Dissenyat per enfortir la convivència a casa, Dog & Chill ensenya al teu gos a relaxar-se, respectar espais i rutines, i a respondre de forma positiva a les normes de la llar. Aquest programa promou una relació basada en el respecte mutu i la comunicació, ajudant a construir un entorn tranquil i equilibrat en el dia a dia.',
+        },
+      },
+      programsInfo: {
+        title: 'Què tenen en comú tots aquests programes?',
+      },
+      benefits: {
+        1: 'Són el punt de partida ideal per a qualsevol tutor caní',
+        2: 'Enforteixen el vincle entre el teu gos i tu',
+        3: 'Utilitzen tècniques pràctiques i efectives',
+        4: "T'ajuden a millorar la convivència",
+        5: 'Són programes complementaris',
+        6: 'Estan pensats per ensenyar a ambdós: humà i gos',
+      },
+      finalMessage:
+        "Ambdós programes del nivell Explorador estan pensats perquè tu i el teu gos aprengueu junts, pas a pas, creant les bases d'una convivència feliç tant dins com fora de casa.",
+      next: 'Nivell Següent',
+    },
+    master: {
+      levelBadge: 'Nivell Avançat',
+      mainTitle: 'Mestre',
+      subtitle:
+        'Perquè la veritable llibertat no és deixar anar la corretja… és saber que el teu gos sempre tornarà a tu.',
+      cards: {
+        1: {
+          title: 'Yes YouCan Free',
+          subTitle:
+            "El nivell més avançat d'educació canina. Obediència sense corretja. Connexió total. Llibertat compartida.",
+          type: 'Nivell 1',
+          description:
+            "T'imagines poder deixar anar el teu gos i que t'obeeixi amb alegria, seguretat i confiança, sense necessitat de corretja? Amb Yes YouCan Free, aquest nivell de connexió és possible. Aquest programa està pensat per a aquells que ja han fet el camí de l'educació canina i volen donar el salt cap a una relació més lliure, equilibrada i fluida amb el seu gos. Treballem l'obediència avançada en llibertat, amb focus en la connexió real, el control emocional i la confiança mútua.",
+        },
+      },
+      programsInfo: { title: 'Què aprendràs en aquest programa?' },
+      benefits: {
+        1: 'Que el teu gos respongui a la crida amb fiabilitat, fins i tot amb distraccions',
+        2: 'Passejar sense corretja de manera segura i controlada',
+        3: 'Enfortir el vincle perquè el teu gos triï estar amb tu',
+        4: 'Millorar el seu autocontrol',
+        5: 'Gaudir junts d’una llibertat responsable i segura',
+      },
+      finalMessage:
+        "Yes YouCan Free, el nivell més avançat d'educació canina: aconsegueix que el teu gos t'obeeixi i gaudeixi amb tu sense necessitat de corretja, amb confiança, seguretat i una connexió única.",
+      previous: 'Nivell Anterior',
+    },
+    mate: {
+      levelBadge: 'Nivell Intermedi',
+      mainTitle: 'Company',
+      subtitle: 'Solucions reals per millorar el comportament i la teva tranquil·litat',
+      description: {
+        1: "El Nivell Company està dissenyat per a aquells que ja han fet els primers passos en l'educació canina i ara busquen abordar problemes de comportament específics que afecten el benestar del gos i la qualitat de vida compartida.",
+        2: "Aquí trobaràs programes personalitzats que aborden situacions quotidianes reals — com l'ansietat per separació, pors, socialització o viatges — amb tècniques pràctiques, respectuoses i efectives. En aquesta etapa treballem les necessitats bàsiques de l'educació canina, tant a casa com en espais públics, a través de programes complementaris i entretinguts que enforteixen el vincle entre humans i gossos.",
+      },
+      cards: {
+        1: {
+          title: "Queda't a Casa",
+          subTitle: 'Ansietat per separació, sense estrès!',
+          type: 'Nivell 1',
+          description:
+            'El teu gos pot aprendre a estar tranquil quan no estàs a casa. Amb aquest programa, treballem pas a pas perquè aprengui a quedar-se sol sense ansietat, lladrucs ni destruccions. Recuperes la teva llibertat i ell la seva calma.',
+        },
+        2: {
+          title: 'Anem a les terrasses?',
+          subTitle: "El gos sociable que t'acompanya arreu",
+          type: 'Nivell 2',
+          description:
+            "Somies en portar el teu gos a una terrassa o a casa d'un amic sense que s'angoixi? En aquest programa ensenyem al teu gos a relaxar-se en entorns socials, envoltat de persones, soroll i altres estímuls. Perfecte per a gossos i famílies amb una agenda plena d'aventures!",
+        },
+        3: {
+          title: 'Ai… quina por!',
+          subTitle: 'Ajudem el teu gos a superar les pors',
+          type: 'Nivell 3',
+          description:
+            "El teu gos té dificultats per sortir al carrer, s'acosta amb por a les persones o s'espanta amb sorolls forts? Treballem amb cura i paciència perquè guanyi seguretat i autoconfiança. Cada petit pas és un gran avanç cap a una vida més feliç.",
+        },
+        4: {
+          title: 'Dogtor',
+          subTitle: 'Visites al veterinari sense drama',
+          type: 'Nivell 4',
+          description:
+            "Convertim la por al veterinari en una experiència més calma i positiva. El teu gos aprendrà a tolerar millor les manipulacions, l'entorn clínic i les rutines mèdiques, fent que cada visita sigui menys estressant per a ell... i per a tu.",
+        },
+        5: {
+          title: 'Puja al Cotxe!',
+          subTitle: 'Viatges tranquils, segurs i sense ansietat',
+          type: 'Nivell 5',
+          description:
+            "Si el teu gos odia el cotxe, plora o s'agit mentre viatgeu, aquest programa és per a tu. T'ensenyem com preparar el gos perquè els desplaçaments siguin agradables, segurs i sense sorpreses, tant per a una escapada com per anar al parc.",
+        },
+      },
+      programsInfo: { title: 'Què tenen en comú tots aquests programes?' },
+      benefits: {
+        1: 'Solucions pràctiques per problemes reals',
+        2: 'Mètodes respectuosos centrats en el benestar del gos',
+        3: 'Suport professional adaptat a cada cas',
+        4: 'Més tranquil·litat per a tu, més seguretat per al teu gos',
+      },
+      finalMessage:
+        "Perfecte per enfortir el vincle amb el teu gos aconseguint un company fiable, equilibrat i capaç de cooperar amb tu en qualsevol context de la vida diària. Tu coneixes el teu gos. Nosaltres t’oferim les eines per entendre'l, ajudar-lo i avançar junts.",
+      previous: 'Nivell Anterior',
+      next: 'Nivell Següent',
+    },
+  },
   meta: {
     dogTraining: {
       title: 'Educació canina personalitzada a Catalunya | Yes YouCan',

@@ -105,6 +105,130 @@ export default {
       termsOfService: 'Terms of Service',
     },
   },
+  pages: {
+    explorer: {
+      levelBadge: 'Basic Level',
+      mainTitle: 'Explorer',
+      subtitle: 'First step towards harmonious coexistence',
+      description:
+        'The Explorer level is the first step on the path to a balanced and happy coexistence with your dog. In this stage, we address the basic needs of dog education, both inside the home and in public spaces, through two complementary and enjoyable programs that strengthen the bond between humans and dogs.',
+      cards: {
+        1: {
+          title: 'Paws Out',
+          subTitle: 'Enjoy walks without pulling or stress!',
+          type: 'Level 1',
+          description:
+            "This program focuses on your dog's behaviour outside the home. You will learn, in a practical way, how to achieve calm and pleasant walks, teaching your dog to walk by your side, sit in different situations and remain calm in varied environments. Ideal for those who want their dog to be a well-mannered companion on the street.",
+        },
+        2: {
+          title: 'Dog & Chill',
+          subTitle: 'Harmony inside the home, from affection and calm',
+          type: 'Level 2',
+          description:
+            'Designed to strengthen coexistence at home, Dog & Chill teaches your dog to relax, respect spaces and routines, and respond positively to household rules. This program promotes a relationship based on mutual respect and communication, helping to build a calm and balanced environment in everyday life.',
+        },
+      },
+      programsInfo: {
+        title: 'What do all these programs have in common?',
+      },
+      benefits: {
+        1: 'They are the ideal starting point for any dog guardian',
+        2: 'They strengthen the bond between your dog and you',
+        3: 'They use practical and effective techniques',
+        4: 'They help you improve coexistence',
+        5: 'They are complementary programs',
+        6: 'They are designed to teach both: human and dog',
+      },
+      finalMessage:
+        'Both programs of the Explorer level are designed for you and your dog to learn together, step by step, creating the foundations for a happy coexistence both inside and outside the home.',
+      next: 'Next Level',
+    },
+    master: {
+      levelBadge: 'Advanced Level',
+      mainTitle: 'Master',
+      subtitle:
+        'Because true freedom is not dropping the leash… it’s knowing your dog will always come back to you.',
+      cards: {
+        1: {
+          title: 'Yes YouCan Free',
+          subTitle:
+            'The most advanced level in dog training. Off-leash obedience. Total connection. Shared freedom.',
+          type: 'Level 1',
+          description:
+            'Imagine being able to let your dog off the leash and have them obey with joy, safety and confidence. With Yes YouCan Free, that level of connection is possible. This program is designed for those who have already gone through the path of dog training and want to take the leap to a freer, more balanced and fluid relationship with their dog. We work on advanced off-leash obedience, focusing on real connection, emotional control and mutual trust.',
+        },
+      },
+      programsInfo: { title: 'What will you learn in this program?' },
+      benefits: {
+        1: 'Reliable recall even with distractions',
+        2: 'Safe and controlled off-leash walks',
+        3: 'Strengthen the bond so your dog chooses to be with you',
+        4: 'Improve self-control',
+        5: 'Enjoy responsible and safe freedom together',
+      },
+      finalMessage:
+        'Yes YouCan Free, the most advanced level of dog training: achieve off-leash obedience and enjoyment together with confidence, safety and a unique connection.',
+      previous: 'Previous Level',
+    },
+
+    mate: {
+      levelBadge: 'Intermediate Level',
+      mainTitle: 'Companion',
+      subtitle: 'Real solutions to improve behaviour and your peace of mind',
+      description: {
+        1: 'The Companion Level is designed for those who have already taken the first steps in dog training and now seek to address specific behaviour problems that affect the dog’s wellbeing and shared quality of life.',
+        2: 'Here you will find personalized programs that tackle real everyday situations — such as separation anxiety, fears, socialization or travel — with practical, kind and effective techniques. At this stage we address the basic needs of dog training, both at home and in public spaces, through complementary and enjoyable programs that strengthen the bond between humans and dogs.',
+      },
+      cards: {
+        1: {
+          title: 'Stay at Home',
+          subTitle: 'Separation anxiety, stress-free!',
+          type: 'Level 1',
+          description:
+            'Your dog can learn to be calm when you are not at home. With this program, we work step by step so that he learns to stay alone without anxiety, barking or destruction. You get your freedom back, and he his calm.',
+        },
+        2: {
+          title: 'Shall we go to the bars?',
+          subTitle: 'The sociable dog that accompanies you everywhere',
+          type: 'Level 2',
+          description:
+            'Do you dream of taking your dog to a terrace or a friend’s house without him getting stressed? In this program we teach your dog to relax in social environments, surrounded by people, noise and other stimuli. Perfect for dogs and families with a full schedule of adventures!',
+        },
+        3: {
+          title: 'Oh… how scary!',
+          subTitle: 'We help your dog overcome its fears',
+          type: 'Level 3',
+          description:
+            'Does your dog struggle to go out, approach people or get scared by loud noises? We work with delicacy and patience so he gains security and self-confidence. Every small step is a big step towards a happier life.',
+        },
+        4: {
+          title: 'Dogtor',
+          subTitle: 'Vet visits without drama',
+          type: 'Level 4',
+          description:
+            'We turn fear of the vet into a much calmer and more positive experience. Your dog will learn to better handle handling, the clinical environment and medical routines, making each visit less stressful for him... and for you.',
+        },
+        5: {
+          title: 'Get in the Car!',
+          subTitle: 'Calm, safe and anxiety-free trips',
+          type: 'Level 5',
+          description:
+            'If your dog hates the car, cries or gets agitated while traveling, this program is for you. We teach you how to prepare the dog so trips are pleasant, safe and without surprises, whether for a getaway or a trip to the park.',
+        },
+      },
+      programsInfo: { title: 'What do all these programs have in common?' },
+      benefits: {
+        1: 'Practical solutions for real problems',
+        2: 'Respectful methods focused on the dog’s welfare',
+        3: 'Professional support tailored to each case',
+        4: 'More peace of mind for you, more safety for your dog',
+      },
+      finalMessage:
+        'Perfect to strengthen the bond with your dog achieving a reliable, balanced companion able to cooperate with you in any daily-life context. You know your dog. We give you the tools to understand, help and move forward together.',
+      previous: 'Previous Level',
+      next: 'Next Level',
+    },
+  },
 
   meta: {
     dogTraining: {
