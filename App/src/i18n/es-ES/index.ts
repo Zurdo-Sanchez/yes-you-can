@@ -17,6 +17,31 @@ export default {
     home: 'Inicio',
     who_am_i: '¿Quién soy?',
   },
+  hero: {
+    title: '¿Listo para entender a tu perro?',
+    matDescription:
+      'Yes YouCan, un método simple que te conecta con tu perro y convierte la obediencia en amistad.',
+  },
+  programs: {
+    1: {
+      title: 'Nivel Explorador',
+      subtitle: 'Seguridad y confianza',
+      description:
+        "El inicio de la aventura. Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: construir confianza y comunicación desde cero.</p>",
+    },
+    2: {
+      title: 'Nivel Compañero',
+      subtitle: 'Cooperación y convivencia',
+      description:
+        "El siguiente paso en la aventura compartida. En este nivel, tu perro y tú profundizáis en la cooperación diaria y la convivencia armoniosa. Se trabajan habilidades como el autocontrol, la socialización adecuada con otros perros y personas, y la respuesta a órdenes en entornos más desafiantes. Perfecto para perros que ya tienen una base pero necesitan mejorar su comportamiento en situaciones cotidianas. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: fortalecer el vínculo y la comunicación para una vida diaria más tranquila y feliz.</p>",
+    },
+    3: {
+      title: 'Nivel Maestro',
+      subtitle: 'Excelencia y libertad con control',
+      description:
+        "De compañero fiel a compañero excepcional. Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total. <p style='font-weight: bold; margin-top: 10px;'>Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto.</p>",
+    },
+  },
   profile: {
     name: 'Xavi Burgos',
     paraf: {
@@ -40,6 +65,12 @@ export default {
   contact: {
     email: 'contacto@yesyoucan.cat',
     phone: '+34 667 67 63 05',
+    contact_us: 'Contáctanos',
+    your_name: 'Tu nombre',
+    your_email: 'Tu correo electrónico',
+    your_phone: 'Tu teléfono',
+    your_message: 'Tu mensaje',
+    btn_send: 'Enviar Mensaje',
   },
   method: {
     block1: {
@@ -103,6 +134,159 @@ export default {
         paraf:
           'En definitiva: el mejor lugar para educar a tu perro es donde ocurren las situaciones reales: tu casa, tu barrio, tu día a día. Ahí es donde el aprendizaje tiene sentido y se convierte en convivencia. <br />Piénsalo: ¿prefieres un perro que obedece solo en una pista de entrenamiento o uno que te entiende y te acompaña en tu vida cotidiana? La respuesta, como siempre, está en casa.',
       },
+    },
+  },
+  faq: {
+    1: {
+      question: '¿Qué tipo de métodos de educación utilizan?',
+      answer:
+        'La educación canina ha pasado del castigo físico al uso exclusivo de premios, dos extremos que no siempre funcionan. En Yes YouCan apostamos por un método equilibrado: refuerzos variados (voz, caricias, libertad), coherencia en la comunicación, constancia y un vínculo emocional sólido. Más que educar, se trata de convivir: enseñar con respeto, límites claros y afecto para lograr perros estables, confiados y felices.',
+    },
+    2: {
+      question: '¿Cuánto dura cada sesión de educación?',
+      answer:
+        'Nuestras sesiones de educación dura 60 minutos. Esto nos permite mantener al perro concentrado y comprometido sin agotarlo.',
+    },
+    3: {
+      question: '¿Ofrecen adiestramiento en grupo o individual?',
+      answer:
+        'El entrenamiento comienza de forma individual, adaptado al nivel y a las necesidades específicas de tu perro. Según su progreso y el tipo de comportamiento que trabajemos, se podrá dar el paso a sesiones grupales, siempre priorizando el bienestar y la efectividad del aprendizaje.',
+    },
+    4: {
+      question: '¿Qué debo llevar a la sesión de adiestramiento?',
+      answer:
+        'No necesitas ningún material específico para comenzar, solo predisposición, constancia y ganas de disfrutar el proceso junto a tu perro.',
+    },
+  },
+  footer: {
+    copyright: '© 2025 Yes You Can. Todos los derechos reservados.',
+    version: 'Versión ',
+    links: {
+      privacyPolicy: 'Política de privacidad',
+      termsOfService: 'Términos de servicio',
+    },
+  },
+  pages: {
+    explorer: {
+      levelBadge: 'Nivel Básico',
+      mainTitle: 'Explorer',
+      subtitle: 'Primer paso hacia una convivencia en armonía',
+      description:
+        'El nivel Explorador es el primer escalón en el camino hacia una convivencia equilibrada y feliz con tu perro. En esta etapa, abordamos las necesidades básicas de educación canina, tanto dentro del hogar como en los espacios públicos, a través de dos programas complementarios y divertidos que fortalecen el vínculo entre humanos y perros.',
+      cards: {
+        1: {
+          title: 'Patas Afuera',
+          subTitle: '¡Disfruta los paseos sin tirones ni estrés!',
+          type: 'Nivel 1',
+          description:
+            'Este programa está enfocado en el comportamiento de tu perro fuera de casa. Aprenderás, de manera práctica, cómo lograr paseos tranquilos y agradables, enseñándole a tu perro a caminar a tu lado, sentarse en diferentes situaciones y mantener la calma en entornos variados. Ideal para quienes quieren que su perro sea un compañero educado en la calle.',
+        },
+        2: {
+          title: 'Dog & Chill',
+          subTitle: 'Armonía dentro del hogar, desde el cariño y la calma',
+          type: 'Nivel 2',
+          description:
+            'Diseñado para fortalecer la convivencia en casa, Dog & Chill enseña a tu perro a relajarse, respetar espacios y rutinas, y a responder de forma positiva a las reglas del hogar. Este programa promueve una relación basada en el respeto mutuo y la comunicación, ayudando a construir un ambiente tranquilo y equilibrado en el día a día.',
+        },
+      },
+      programsInfo: {
+        title: '¿Qué tienen en común todos estos programas?',
+      },
+      benefits: {
+        1: 'Son el punto de partida ideal para cualquier tutor canino',
+        2: 'Refuerzan el vínculo entre tu perro y tú',
+        3: 'Utilizan técnicas prácticas y efectivas',
+        4: 'Te ayudan a mejorar la convivencia',
+        5: 'Son programas complementarios',
+        6: 'Están pensados para enseñar a ambos: humano y perro',
+      },
+      finalMessage:
+        'Ambos programas del nivel Explorador están pensados para que tú y tu perro aprendáis juntos, paso a paso, creando las bases de una convivencia feliz tanto dentro como fuera de casa.',
+      next: 'Nivel Siguiente',
+    },
+    master: {
+      levelBadge: 'Nivel Avanzado',
+      mainTitle: 'Maestro',
+      subtitle:
+        'Porque la verdadera libertad no es soltar la correa… es saber que tu perro siempre volverá a ti.',
+      cards: {
+        1: {
+          title: 'Yes YouCan Free',
+          subTitle:
+            'El nivel más avanzado de educación canina. Obediencia sin correa. Conexión total. Libertad compartida.',
+          type: 'Nivel 1',
+          description:
+            '¿Te imaginas poder soltar a tu perro y que te obedezca con alegría, seguridad y confianza, sin necesidad de correa? Con Yes YouCan Free, ese nivel de conexión es posible. Este programa está diseñado para quienes ya han recorrido el camino de la educación canina y quieren dar el salto hacia una relación más libre, equilibrada y fluida con su perro. Trabajamos la obediencia avanzada en libertad, con foco en la conexión real, el control emocional y la confianza mutua.',
+        },
+      },
+      programsInfo: { title: '¿Qué aprenderás en este programa?' },
+      benefits: {
+        1: 'A que tu perro responda a la llamada con fiabilidad, incluso con distracciones',
+        2: 'A pasear sin correa de forma segura y controlada',
+        3: 'A reforzar el vínculo para que tu perro elija estar contigo',
+        4: 'A mejorar su autocontrol',
+        5: 'A disfrutar juntos de una libertad responsable y segura',
+      },
+      finalMessage:
+        'Yes YouCan Free, el nivel más avanzado de educación canina: logra que tu perro te obedezca y disfrute contigo sin necesidad de correa, con confianza, seguridad y una conexión única.',
+      previous: 'Nivel Anterior',
+    },
+    mate: {
+      levelBadge: 'Nivel Intermedio',
+      mainTitle: 'Compañero',
+      subtitle: 'Soluciones reales para mejorar el comportamiento y tu tranquilidad',
+      description: {
+        1: 'El Nivel Compañero está diseñado para quienes ya han dado los primeros pasos en la educación canina y ahora buscan afrontar problemas de comportamiento concretos que afectan al bienestar del perro y la calidad de vida compartida.',
+        2: 'Aquí encontrarás programas personalizados que abordan situaciones cotidianas —como la ansiedad por separación, miedos, socialización o viajes— con técnicas prácticas, respetuosas y efectivas. En esta etapa trabajamos las necesidades básicas de la educación canina, tanto en casa como en espacios públicos, mediante programas complementarios y entretenidos que fortalecen el vínculo entre humanos y perros.',
+      },
+      cards: {
+        1: {
+          title: 'Quedarse en Casa',
+          subTitle: 'Ansiedad por separación, ¡sin estrés!',
+          type: 'Nivel 1',
+          description:
+            'Tu perro puede aprender a estar tranquilo cuando no estás en casa. Con este programa trabajamos paso a paso para que aprenda a quedarse solo sin ansiedad, ladridos ni destrucción. Recuperas tu libertad y él su calma.',
+        },
+        2: {
+          title: '¿Vamos a las terrazas?',
+          subTitle: 'El perro sociable que te acompaña a todas partes',
+          type: 'Nivel 2',
+          description:
+            '¿Sueñas con llevar a tu perro a una terraza o a casa de un amigo sin que se estrese? En este programa enseñamos a tu perro a relajarse en entornos sociales, rodeado de personas, ruido y otros estímulos. Perfecto para familias con una agenda llena de planes.',
+        },
+        3: {
+          title: '¡Oh… qué miedo!',
+          subTitle: 'Ayudamos a tu perro a superar sus miedos',
+          type: 'Nivel 3',
+          description:
+            'Si tu perro tiene dificultades para salir, se acerca con miedo a las personas o se asusta con ruidos fuertes, trabajamos con delicadeza y paciencia para que gane seguridad y confianza. Cada pequeño paso es un gran avance hacia una vida más feliz.',
+        },
+        4: {
+          title: 'Dogtor',
+          subTitle: 'Visitas al veterinario sin drama',
+          type: 'Nivel 4',
+          description:
+            'Transformamos el miedo al veterinario en una experiencia más calmada y positiva. Tu perro aprenderá a tolerar mejor las manipulaciones, el entorno clínico y las rutinas médicas, haciendo que cada visita sea menos estresante para él... y para ti.',
+        },
+        5: {
+          title: '¡Súbete al Coche!',
+          subTitle: 'Viajes tranquilos, seguros y sin ansiedad',
+          type: 'Nivel 5',
+          description:
+            'Si a tu perro no le gusta el coche, llora o se altera durante los viajes, este programa es para vosotros. Te enseñamos cómo preparar al perro para que los desplazamientos sean agradables, seguros y sin sorpresas, ya sea para una escapada o para ir al parque.',
+        },
+      },
+      programsInfo: { title: '¿Qué tienen en común todos estos programas?' },
+      benefits: {
+        1: 'Soluciones prácticas para problemas reales',
+        2: 'Métodos respetuosos centrados en el bienestar del perro',
+        3: 'Apoyo profesional adaptado a cada caso',
+        4: 'Más tranquilidad para ti, más seguridad para tu perro',
+      },
+      finalMessage:
+        'Perfecto para fortalecer el vínculo con tu perro logrando un compañero fiable, equilibrado y capaz de cooperar contigo en cualquier contexto de la vida diaria. Tú conoces a tu perro. Nosotros te damos las herramientas para entenderle, ayudarle y avanzar juntos.',
+      previous: 'Nivel Anterior',
+      next: 'Nivel Siguiente',
     },
   },
   meta: {

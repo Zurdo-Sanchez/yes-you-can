@@ -1,70 +1,56 @@
 <template>
   <div class="explorer-page">
-    <span class="level-badge">Nivel Avanzado</span>
+    <span class="level-badge">{{ t('pages.master.levelBadge') }}</span>
     <div class="page-header">
-      <h1 class="main-title">Maestro</h1>
+      <h1 class="main-title">{{ t('pages.master.mainTitle') }}</h1>
     </div>
-    <h1 class="subtitle">
-      Porque la verdadera libertad no es soltar la correa… es saber que tu perro siempre volverá a
-      ti.
-    </h1>
+    <h1 class="subtitle">{{ t('pages.master.subtitle') }}</h1>
 
     <CardHorizontalComponent
-      title="Yes YouCan Free"
-      subTitle="El nivel más avanzado de educación canina. ---- abajoooo -----
-Obediencia sin correa. Conexión total. Libertad compartida."
+      :title="t('pages.master.cards.1.title')"
+      :subTitle="t('pages.master.cards.1.subTitle')"
       img="/images/home/maestro-N1.png"
-      type="Nivel 1"
-      description="¿Te imaginas poder soltar a tu perro y que te obedezca con alegría, seguridad y confianza, sin necesidad de correa?
-      <br>
-      Con Yes YouCan Free, ese nivel de conexión es posible.
-      <br>
-      Este programa está diseñado para quienes ya han recorrido el camino de la educación canina y quieren dar el salto hacia una relación más libre, equilibrada y fluida con su perro. 
-      Trabajamos la obediencia avanzada en libertad, con foco en la conexión real, el control emocional y la confianza mutua."
+      :type="t('pages.master.cards.1.type')"
+      :description="t('pages.master.cards.1.description')"
       imagePosition="left"
     />
 
     <div class="programs-info">
-      <h3 class="info-title">¿Qué aprenderás en este programa?</h3>
+      <h3 class="info-title">{{ t('pages.master.programsInfo.title') }}</h3>
       <div class="benefits-list">
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
-          <span
-            >A que tu perro responda a la llamada con fiabilidad, incluso con distracciones</span
-          >
+          <span>{{ t('pages.master.benefits.1') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>A pasear sin correa de forma segura y controlada</span>
+          <span>{{ t('pages.master.benefits.2') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>A reforzar el vínculo para que tu perro elija estar contigo</span>
+          <span>{{ t('pages.master.benefits.3') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>A mejorar su autocontrol</span>
+          <span>{{ t('pages.master.benefits.4') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>A disfrutar juntos de una libertad responsable y segura</span>
+          <span>{{ t('pages.master.benefits.5') }}</span>
         </div>
       </div>
     </div>
     <div class="final-message">
-      <p>
-        Yes YouCan Free, el nivel más avanzado de educación canina: logra que tu perro te obedezca y
-        disfrute contigo sin necesidad de correa, con confianza, seguridad y una conexión única.
-      </p>
+      <p>{{ t('pages.master.finalMessage') }}</p>
     </div>
 
     <!-- FAB expandible para ir a Compañero -->
     <FloatArrow
-      text="Nivel Anterior"
+      :text="t('pages.master.previous')"
       icon="keyboard_double_arrow_left"
       position="left"
       to="/mate"
@@ -86,7 +72,7 @@ import { useI18n } from 'vue-i18n';
 import CardHorizontalComponent from '../components/CardHorizontalComponent.vue';
 import FloatArrow from '../components/FloatArrow.vue';
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
 
 const explorerOgImage = '/img/home/explorador.png';

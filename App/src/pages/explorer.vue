@@ -1,78 +1,69 @@
 <template>
   <div class="explorer-page">
-    <span class="level-badge">Nivel Básico</span>
+    <span class="level-badge">{{ t('pages.explorer.levelBadge') }}</span>
     <div class="page-header">
-      <h1 class="main-title">Explorer</h1>
+      <h1 class="main-title">{{ t('pages.explorer.mainTitle') }}</h1>
     </div>
-    <h1 class="subtitle">Primer paso hacia una convivencia en armonía</h1>
-    <p class="description">
-      El nivel Explorador es el primer escalón en el camino hacia una convivencia equilibrada y
-      feliz con tu perro. En esta etapa, abordamos las necesidades básicas de educación canina,
-      tanto dentro del hogar como en los espacios públicos, a través de dos programas
-      complementarios y divertidos que fortalecen el vínculo entre humanos y perros.
-    </p>
+    <h1 class="subtitle">{{ t('pages.explorer.subtitle') }}</h1>
+    <p class="description">{{ t('pages.explorer.description') }}</p>
     <CardHorizontalComponent
-      title="Patas Afuera"
-      subTitle="¡Disfruta los paseos sin tirones ni estrés!"
+      :title="t('pages.explorer.cards.1.title')"
+      :subTitle="t('pages.explorer.cards.1.subTitle')"
       img="/images/home/explorador-N1.png"
-      type="Nivel 1"
-      description="Este programa está enfocado en el comportamiento de tu perro fuera de casa. Aprenderás, de manera práctica, cómo lograr paseos tranquilos y agradables, enseñándole a tu perro a caminar a tu lado, sentarse en diferentes situaciones y mantener la calma en entornos variados.
-Ideal para quienes quieren que su perro sea un compañero educado en la calle."
+      :type="t('pages.explorer.cards.1.type')"
+      :description="t('pages.explorer.cards.1.description')"
       imagePosition="left"
     />
     <CardHorizontalComponent
-      title="Dog & Chill"
-      subTitle="Armonía dentro del hogar, desde el cariño y la calma"
+      :title="t('pages.explorer.cards.2.title')"
+      :subTitle="t('pages.explorer.cards.2.subTitle')"
       img="/images/home/explorador-N2.png"
-      type="Nivel 2"
-      description="Diseñado para fortalecer la convivencia en casa, Dog & Chill enseña a tu perro a relajarse, respetar espacios y rutinas, y a responder de forma positiva a las reglas del hogar. Este programa promueve una relación basada en el respeto mutuo y la comunicación, ayudando a construir un ambiente tranquilo y equilibrado en el día a día."
+      :type="t('pages.explorer.cards.2.type')"
+      :description="t('pages.explorer.cards.2.description')"
       imagePosition="right"
     />
 
     <div class="programs-info">
-      <h3 class="info-title">¿Qué tienen en común todos estos programas?</h3>
+      <h3 class="info-title">{{ t('pages.explorer.programsInfo.title') }}</h3>
       <div class="benefits-list">
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
-          <span>Son el punto de partida ideal para cualquier tutor canino</span>
+          <span>{{ t('pages.explorer.benefits.1') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Refuerzan el vínculo entre tu perro y tú</span>
+          <span>{{ t('pages.explorer.benefits.2') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Utilizan técnicas prácticas y efectivas</span>
+          <span>{{ t('pages.explorer.benefits.3') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Te ayudan a mejorar la convivencia</span>
+          <span>{{ t('pages.explorer.benefits.4') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Son programas complementarios</span>
+          <span>{{ t('pages.explorer.benefits.5') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Están pensados para enseñar a ambos: humano y perro</span>
+          <span>{{ t('pages.explorer.benefits.6') }}</span>
         </div>
       </div>
     </div>
     <div class="final-message">
-      <p>
-        Ambos programas del nivel Explorador están pensados para que tú y tu perro aprendáis juntos,
-        paso a paso, creando las bases de una convivencia feliz tanto dentro como fuera de casa.
-      </p>
+      <p>{{ t('pages.explorer.finalMessage') }}</p>
     </div>
 
     <!-- FAB expandible para ir a Compañero -->
     <FloatArrow
-      text="Nivel Siguiente"
+      :text="t('pages.explorer.next')"
       icon="keyboard_double_arrow_right"
       position="right"
       to="/mate"
@@ -94,7 +85,7 @@ import { useI18n } from 'vue-i18n';
 import CardHorizontalComponent from '../components/CardHorizontalComponent.vue';
 import FloatArrow from '../components/FloatArrow.vue';
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
 
 const explorerOgImage = '/img/home/explorador.png';

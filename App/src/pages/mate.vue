@@ -1,109 +1,91 @@
 <template>
   <div class="explorer-page">
-    <span class="level-badge">Nivel Intermedio</span>
+    <span class="level-badge">{{ t('pages.mate.levelBadge') }}</span>
+
     <div class="page-header">
-      <h1 class="main-title">Compañero</h1>
+      <h1 class="main-title">{{ t('pages.mate.mainTitle') }}</h1>
     </div>
-    <h1 class="subtitle">Soluciones reales para mejorar su conducta y tu tranquilidad</h1>
-    <p class="description">
-      El Nivel Compañero está diseñado para quienes ya han dado los primeros pasos en educación
-      canina y ahora buscan resolver problemas de conducta concretos que afectan el bienestar del
-      perro y la calidad de vida en común.
-    </p>
-    <p class="description">
-      Aquí encontrarás programas personalizados que abordan situaciones reales del día a día —como
-      la ansiedad por separación, los miedos, la socialización o los viajes— con técnicas prácticas,
-      amables y efectivas. En esta etapa, abordamos las necesidades básicas de educación canina,
-      tanto dentro del hogar como en los espacios públicos, a través de dos programas
-      complementarios y divertidos que fortalecen el vínculo entre humanos y perros.
-    </p>
+    <h1 class="subtitle">{{ t('pages.mate.subtitle') }}</h1>
+    <p class="description">{{ t('pages.mate.description.1') }}</p>
+    <p class="description">{{ t('pages.mate.description.2') }}</p>
     <CardHorizontalComponent
-      title="Stay at Home"
-      subTitle="Ansiedad por separación, ¡fuera estrés!"
+      :title="t('pages.mate.cards.1.title')"
+      :subTitle="t('pages.mate.cards.1.subTitle')"
       img="/images/home/Stay-at-home.png"
-      type="Nivel 1"
-      description="Tu perro puede aprender a estar tranquilo cuando tú no estás en casa.
-Con este programa, trabajamos paso a paso para que aprenda a quedarse solo sin angustia, ladridos ni destrozos. Tú recuperas tu libertad, y él su calma."
+      :type="t('pages.mate.cards.1.type')"
+      :description="t('pages.mate.cards.1.description')"
       imagePosition="left"
     />
     <CardHorizontalComponent
-      title="¿Vamos de Bares?"
-      subTitle="El perro sociable que te acompaña a todas partes"
+      :title="t('pages.mate.cards.2.title')"
+      :subTitle="t('pages.mate.cards.2.subTitle')"
       img="/images/home/compañero-bares.png"
-      type="Nivel 2"
-      description="¿Sueñas con llevar a tu perro a una terraza o a casa de amigos sin que se altere?
-En este programa enseñamos a tu perro a relajarse en entornos sociales, rodeado de personas, ruido y otros estímulos. ¡Perfecto para perros y familias con una agenda llena de aventuras! "
+      :type="t('pages.mate.cards.2.type')"
+      :description="t('pages.mate.cards.2.description')"
       imagePosition="right"
     />
     <CardHorizontalComponent
-      title="¡Uy… qué miedo!"
-      subTitle="Ayudamos a tu perro a superar sus temores"
+      :title="t('pages.mate.cards.3.title')"
+      :subTitle="t('pages.mate.cards.3.subTitle')"
       img="/images/home/perro-miedo.png"
-      type="Nivel 3"
-      description="¿Le cuesta salir a la calle, acercarse a personas o se asusta con ruidos fuertes?
-Trabajamos con delicadeza y paciencia para que gane seguridad y confianza en sí mismo. Cada pequeño avance es un gran paso hacia una vida más feliz."
+      :type="t('pages.mate.cards.3.type')"
+      :description="t('pages.mate.cards.3.description')"
       imagePosition="left"
     />
     <CardHorizontalComponent
-      title="Dogtor"
-      subTitle="Visitas al veterinario sin dramas"
+      :title="t('pages.mate.cards.4.title')"
+      :subTitle="t('pages.mate.cards.4.subTitle')"
       img="/images/home/compañero.png"
-      type="Nivel 4"
-      description="Convertimos el miedo al veterinario en una experiencia mucho más calmada y positiva.
-Tu perro aprenderá a manejar mejor la manipulación, el entorno clínico y las rutinas médicas, lo que hace que cada visita sea menos estresante para él... y para ti."
+      :type="t('pages.mate.cards.4.type')"
+      :description="t('pages.mate.cards.4.description')"
       imagePosition="right"
     />
     <CardHorizontalComponent
-      title="¡Sube al Coche!"
-      subTitle="Viajes tranquilos, seguros y sin ansiedad"
+      :title="t('pages.mate.cards.5.title')"
+      :subTitle="t('pages.mate.cards.5.subTitle')"
       img="/images/home/compañero-coche.png"
-      type="Nivel 5"
-      description="Si tu perro odia el coche, llora o se agita al viajar, este programa es para ti.
-Te enseñamos cómo preparar al perro para que los trayectos sean agradables, seguros y sin sobresaltos, ya sea para una escapada o para ir al parque."
+      :type="t('pages.mate.cards.5.type')"
+      :description="t('pages.mate.cards.5.description')"
       imagePosition="left"
     />
 
     <div class="programs-info">
-      <h3 class="info-title">¿Qué tienen en común todos estos programas?</h3>
+      <h3 class="info-title">{{ t('pages.mate.programsInfo.title') }}</h3>
       <div class="benefits-list">
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
-          <span>Soluciones prácticas para problemas reales</span>
+          <span>{{ t('pages.mate.benefits.1') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Métodos respetuosos y basados en el bienestar del perro</span>
+          <span>{{ t('pages.mate.benefits.2') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Acompañamiento profesional adaptado a cada caso</span>
+          <span>{{ t('pages.mate.benefits.3') }}</span>
         </div>
         <div class="benefit-item">
           <q-icon class="check-icon" :name="'done_all'" />
 
-          <span>Más tranquilidad para ti, más seguridad para tu perro</span>
+          <span>{{ t('pages.mate.benefits.4') }}</span>
         </div>
       </div>
     </div>
     <div class="final-message">
-      <p>
-        Perfecto para fortalecer el vínculo con tu perro logrando un compañero confiable,
-        equilibrado y capaz de cooperar contigo en cualquier contexto de la vida diaria. Tú conoces
-        a tu perro. Nosotros te damos las herramientas para entenderlo, ayudarlo y avanzar juntos.
-      </p>
+      <p>{{ t('pages.mate.finalMessage') }}</p>
     </div>
 
     <!-- FAB expandible para ir a Compañero -->
     <FloatArrow
-      text="Nivel Anterior"
+      :text="t('pages.mate.previous')"
       icon="keyboard_double_arrow_left"
       position="left"
       to="/explorer"
     />
     <FloatArrow
-      text="Nivel Siguiente"
+      :text="t('pages.mate.next')"
       icon="keyboard_double_arrow_right"
       position="right"
       to="/master"
@@ -125,7 +107,7 @@ import { useI18n } from 'vue-i18n';
 import CardHorizontalComponent from '../components/CardHorizontalComponent.vue';
 import FloatArrow from '../components/FloatArrow.vue';
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
 
 const explorerOgImage = '/img/home/explorador.png';

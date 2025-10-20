@@ -1,12 +1,18 @@
 <template>
   <section class="contact-section">
-    <h2 class="section-title">Contáctanos</h2>
+    <h2 class="section-title">{{ t('contact.contact_us') }}</h2>
     <q-form class="contact-form">
-      <q-input rounded outlined label="Tu Nombre" class="contact-input" v-model="name" />
       <q-input
         rounded
         outlined
-        label="Tu Email"
+        :label="t('contact.your_name')"
+        class="contact-input"
+        v-model="name"
+      />
+      <q-input
+        rounded
+        outlined
+        :label="t('contact.your_email')"
         type="email"
         class="contact-input"
         v-model="email"
@@ -14,7 +20,7 @@
       <q-input
         rounded
         outlined
-        label="Tu Teléfono"
+        :label="t('contact.your_phone')"
         type="tel"
         class="contact-input"
         v-model="telefono"
@@ -22,13 +28,13 @@
       <q-input
         rounded
         outlined
-        label="Tu Mensaje"
+        :label="t('contact.your_message')"
         type="textarea"
         class="contact-input"
         v-model="message"
       />
       <div class="contact-actions">
-        <q-btn class="send-btn" :label="t('send_message')" />
+        <q-btn class="send-btn" :label="t('contact.btn_send')" />
       </div>
     </q-form>
   </section>
