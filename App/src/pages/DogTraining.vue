@@ -13,7 +13,7 @@
           </p>
           <q-btn class="hero-btn" :label="t('content.btn')" @click="$router.push('/method')" />
         </div>
-        <div class="hero-image">
+        <div class="hero-image hero-image-right">
           <img
             src="../assets/youcan caminando sin fondo.png"
             alt="Yes YouCan Logo"
@@ -326,6 +326,7 @@ const autoplay = ref(true);
   padding: 1.5rem;
   margin: 1rem 1rem 0 1rem;
   height: 32rem;
+  height: auto;
 }
 
 .hero-grid {
@@ -353,15 +354,33 @@ const autoplay = ref(true);
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .success-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
   }
-
   .hero-logo {
     max-width: 300px;
+  }
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero-image-right {
+    display: none;
+  }
+}
+@media (min-width: 900px) and (max-width: 1345px) {
+  .hero-image-right {
+    display: none;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: center;
   }
 }
 .hero-title {
@@ -402,11 +421,6 @@ const autoplay = ref(true);
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-@media (min-width: 768px) {
-  .success-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .success-card {
   background: var(--q-white);
   border-radius: 1rem;
@@ -446,11 +460,6 @@ const autoplay = ref(true);
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-}
-@media (min-width: 768px) {
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .page-container {
   padding: 0px;

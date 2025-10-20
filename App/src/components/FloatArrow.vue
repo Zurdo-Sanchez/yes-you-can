@@ -246,19 +246,55 @@ function handleClick() {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
-  .fab-right,
-  .fab-left,
-  .fab-up,
-  .fab-down,
-  .fab-right-up,
-  .fab-right-down,
-  .fab-left-up,
-  .fab-left-down {
+  /* On small screens keep left and right FABs on their respective sides
+     and avoid collapsing all positions into bottom-right which causes overlap */
+  .fab-right {
     bottom: 16px;
     right: 16px;
     top: auto;
     left: auto;
     transform: none;
+  }
+
+  .fab-left {
+    bottom: 16px;
+    left: 16px;
+    top: auto;
+    right: auto;
+    transform: none;
+  }
+
+  /* Centered positions remain centered but move slightly up to avoid bottom FABs */
+  .fab-up {
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fab-down {
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fab-right-up {
+    top: 56px;
+    right: 16px;
+  }
+
+  .fab-right-down {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .fab-left-up {
+    top: 56px;
+    left: 16px;
+  }
+
+  .fab-left-down {
+    bottom: 16px;
+    left: 16px;
   }
 
   .expandable-fab:hover {
