@@ -1,15 +1,17 @@
 <template>
   <div class="work-card" :class="`work-card--${type || 'default'}`">
     <img :src="img" :alt="title" class="work-img" />
-    <!-- Debug: mostrar la URL de la imagen -->
     <div v-if="type" class="course-badge">{{ courseTypeLabel }}</div>
     <h3 class="work-title">{{ title }}</h3>
     <h4 v-if="subTitle" class="work-subtitle">{{ subTitle }}</h4>
-    <p class="work-desc">
-      {{ description }}
-    </p>
+    <p class="work-desc" v-html="description"></p>
   </div>
 </template>
+<script lang="ts">
+export default {
+  name: 'CardHorizontalComponent',
+};
+</script>
 <script setup lang="ts">
 import { computed } from 'vue';
 

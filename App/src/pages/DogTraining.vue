@@ -7,14 +7,13 @@
           <img src="../assets/logoSinFondo.png" alt="Yes YouCan Logo" class="hero-logo" />
         </div>
         <div class="hero-content">
-          <h1 class="hero-title">¿Listo para entender a tu perro?</h1>
+          <h1 class="hero-title">{{ t('hero.title') }}</h1>
           <p class="hero-desc">
-            Yes YouCan, un método simple que te conecta con tu perro y convierte la obediencia en
-            amistad
+            {{ t('hero.matDescription') }}
           </p>
           <q-btn class="hero-btn" :label="t('content.btn')" @click="$router.push('/method')" />
         </div>
-        <div class="hero-image">
+        <div class="hero-image hero-image-right">
           <img
             src="../assets/youcan caminando sin fondo.png"
             alt="Yes YouCan Logo"
@@ -28,26 +27,28 @@
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
-          title="Explorador"
-          subTitle="Seguridad y confianza"
-          :img="'/img/home/explorador.png'"
+          :title="t('programs.1.title')"
+          :subTitle="t('programs.1.subtitle')"
           type="explorer"
-          description="El inicio de la aventura. Tu perro empieza a descubrir el mundo contigo. En este nivel se trabajan las bases: obediencia básica, normas de convivencia y primeras órdenes esenciales (sentarse, caminar con correa sin tirar). Ideal para cachorros o perros que nunca han tenido entrenamiento formal. Beneficio clave: construir confianza y comunicación desde cero."
+          img="/images/home/explorador.png"
+          :description="t('programs.1.description')"
           @click="$router.push('/explorer')"
         />
         <CardComponent
-          title="Compañero"
-          subTitle="Cooperación y convivencia."
-          :img="'/img/home/compañero.png'"
+          :title="t('programs.2.title')"
+          :subTitle="t('programs.2.subtitle')"
+          img="/images/home/compañero.png"
           type="companion"
-          description="El vínculo que se fortalece. Tu perro ya no solo obedece, ahora entiende y coopera contigo. En este nivel se desarrollan habilidades intermedias como control en ambientes con distracciones, ejercicios de autocontrol, socialización avanzada y obediencia en distintos contextos. Beneficio clave: tener un perro confiable en la vida diaria, que comparte y respeta tu ritmo."
+          :description="t('programs.2.description')"
+          @click="$router.push('/mate')"
         />
         <CardComponent
-          title="Maestro"
-          subTitle="Excelencia y libertad con control."
-          :img="'/img/home/maestro.png'"
+          :title="t('programs.3.title')"
+          :subTitle="t('programs.3.subtitle')"
+          img="/images/home/maestro.png"
           type="master"
-          description="De compañero fiel a compañero excepcional. Aquí tu perro alcanza su máximo potencial. Se entrenan habilidades avanzadas: obediencia sin correa, comandos complejos, trucos especiales, respuesta en situaciones difíciles y refuerzo del vínculo para una conexión total. Beneficio clave: vivir con un compañero canino equilibrado, obediente y listo para cualquier reto."
+          :description="t('programs.3.description')"
+          @click="$router.push('/master')"
         />
       </div>
     </section>
@@ -117,33 +118,56 @@
     <section id="faq" class="faq-section">
       <h2 class="section-title">{{ t('header.faq') }}</h2>
       <div class="faq-list">
-        <q-expansion-item label="¿Qué tipo de métodos de educación utilizan?">
-          <div>
-            La educación canina ha pasado del castigo físico al uso exclusivo de premios, dos
-            extremos que no siempre funcionan. En Yes YouCan apostamos por un método equilibrado:
-            refuerzos variados (voz, caricias, libertad), coherencia en la comunicación, constancia
-            y un vínculo emocional sólido. Más que educar, se trata de convivir: enseñar con
-            respeto, límites claros y afecto para lograr perros estables, confiados y felices.
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          :label="t('faq.1.question')"
+        >
+          <div class="faq-content">
+            {{ t('faq.1.answer') }}
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Cuánto dura cada sesión de educación?">
-          <div>
-            Nuestras sesiones de educación dura 60 minutos. Esto nos permite mantener al perro
-            concentrado y comprometido sin agotarlo.
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          :label="t('faq.2.question')"
+        >
+          <div class="faq-content">
+            {{ t('faq.2.answer') }}
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Ofrecen adiestramiento en grupo o individual?">
-          <div>
-            El entrenamiento comienza de forma individual, adaptado al nivel y a las necesidades
-            específicas de tu perro. Según su progreso y el tipo de comportamiento que trabajemos,
-            se podrá dar el paso a sesiones grupales, siempre priorizando el bienestar y la
-            efectividad del aprendizaje.
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          :label="t('faq.3.question')"
+        >
+          <div class="faq-content">
+            {{ t('faq.3.answer') }}
           </div>
         </q-expansion-item>
-        <q-expansion-item label="¿Qué debo llevar a la sesión de adiestramiento?">
-          <div>
-            No necesitas ningún material específico para comenzar, solo predisposición, constancia y
-            ganas de disfrutar el proceso junto a tu perro.
+        <q-expansion-item
+          q-expansion-item
+          class="shadow-1 overflow-hidden"
+          style="border-radius: 30px; margin-bottom: 1rem"
+          icon="help_outline"
+          header-class="bg-primary text-white"
+          expand-icon-class="text-white"
+          :label="t('faq.4.question')"
+        >
+          <div class="faq-content">
+            {{ t('faq.4.answer') }}
           </div>
         </q-expansion-item>
       </div>
@@ -257,13 +281,16 @@ const autoplay = ref(true);
 .section-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--q-primary);
+  color: var(--q-text);
 }
 .centered-secondary {
   display: block;
   text-align: center;
   color: var(--q-secondary);
   width: 100%;
+}
+.q-carousel {
+  box-shadow: 0 2px 8px var(--q-primary);
 }
 .nav {
   display: flex;
@@ -299,6 +326,7 @@ const autoplay = ref(true);
   padding: 1.5rem;
   margin: 1rem 1rem 0 1rem;
   height: 32rem;
+  height: auto;
 }
 
 .hero-grid {
@@ -325,18 +353,6 @@ const autoplay = ref(true);
 .hero-logo {
   height: auto;
 }
-
-@media (max-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .hero-logo {
-    max-width: 300px;
-  }
-}
 .hero-title {
   font-size: 2.5rem;
   font-weight: 900;
@@ -346,6 +362,7 @@ const autoplay = ref(true);
 .hero-desc {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .hero-btn {
   font-weight: bold;
@@ -373,11 +390,6 @@ const autoplay = ref(true);
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-}
-@media (min-width: 768px) {
-  .success-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .success-card {
   background: var(--q-white);
@@ -416,15 +428,45 @@ const autoplay = ref(true);
 }
 .work-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-}
-@media (min-width: 768px) {
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .page-container {
   padding: 0px;
+}
+.faq-content {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: justify;
+}
+@media (max-width: 900px) {
+  .success-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .hero-logo {
+    max-width: 300px;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-image-right {
+    display: none;
+  }
+}
+@media (min-width: 900px) and (max-width: 1345px) {
+  .hero-image-right {
+    display: none;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
 }
 </style>
