@@ -46,7 +46,6 @@
           </div>
         </div>
         <div style="display: flex; justify-content: center; align-items: center">
-          ">
           <img
             class="profile-img"
             style="margin: 8px"
