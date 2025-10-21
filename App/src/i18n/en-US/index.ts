@@ -46,7 +46,7 @@ export default {
     },
   },
   content: {
-    btn: 'Start',
+    btn: 'Our working method',
   },
   contact: {
     email: 'contact@yesyoucan.cat',
