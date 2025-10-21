@@ -61,11 +61,11 @@ export default {
   profile: {
     name: 'Xavi Burgos',
     paraf: {
-      1: 'My name is Xavi Burgos and my story with dogs began when I was 18. At home arrived a “little furry bug” named Bruna, a German shepherd full of energy, nobility, and character.',
-      2: 'Bruna taught me many things: the joy of sharing life with a dog, the first games... But also the difficulties that arise when proper education is lacking, pulling on walks, nervousness with visitors, disobedience... situations that gradually became part of our daily life.',
-      3: 'One day, an unexpected accident marked a before and after: Bruna was run over and, in her fear, she ran away. Those were very tough moments, but we finally got her back.',
-      4: 'That experience opened our eyes: we needed help. And that’s how I met Ken Sewell, a dog trainer with more than 30 years of experience, who guided us on the path to understanding Bruna and learning to live in balance with her. With Ken, we not only solved our problems, but I discovered a true vocation.',
-      5: 'Later I decided to train directly with him, and in 2011 I took the step to dedicate myself professionally to home dog training. Since then, I have accompanied many families and dogs in their own learning processes, with the goal of building a calmer, happier, and more harmonious coexistence.',
+      1: 'My name is Xavi Burgos and my story with dogs began when I was 18. At home arrived a "little furry bug" named Bruna, a German shepherd full of energy, nobility, and character.',
+      2: 'Bruna taught me many things: the joy of sharing life with a dog, the first games... but also the difficulties that arise when proper education is lacking: pulling on walks, nervousness with visitors, disobedience... situations that gradually became part of our daily life.',
+      3: 'One day, an unexpected accident marked a before and after: Bruna was hit by a car and, in her fear, she ran away. Those were very tough moments, but in the end we managed to get her back.',
+      4: 'That experience opened our eyes: we needed help. That is how I met Ken Sewell, a dog trainer with more than 30 years of experience, who guided us on the path to understanding Bruna and learning to live in balance with her. With Ken, we not only solved our problems, but I discovered a true vocation.',
+      5: 'Later I decided to train directly with him, and in 2011 I took the step to dedicate myself professionally to in-home dog training. Since then, I have accompanied many families and dogs in their own learning processes, with the goal of building a calmer, happier, and more harmonious coexistence.',
       6: 'Today I look back with gratitude: to Bruna, who was my best teacher, and to Ken, who showed me a way of life.',
       7: 'Thanks to them, I can dedicate myself to what truly excites me: helping people and dogs live better together.',
     },
@@ -74,6 +74,70 @@ export default {
       description: 'Dog Trainer',
     },
     ubicacion: { title: 'Location', description: 'Celrà' },
+  },
+  method: {
+    block1: {
+      paraf1: {
+        title: 'Dog training: from the stick to the treat',
+        paraf:
+          'Not so long ago, dog training resembled a military drill more than a shared coexistence between species.' +
+          '<br /> Dogs learned through harsh, blunt commands and, in many cases, physical punishment. The logic was simple (and wrong): if you obey, all is well; if not, the hard hand will make you learn. <br />Forty years later, the pendulum has swung to the opposite extreme. Today we find an approach almost completely based on food rewards. Pieces of frankfurter, chicken or biscuits become the main tool to teach a dog to sit, lie down or come when called. Both methods represent extremes. And as often happens in life, extremes are rarely the best answer.',
+      },
+      paraf2: {
+        title: 'The problem of punishment',
+        paraf:
+          'There is no need to insist: violence has no place in dog training. It generates fear, stress and distrust in the dog. In the long term it can even lead to aggressive or avoidant behaviors. Moreover, it breaks the bond that should unite us with our four-legged friend. Education should be based on trust, respect and consistency. Physical or emotional punishment never builds any of that.',
+      },
+      paraf3: {
+        title: 'The limits of rewards',
+        paraf:
+          'Does positive reinforcement with food work? Yes, in many cases. A food-motivated dog can learn quickly and enjoyably. But what if your dog is not one of those that would sell its soul for a sausage? What happens when there are distractions more attractive than a piece of frankfurter? This is where the "only food" method begins to fall short. Turning training into a perpetual exchange of "do this and I give you that" can end up being more of a bribe than true education.',
+      },
+      paraf4: {
+        title: 'The path of balance',
+        paraf:
+          'At Yes YouCan, we are convinced the key lies in the middle ground. Our experience, together with Ken Sewell’s more than 40 years of work, has taught us that neither harshness nor blind faith in food rewards solves the challenge of educating a dog by itself.<br />' +
+          ' What we propose is a balanced system that combines:<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Varied positive reinforcements: not everything is food; voice, play, petting or freedom are also rewards.<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Coherent communication: the dog needs to understand what we expect from them and that we are consistent in our body language, tone and rules.<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Consistency: educating with persistence is sowing today the behavior we will enjoy tomorrow and always.<br />' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Emotional bond: the dog learns better when they feel their guide is someone they can trust, not just a deliverer of treats.',
+      },
+      paraf5: {
+        title: 'More than training, coexistence',
+        paraf:
+          'In the end, educating a dog should not be seen as "taming" or simply "training", but as learning to live together. It means teaching them to interpret our human world as kindly as possible while respecting their canine nature. That balance—between clear boundaries and positive reinforcement—is what allows building a stable, confident and happy dog... and a relationship of complicity that lasts a lifetime. At Yes YouCan, we believe teaching a dog is also about teaching ourselves: learning to communicate, being patient and leading with kindness and coherence. Neither the stick nor only treats. The true path lies in balance.',
+      },
+    },
+    block2: {
+      paraf1: {
+        title: 'Where is the best place to train your dog?',
+        paraf:
+          'When we think about training our dog, the first thing that usually comes to mind is a training center, with mats, tracks and a professional giving orders.' +
+          ' But the reality is that the best place to teach your dog is not a facility... it is your home and your neighborhood.' +
+          ' Why? Very simple: in-home training allows the dog and the human to learn together in the real context of everyday life.' +
+          ' You do not need to be separated from your pet or trust that someone else will "fix" it for you. In the end, who needs the dog to obey? Not the professional, but you and your family.',
+      },
+      paraf2: {
+        title: 'The problem with training in a facility',
+        paraf:
+          'When a dog is trained in a center, it does so under a very specific environment: the trainer is present, there is a dedicated workspace and set routines. In that context, it is normal for the dog to behave exemplary. The problem arises when it returns home. Suddenly, the factors that accompanied the learning disappear: the professional is not there, the environment is different and you do not always apply exactly the same guidelines. The result? It is very likely your dog will revert to old habits, because in its everyday world it does not recognize the same situation.',
+      },
+      paraf3: {
+        title: 'Education starts at home',
+        paraf:
+          'If you want your dog not to get on the bed, not to take your child’s toys or not to enter your kitchen, where do you think you should teach those rules? Exactly: at home, in the places where those behaviors occur. The same applies to walks. If you want them to walk calmly on a leash, it is not enough for them to be perfect in a training yard. You need to work with them in your neighborhood, with the noises, smells and real distractions of everyday life.',
+      },
+      paraf4: {
+        title: 'Learning together strengthens the bond',
+        paraf:
+          'In-home education has another great advantage: not only does the dog learn, you do too. You discover how to communicate better with your companion, understand their signals and apply consistent routines in your own environment. That shared process strengthens the bond. Your dog does not obey because a stranger orders them to, but because they trust you, understand the rules come from their family and have practiced with you where they live.',
+      },
+      paraf5: {
+        paraf:
+          'In short: the best place to train your dog is where real situations happen: your home, your neighborhood, your daily life. That is where learning makes sense and becomes coexistence. <br />Think about it: would you rather have a dog that obeys only on a training track or one that understands you and accompanies you in your everyday life? The answer, as always, is at home.',
+      },
+    },
   },
   faq: {
     1: {
@@ -235,10 +299,10 @@ export default {
       title: 'Personalized Dog Training in Catalonia | Yes YouCan',
       description:
         'Discover behaviour modification, obedience and puppy development programs guided by a certified dog trainer.',
-      ogTitle: 'Yes YouCan · Dog Training Experts',
+      ogTitle: 'YesYouCan · Dog Training Experts',
       ogDescription:
         'We help families improve life with their dogs through tailored coaching and proven success stories.',
-      ogImageAlt: 'Dog training with its handler during a Yes YouCan session.',
+      ogImageAlt: 'Dog training with its handler during a YesYouCan session.',
     },
     whoAmI: {
       title: 'Meet Xavi Burgos | Yes YouCan Dog Trainer',
@@ -253,7 +317,7 @@ export default {
       title: 'Page not found | Yes YouCan',
       description:
         'The page you are looking for does not exist or has moved. Return to the home page to keep exploring Yes YouCan.',
-      ogTitle: 'Yes YouCan · Page not found',
+      ogTitle: 'YesYouCan · Page not found',
       ogDescription: 'Use our menu to return to dog training services and available resources.',
       ogImageAlt: 'Dog trying to find its way back home.',
     },
