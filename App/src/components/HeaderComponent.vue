@@ -389,7 +389,6 @@ function scrollTo(id: string) {
 .nav-link {
   color: var(--q-nameSecondary);
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 4px;

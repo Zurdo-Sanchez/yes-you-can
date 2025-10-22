@@ -1,7 +1,7 @@
 <template>
   <section class="contact-section">
     <h2 class="section-title">{{ t('contact.contact_us') }}</h2>
-    <q-form class="contact-form">
+    <q-form class="contact-form" @submit.prevent="sendNotification">
       <q-input
         rounded
         outlined
@@ -16,7 +16,11 @@
         type="email"
         class="contact-input"
         v-model="email"
+        @blur="touchedEmail = true"
       />
+      <div v-if="touchedEmail && !isEmailValid(email)" class="field-error">
+        {{ t('contact.invalid_email') || 'Email no válido' }}
+      </div>
       <q-input
         rounded
         outlined
@@ -24,7 +28,14 @@
         type="tel"
         class="contact-input"
         v-model="telefono"
+        @input="onPhoneInput"
+        @blur="touchedPhone = true"
+        inputmode="numeric"
+        pattern="[0-9]*"
       />
+      <div v-if="touchedPhone && !isPhoneValid(telefono)" class="field-error">
+        {{ t('contact.invalid_phone') || 'Teléfono no válido' }}
+      </div>
       <q-input
         rounded
         outlined
@@ -34,7 +45,15 @@
         v-model="message"
       />
       <div class="contact-actions">
-        <q-btn class="send-btn" :label="t('contact.btn_send')" />
+        <q-btn
+          class="send-btn"
+          :label="loading ? 'Enviando...' : t('contact.btn_send')"
+          :loading="loading"
+          :disable="!isValid || loading"
+          type="submit"
+        >
+          <q-tooltip v-if="!isValid && !loading">{{ tooltipText }}</q-tooltip>
+        </q-btn>
       </div>
     </q-form>
   </section>
@@ -46,9 +65,10 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useConfigStore } from '../stores/settingsStore';
+import { Notify } from 'quasar';
 
 const store = useConfigStore();
 const { t, locale } = useI18n();
@@ -65,6 +85,74 @@ const name = ref('');
 const email = ref('');
 const telefono = ref('');
 const message = ref('');
+const loading = ref(false);
+
+const isEmailValid = (value: string) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/i.test(value);
+const isPhoneValid = (value: string) => /^\d+$/.test(String(value || '').trim());
+
+const isValid = computed(() => {
+  return (
+    name.value.trim() !== '' &&
+    email.value.trim() !== '' &&
+    telefono.value.trim() !== '' &&
+    message.value.trim() !== '' &&
+    isEmailValid(email.value)
+  );
+});
+
+const touchedEmail = ref(false);
+const touchedPhone = ref(false);
+
+const tooltipText = computed(() => {
+  if (loading.value) return '';
+  const missing: string[] = [];
+  if (!name.value.trim()) missing.push('Nombre');
+  if (!email.value.trim()) missing.push('Email');
+  else if (!isEmailValid(email.value)) missing.push('Email inválido');
+  if (!telefono.value.trim()) missing.push('Teléfono');
+  else if (!isPhoneValid(telefono.value)) missing.push('Teléfono inválido');
+  if (!message.value.trim()) missing.push('Mensaje');
+  if (missing.length === 0) return '';
+  return `Faltan: ${missing.join(', ')}`;
+});
+
+function onPhoneInput(val: string) {
+  // keep only digits
+  telefono.value = String(val || '').replace(/\D+/g, '');
+}
+
+const sendNotification = async () => {
+  if (!isValid.value)
+    return Notify.create({ type: 'negative', message: 'Rellena todos los campos correctamente' });
+
+  loading.value = true;
+  try {
+    const res = await fetch('http://localhost:7000/mail/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        telefono: telefono.value,
+        message: message.value,
+      }),
+    });
+
+    if (!res.ok) throw new Error('Error en el envío');
+    Notify.create({ type: 'positive', message: 'Correo enviado correctamente' });
+    name.value = '';
+    email.value = '';
+    telefono.value = '';
+    message.value = '';
+  } catch (err) {
+    console.error('Error sending notification:', err);
+    Notify.create({ type: 'negative', message: 'Error al enviar el correo' });
+  } finally {
+    loading.value = false;
+  }
+};
 </script>
 <style scoped>
 .contact-section {

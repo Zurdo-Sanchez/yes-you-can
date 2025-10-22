@@ -71,6 +71,8 @@ export default {
     your_phone: 'Tu teléfono',
     your_message: 'Tu mensaje',
     btn_send: 'Enviar Mensaje',
+    invalid_email: 'Correo electrónico no válido',
+    invalid_phone: 'Teléfono no válido',
   },
   method: {
     block1: {
