@@ -54,6 +54,8 @@ export default {
     your_phone: 'El teu telèfon',
     your_message: 'El teu missatge',
     btn_send: 'Enviar Missatge',
+    invalid_email: 'Correu electrònic no vàlid',
+    invalid_phone: 'Telèfon no vàlid',
   },
   profile: {
     name: 'Xavi Burgos',

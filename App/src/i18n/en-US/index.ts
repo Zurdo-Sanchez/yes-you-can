@@ -57,6 +57,8 @@ export default {
     your_phone: 'Your Phone',
     your_message: 'Your Message',
     btn_send: 'Send Message',
+    invalid_email: 'Invalid email address',
+    invalid_phone: 'Invalid phone number',
   },
   profile: {
     name: 'Xavi Burgos',
