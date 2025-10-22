@@ -77,30 +77,53 @@
               <q-toggle dense dark color="primary" v-model="autoplay" label="Auto Play" />
             </q-carousel-control>
           </template>
-          <q-carousel-slide
-            name="max"
-            img-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoaF0evBqNMTsHpbDkxa3lKfRTfODf2ngy53OWOWjU42Ycibo6sLU88Um6oxvqFZDFaaJPnZFoXtmWM4UCSptdE5HBqyWPR87EJpYpAa0D_oOczsTTXHSeXGU5QY89PkgNWw1Y_1BoK6arKsXfEgrPtwksPMkRiuo-anr7tVeMapWR3Rw5gQQiakWlUyUiFGWtluimCoO2lFl1GDaFaxBkL6F9LMUgOToaSwJvmqq5tDg-r_tL9DvUao8MQXBcSjVtqgI-VmrtmXE"
-          >
+          <q-carousel-slide name="maui" img-src="../assets/Maui-Juan-Xavi.jpeg">
             <div class="q-mt-md">
-              <h3 class="success-title">La Transformación de Max</h3>
+              <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
               <p class="success-desc">
-                De agresivo a gentil: la historia de Max superando los desafíos de comportamiento.
+                Maui es un bóxer de 7 años lleno de energía y entusiasmo. Desde cachorro, cada
+                salida era una batalla: tirones de correa, ladridos a otros perros, energía
+                desbordada… tanto, que sus dueños, Juan y Georgina, terminaron limitándose a sacarlo
+                solo de madrugada o muy tarde por la noche para evitar problemas. Pero todo eso
+                cambió en solo 45 minutos. El primer día del programa básico Nivel Explorador-¡Patas
+                Afuera! Maui sorprendió a todos caminando tranquilo al lado de Juan, sin tirar, sin
+                estrés, disfrutando del paseo como nunca antes. Hoy, Juan y Georgina ya no piensan
+                en la hora ni en los obstáculos. Pasear con Maui se ha convertido en un momento de
+                libertad y felicidad compartida. -- Lo inspirador de esta historia no es solo el
+                cambio de Maui, sino el recordatorio de que con la educación adecuada, cualquier
+                perro —sin importar la edad o las costumbres— puede aprender a disfrutar de la vida
+                en equilibrio junto a su familia. --Si Maui pudo hacerlo, tu perro también puede.
               </p>
             </div>
           </q-carousel-slide>
-          <q-carousel-slide
-            name="bella"
-            img-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpieVmGsrCDkLZKt8z8M1pdNyL5qFk8YHkIncGz5Y4Z_FPWpEXMrC5SV2_BalpsefR1q5iuqg6PCGTfPivdkU2IS3K_MyUs60UrjmXfcHsbCiJn8TGx6CL0SE248-tLMETfJYCxNAnnATDNlyDQ-OfjFrW8ZKz1PHw2kDuiXwXRxR7T-rsKB7_iCRM-631s5eCqIbqo-UiEQvu5zcJkKneneDYkIJtdFkjf0RNJy0vhG3-yrVnRJqzW6jGapbaSM8m_lWX-cIpsaQ"
-          >
+          <q-carousel-slide name="luna-y-kumo" img-src="../assets/Luna y Kumo.png">
             <div class="q-mt-md">
-              <h3 class="success-title">El Viaje de Bella</h3>
+              <h3 class="success-title">Luna y Kumo: de tensiones en casa a paz compartida</h3>
               <p class="success-desc">
-                El viaje de Bella para convertirse en una compañera bien educada a través del
-                entrenamiento de obediencia.
+                Luna, una mestiza de 4 años, siempre fue la reina de la casa: cariñosa, juguetona y
+                dueña de cada rincón. Kumo, un husky de 2 años, llegó con energía y curiosidad, pero
+                pronto las cosas se tensaron: gruñidos cuando se acercaban al plato, persecuciones
+                por el pasillo, y peleas por el sofá que convertían el hogar en un campo de batalla
+                emocional. Sus dueños, Marta y David, vivían con la frustración de no poder
+                disfrutar de su propia casa. Separaban áreas, recogían juguetes, y evitaban traer
+                visitas por miedo a que los perros discutieran. Lo que debía ser confort y compañía
+                se había vuelto fuente de estrés. Decidieron probar el programa basico de educación
+                nivel explorador “Dog and Chill”. En la primera sesión, con ejercicios guiados y
+                técnicas de gestión de recursos, Luna y Kumo aprendieron límites claros, señales de
+                calma y turnos para el espacio y la comida. Lo que empezó como desconfianza se
+                transformó rápidamente en respeto. En dos semanas, los cambios eran palpables: ya no
+                había carreras ni gruñidos cuando compartían el salón. Luna dejó de tensarse al
+                entrar Kumo a la cocina; Kumo aprendió a esperar su turno y a responder a las
+                indicaciones de Marta y David. Hoy son inseparables, se buscan para jugar y la casa
+                volvió a ser un lugar de calma y risas. “Recuperamos nuestro hogar —nos dicen Marta
+                y David—. Verlos relajados nos devolvió la tranquilidad que habíamos perdido.” Esta
+                historia demuestra que la convivencia armoniosa se puede enseñar. No importa la
+                edad, la raza o el historial: con las herramientas correctas y constancia, los
+                perros aprenden a vivir en paz y a hacer del hogar un refugio para toda la familia.
               </p>
             </div>
           </q-carousel-slide>
-          <q-carousel-slide
+          <!-- <q-carousel-slide
             name="rocky"
             img-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXVYqtCoi3EFxg6OZF9zQE58u5N6HsgTI8-XHlIds71B_nPJzG5XBYFBtht7Z5MPOdtnxqzdngwOp1irzaaB3PzsSs5sSoD2izNKs79Lek0UJnKDZ6WojGy7rErjyQd_9pdScvmCVY1QDh3Xd15-JG5t40-dq40iIC7i98abxtD4H9BxE1HqOkZfpfQE6pLzW2zJ3xT1BiOe9ZsrBRuMcpsC3JNjCTkLjNj-JC_7fzDlufX55Hwp6LzcXEjGXzM8dWl8irWx2a94"
           >
@@ -110,7 +133,7 @@
                 El exitoso desarrollo de Rocky de un cachorro juguetón a un adulto disciplinado.
               </p>
             </div>
-          </q-carousel-slide>
+          </q-carousel-slide> -->
         </q-carousel>
       </div>
     </section>
