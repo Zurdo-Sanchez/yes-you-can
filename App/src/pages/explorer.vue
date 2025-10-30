@@ -201,8 +201,10 @@ watch([locale, () => route.fullPath], () => {
 .subtitle {
   font-size: 1.5rem;
   color: var(--q-primary);
-  margin: 0;
+  margin-bottom: 2rem;
   font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .description {
