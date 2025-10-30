@@ -24,7 +24,11 @@
     </header>
     <!-- Nuestro Trabajo -->
     <section id="work" class="work-section">
-      <q-btn class="hero-btn" :label="t('header.who_am_i')" @click="$router.push('/whoami')" />
+      <q-btn
+        class="hero-btn btn-who_am_i"
+        :label="t('header.who_am_i')"
+        @click="$router.push('/whoami')"
+      />
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
@@ -395,6 +399,9 @@ const autoplay = ref(true);
   background: var(--q-backgroundHeader);
   color: var(--q-white);
 }
+.btn-who_am_i {
+  display: none;
+}
 .work-section {
   padding: 3rem 0 2rem 0;
   display: grid;
@@ -482,6 +489,11 @@ const autoplay = ref(true);
   }
   .hero-image-right {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .btn-who_am_i {
+    display: flex;
   }
 }
 @media (min-width: 900px) and (max-width: 1345px) {
