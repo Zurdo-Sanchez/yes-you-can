@@ -54,11 +54,13 @@ export default {
     your_phone: 'El teu telèfon',
     your_message: 'El teu missatge',
     btn_send: 'Enviar Missatge',
+    invalid_email: 'Correu electrònic no vàlid',
+    invalid_phone: 'Telèfon no vàlid',
   },
   profile: {
     name: 'Xavi Burgos',
     paraf: {
-      1: 'Em dic Xavi Burgos i la meva història amb els gossos va començar quan tenia 18 anys. A casa va arribar un “bitxet pelut” anomenat Bruna, una pastora alemanya plena d’energia, noblesa i caràcter.',
+      1: 'La meva història amb els gossos va començar quan tenia 18 anys. A casa va arribar un “bitxet pelut” anomenat Bruna, una pastora alemanya plena d’energia, noblesa i caràcter.',
       2: 'La Bruna em va ensenyar moltes coses: l’alegria de compartir la vida amb un gos, els primers jocs... Però també les dificultats que sorgeixen quan falta l’educació adequada, estrebades en els passejos, nervis amb les visites, desobediència… situacions que a poc a poc es van fer part del nostre dia a dia.',
       3: 'Un dia, un accident inesperat va marcar un abans i un després: la Bruna va ser atropellada i, en la seva por, va escapar. Van ser moments molt durs, però finalment la vam recuperar.',
       4: 'Aquella experiència ens va obrir els ulls: necessitàvem ajuda. I va ser així com vaig conèixer en Ken Sewell, un educador caní amb més de 30 anys d’experiència, que ens va guiar en el camí d’entendre la Bruna i aprendre a viure en equilibri amb ella. Amb en Ken no només vam resoldre els nostres problemes, sinó que vaig descobrir una autèntica vocació.',
@@ -77,7 +79,7 @@ export default {
       paraf1: {
         title: 'Educació canina: del pal al premi',
         paraf:
-          'No fa tant de temps, l’educació canina s’assemblava més a un entrenament militar que a una convivència entre espècies.<br /> El gos aprenia a base d’ordres taxatives i, en molts casos, de càstigs físics. La lògica era simple (i equivocada): si obeixes, tot bé; si no, la mà dura t’obligava a aprendre. <br /> Quaranta anys després, el pòndol s’ha mogut cap a l’altre extrem. Avui trobem un enfocament gairebé oposat: l’adiestrament basat en premis de menjar. Trossos de frankfurt, pollastre o galetes es converteixen en l’eina principal per ensenyar a un gos a seure, tombar-se o acudir a la crida. Ambdós mètodes representen extrems. I, com passa sovint a la vida, els extrems rarament són la millor resposta.',
+          'No fa tant de temps, l’educació canina s’assemblava més a un entrenament militar que a una convivència entre espècies.<br /> El gos aprenia a base d’ordres taxatives i, en molts casos, de càstigs físics. La lògica era simple (i equivocada): si obeeixes, tot bé; si no, la mà dura t’obligava a aprendre. <br /> Quaranta anys després, el pòndol s’ha mogut cap a l’altre extrem. Avui trobem un enfocament gairebé oposat: l’ensinistrament basat en premis de menjar. Trossos de frankfurt, pollastre o galetes es converteixen en l’eina principal per ensenyar a un gos a seure, tombar-se o acudir a la crida. Ambdós mètodes representen extrems. I, com passa sovint a la vida, els extrems rarament són la millor resposta.',
       },
       paraf2: {
         title: 'El problema del càstig',
@@ -100,21 +102,21 @@ export default {
           '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Vincle emocional: el gos aprèn millor quan sent que la seva guia és algú en qui confiar, no només un repartidor de salsitxes.',
       },
       paraf5: {
-        title: 'Més que adiestrament, convivència',
+        title: 'Més que ensinistrament, convivència',
         paraf:
-          'Al cap i a la fi, educar un gos no hauria de ser vist com “domar” o “adiestrar”, sinó com aprendre a conviure. Significa ensenyar-li a interpretar el nostre món humà de la manera més amable possible, i al mateix temps respectar la seva naturalesa canina. Aquest equilibri, entre límits clars i reforços positius, és el que permet construir un gos estable, segur i feliç... i una relació de complicitat que dura tota la vida. A Yes YouCan, creiem que educar un gos és també educar-nos a nosaltres mateixos: aprendre a comunicar-nos, a ser pacient i a liderar amb afecte i coherència. Ni pal, ni només premi. El veritable camí està en l’equilibri.',
+          'Al cap i a la fi, educar un gos no hauria de ser vist com “domar” o “ensinistrar”, sinó com aprendre a conviure. Significa ensenyar-li a interpretar el nostre món humà de la manera més amable possible, i al mateix temps respectar la seva naturalesa canina. Aquest equilibri, entre límits clars i reforços positius, és el que permet construir un gos estable, segur i feliç... i una relació de complicitat que dura tota la vida. A Yes YouCan, creiem que educar un gos és també educar-nos a nosaltres mateixos: aprendre a comunicar-nos, a ser pacient i a liderar amb afecte i coherència. Ni pal, ni només premi. El veritable camí està en l’equilibri.',
       },
     },
     block2: {
       paraf1: {
         title: 'On és el millor lloc per educar el teu gos?',
         paraf:
-          'Quan pensem a educar el nostre gos, el primer que sol venir-nos al cap és un centre d’adiestrament, amb estores, pistes i un professional donant ordres. Però la realitat és que el millor lloc per ensenyar-li al teu gos no és un local... sinó la teva casa i el teu barri. Per què? Molt senzill: l’educació a domicili permet que gos i humà aprenguin junts, en el context real de la convivència. No cal separar-te de la teva mascota ni confiar que una altra persona “ho arregli” per tu. Al final, qui necessita que el gos faci cas? No el professional, sinó tu i la teva família.',
+          'Quan pensem a educar el nostre gos, el primer que acostuma a venir-nos al cap és un centre d’ensinistrament, amb estores, pistes i un professional donant ordres. Però la realitat és que el millor lloc per ensenyar-li al teu gos no és un local... sinó la teva casa i el teu barri. Per què? Molt senzill: l’educació a domicili permet que gos i humà aprenguin junts, en el context real de la convivència. No cal separar-te de la teva mascota ni confiar que una altra persona “ho arregli” per tu. Al final, qui necessita que el gos faci cas? No el professional, sinó tu i la teva família.',
       },
       paraf2: {
         title: 'El problema d’educar en un local',
         paraf:
-          'Quan un gos s’entrena en un centre, ho fa en un entorn molt concret: hi són presents l’adiestrador, l’espai de treball i unes rutines específiques. En aquest context, és normal que el gos es comporti de manera exemplar. El problema apareix quan torna a casa. De sobte, els factors que van acompanyar l’aprenentatge desapareixen: el professional ja no hi és, l’entorn és diferent i tu no sempre apliques exactament les mateixes pautes. El resultat? És molt probable que el teu gos torni a les “andades”, perquè en el seu món quotidià no reconeix la mateixa situació.',
+          'Quan un gos s’entrena en un centre, ho fa en un entorn molt concret: hi són presents l’ensinistrador, l’espai de treball i unes rutines específiques. En aquest context, és normal que el gos es comporti de manera exemplar. El problema apareix quan torna a casa. De sobte, els factors que van acompanyar l’aprenentatge desapareixen: el professional ja no hi és, l’entorn és diferent i tu no sempre apliques exactament les mateixes pautes. El resultat? És molt probable que el teu gos torni a les “andades”, perquè en el seu món quotidià no reconeix la mateixa situació.',
       },
       paraf3: {
         title: 'L’educació comença a casa',
@@ -124,7 +126,7 @@ export default {
       paraf4: {
         title: 'Aprendre junts enforteix el vincle',
         paraf:
-          'L’educació a domicili té un altre gran avantatge: no només aprèn el gos, també aprens tu. Descobreixes com comunicar-te millor amb el teu company, entens les seves senyals i apliques rutines coherents en el vostre propi entorn. Aquest procés compartit enforteix el vincle. El teu gos no obeix perquè un desconegut se li ha ordenat, sinó perquè confia en tu, perquè entén que les normes venen de la seva família i perquè ha practicat amb tu al lloc on viu.',
+          'L’educació a domicili té un altre gran avantatge: no només aprèn el gos, també aprens tu. Descobreixes com comunicar-te millor amb el teu company, entens les seves senyals i apliques rutines coherents en el vostre propi entorn. Aquest procés compartit enforteix el vincle. El teu gos no obeeix perquè un desconegut se li ha ordenat, sinó perquè confia en tu, perquè entén que les normes venen de la seva família i perquè ha practicat amb tu al lloc on viu.',
       },
       paraf5: {
         paraf:
@@ -149,7 +151,7 @@ export default {
         "L'entrenament comença de forma individual, adaptat al nivell i a les necessitats específiques del teu gos. Segons el seu progrés i el tipus de comportament que treballem, es podrà fer el pas a sessions grupals, sempre prioritzant el benestar i l'efectivitat de l'aprenentatge.",
     },
     4: {
-      question: "Què he de portar a la sessió d'adiestrament?",
+      question: "Què he de portar a la sessió d'educació?",
       answer:
         'No necessites cap material específic per començar, només predisposició, constància i ganes de gaudir el procés juntament amb el teu gos.',
     },
