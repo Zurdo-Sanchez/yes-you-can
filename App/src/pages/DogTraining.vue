@@ -382,6 +382,7 @@ const autoplay = ref(true);
   font-weight: 900;
   margin: 0px;
   color: var(--q-nameSecondary);
+  line-height: 1.2;
 }
 .hero-desc {
   font-size: 1.2rem;
@@ -470,7 +471,7 @@ const autoplay = ref(true);
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 0;
     text-align: center;
   }
   .hero-logo {
@@ -481,6 +482,9 @@ const autoplay = ref(true);
   }
   .hero-image-right {
     display: none;
+  }
+  .hero-desc {
+    margin-top: 1rem;
   }
 }
 @media (min-width: 900px) and (max-width: 1345px) {
