@@ -386,7 +386,7 @@ const autoplay = ref(true);
 }
 .hero-desc {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: center;
 }
 .hero-btn {
@@ -482,9 +482,6 @@ const autoplay = ref(true);
   }
   .hero-image-right {
     display: none;
-  }
-  .hero-desc {
-    margin-top: 1rem;
   }
 }
 @media (min-width: 900px) and (max-width: 1345px) {
