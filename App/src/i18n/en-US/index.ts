@@ -63,7 +63,7 @@ export default {
   profile: {
     name: 'Xavi Burgos',
     paraf: {
-      1: 'My name is Xavi Burgos and my story with dogs began when I was 18. At home arrived a "little furry bug" named Bruna, a German shepherd full of energy, nobility, and character.',
+      1: 'My story with dogs began when I was 18. At home arrived a "little furry bug" named Bruna, a German shepherd full of energy, nobility, and character.',
       2: 'Bruna taught me many things: the joy of sharing life with a dog, the first games... but also the difficulties that arise when proper education is lacking: pulling on walks, nervousness with visitors, disobedience... situations that gradually became part of our daily life.',
       3: 'One day, an unexpected accident marked a before and after: Bruna was hit by a car and, in her fear, she ran away. Those were very tough moments, but in the end we managed to get her back.',
       4: 'That experience opened our eyes: we needed help. That is how I met Ken Sewell, a dog trainer with more than 30 years of experience, who guided us on the path to understanding Bruna and learning to live in balance with her. With Ken, we not only solved our problems, but I discovered a true vocation.',

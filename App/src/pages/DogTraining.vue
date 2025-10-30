@@ -24,6 +24,7 @@
     </header>
     <!-- Nuestro Trabajo -->
     <section id="work" class="work-section">
+      <q-btn class="hero-btn" :label="t('header.who_am_i')" @click="$router.push('/whoami')" />
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent

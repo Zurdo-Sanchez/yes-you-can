@@ -129,4 +129,19 @@ watch([locale, () => route.fullPath], () => {
 .bio-text li {
   margin-bottom: 8px;
 }
+
+@media (max-width: 900px) {
+  .bio-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-img {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+  .bio-text {
+    text-align: center;
+  }
+}
 </style>

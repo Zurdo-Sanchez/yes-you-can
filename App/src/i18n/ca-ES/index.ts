@@ -60,7 +60,7 @@ export default {
   profile: {
     name: 'Xavi Burgos',
     paraf: {
-      1: 'Em dic Xavi Burgos i la meva història amb els gossos va començar quan tenia 18 anys. A casa va arribar un “bitxet pelut” anomenat Bruna, una pastora alemanya plena d’energia, noblesa i caràcter.',
+      1: 'La meva història amb els gossos va començar quan tenia 18 anys. A casa va arribar un “bitxet pelut” anomenat Bruna, una pastora alemanya plena d’energia, noblesa i caràcter.',
       2: 'La Bruna em va ensenyar moltes coses: l’alegria de compartir la vida amb un gos, els primers jocs... Però també les dificultats que sorgeixen quan falta l’educació adequada, estrebades en els passejos, nervis amb les visites, desobediència… situacions que a poc a poc es van fer part del nostre dia a dia.',
       3: 'Un dia, un accident inesperat va marcar un abans i un després: la Bruna va ser atropellada i, en la seva por, va escapar. Van ser moments molt durs, però finalment la vam recuperar.',
       4: 'Aquella experiència ens va obrir els ulls: necessitàvem ajuda. I va ser així com vaig conèixer en Ken Sewell, un educador caní amb més de 30 anys d’experiència, que ens va guiar en el camí d’entendre la Bruna i aprendre a viure en equilibri amb ella. Amb en Ken no només vam resoldre els nostres problemes, sinó que vaig descobrir una autèntica vocació.',
