@@ -45,7 +45,7 @@ export default {
   profile: {
     name: 'Xavi Burgos',
     paraf: {
-      1: 'Me llamo Xavi Burgos y mi historia con los perros comenzó cuando tenía 18 años. A casa llegó un “bichito peludo” llamado Bruna, una pastora alemana llena de energía, nobleza y carácter.',
+      1: 'Mi historia con los perros comenzó cuando tenía 18 años. A casa llegó un “bichito peludo” llamado Bruna, una pastora aleman llena de energía, nobleza y carácter.',
       2: 'Bruna me enseñó muchas cosas: la alegría de compartir la vida con un perro, los primeros juegos... Pero tambien las dificultades que surgen cuando falta la educacion adecuada, tirones en los paseos, nervios con las visitas, desobediencia… situaciones que poco a poco se hicieron parte de nuestro día a día.',
       3: 'Un día, un accidente inesperado marcó un antes y un después: Bruna fue atropellada y, en su miedo, se escapó. Fueron momentos muy duros, pero finalmente la recuperamos.',
       4: 'Aquella experiencia nos abrió los ojos: necesitábamos ayuda. Y fue así como conocí a Ken Sewell, un educador canino con más de 30 años de experiencia, que nos guió en el camino de entender a Bruna y aprender a vivir en equilibrio con ella. Con Ken no solo resolvimos nuestros problemas, sino que descubrí una auténtica vocación.',
