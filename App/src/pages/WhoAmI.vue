@@ -1,10 +1,10 @@
 <template>
   <div class="biography-page">
-    <h1 style="color: var(--q-title)">{{ t('header.who_am_i') }}</h1>
+    <h1 class="title" style="color: var(--q-title)">{{ t('header.who_am_i') }}</h1>
     <div class="bio-content">
       <img src="../assets/xavi ahora.jpeg" class="profile-img" />
       <div class="bio-text">
-        <h2 style="color: var(--q-text)">{{ t('profile.name') }}</h2>
+        <h2 class="subtitle" style="color: var(--q-text)">{{ t('profile.name') }}</h2>
         <p>{{ t('profile.paraf.1') }}</p>
         <img src="../assets/Xavi-bruna-bb.png" class="other-img" />
         <p>{{ t('profile.paraf.2') }}</p>
@@ -84,6 +84,7 @@ watch([locale, () => route.fullPath], () => {
 </script>
 <style scoped>
 .biography-page {
+  text-align: center;
   max-width: 700px;
   margin: 40px auto;
   padding: 24px;
@@ -142,6 +143,9 @@ watch([locale, () => route.fullPath], () => {
   }
   .bio-text {
     text-align: center;
+  }
+  .title {
+    font-size: 5.5rem;
   }
 }
 </style>
