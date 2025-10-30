@@ -145,7 +145,7 @@ watch([locale, () => route.fullPath], () => {
     text-align: center;
   }
   .title {
-    font-size: 4.3rem;
+    font-size: 4rem;
   }
 }
 </style>
