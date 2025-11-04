@@ -145,7 +145,7 @@ onMounted(() => {
   );
 
   document.querySelectorAll('.reveal').forEach((el) => {
-    if (observer) observer.observe(el as Element);
+    if (observer) observer.observe(el);
   });
 });
 
