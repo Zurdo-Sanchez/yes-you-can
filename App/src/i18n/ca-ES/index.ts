@@ -246,7 +246,7 @@ export default {
             'El teu gos pot aprendre a estar tranquil quan no estàs a casa. Amb aquest programa, treballem pas a pas perquè aprengui a quedar-se sol sense ansietat, lladrucs ni destruccions. Recuperes la teva llibertat i ell la seva calma.',
         },
         2: {
-          title: 'Anem a les terrasses?',
+          title: 'Anem a fer una birra?',
           subTitle: "El gos sociable que t'acompanya arreu",
           type: 'Nivell 2',
           description:

@@ -11,6 +11,8 @@ const routes: RouteRecordRaw[] = [
       { path: 'explorer', component: () => import('pages/explorer.vue') },
       { path: 'mate', component: () => import('pages/mate.vue') },
       { path: 'master', component: () => import('pages/master.vue') },
+      { path: 'lunaYKumo', component: () => import('pages/lunaYKumo.vue') },
+      { path: 'histories', component: () => import('pages/histories.vue') },
     ],
   },
 
