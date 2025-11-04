@@ -82,7 +82,11 @@
               <q-toggle dense dark color="primary" v-model="autoplay" label="Auto Play" />
             </q-carousel-control>
           </template>
-          <q-carousel-slide name="maui" img-src="../assets/Maui-Juan-Xavi.jpeg">
+          <q-carousel-slide
+            name="maui"
+            img-src="../assets/Maui-Juan-Xavi.jpeg"
+            @click="$router.push('/histories')"
+          >
             <div class="q-mt-md">
               <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
               <p class="success-desc">
@@ -101,7 +105,11 @@
               </p>
             </div>
           </q-carousel-slide>
-          <q-carousel-slide name="luna-y-kumo" img-src="../assets/Luna y Kumo.png">
+          <q-carousel-slide
+            name="luna-y-kumo"
+            img-src="../assets/Luna y Kumo.png"
+            @click="$router.push('/histories')"
+          >
             <div class="q-mt-md">
               <h3 class="success-title">Luna y Kumo: de tensiones en casa a paz compartida</h3>
               <p class="success-desc">
