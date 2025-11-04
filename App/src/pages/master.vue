@@ -190,6 +190,9 @@ watch([locale, () => route.fullPath], () => {
   color: var(--q-primary);
   margin: 0;
   font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .description {

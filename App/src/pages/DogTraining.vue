@@ -24,7 +24,11 @@
     </header>
     <!-- Nuestro Trabajo -->
     <section id="work" class="work-section">
-      <q-btn class="hero-btn" :label="t('header.who_am_i')" @click="$router.push('/whoami')" />
+      <q-btn
+        class="hero-btn btn-who_am_i"
+        :label="t('header.who_am_i')"
+        @click="$router.push('/whoami')"
+      />
       <h2 class="section-title">{{ t('header.our_work') }}</h2>
       <div class="work-grid">
         <CardComponent
@@ -382,10 +386,11 @@ const autoplay = ref(true);
   font-weight: 900;
   margin: 0px;
   color: var(--q-nameSecondary);
+  line-height: 1.2;
 }
 .hero-desc {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: center;
 }
 .hero-btn {
@@ -393,6 +398,9 @@ const autoplay = ref(true);
   font-size: 1.1rem;
   background: var(--q-backgroundHeader);
   color: var(--q-white);
+}
+.btn-who_am_i {
+  display: none;
 }
 .work-section {
   padding: 3rem 0 2rem 0;
@@ -470,7 +478,7 @@ const autoplay = ref(true);
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 0;
     text-align: center;
   }
   .hero-logo {
@@ -481,6 +489,11 @@ const autoplay = ref(true);
   }
   .hero-image-right {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .btn-who_am_i {
+    display: flex;
   }
 }
 @media (min-width: 900px) and (max-width: 1345px) {
