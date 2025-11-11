@@ -82,18 +82,16 @@
               <q-toggle dense dark color="primary" v-model="autoplay" label="Auto Play" />
             </q-carousel-control>
           </template>
-          <q-carousel-slide
-            name="maui"
-            class="maui-slide"
-            img-src="../assets/Maui-Juan-Xavi.jpeg"
-            @click="$router.push('/histories')"
-          >
-            <div class="q-mt-md">
-              <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
-              <p class="success-desc">
-                Maui es un bóxer de 7 años lleno de energía y entusiasmo. Desde cachorro, cada
-                salida era una batalla.
-              </p>
+          <q-carousel-slide name="maui">
+            <div class="maui-slide-inner" @click="$router.push('/histories')">
+              <img src="../assets/Maui-Juan-Xavi.jpeg" alt="Maui" class="carousel-img maui-img" />
+              <div class="q-mt-md maui-caption">
+                <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
+                <p class="success-desc">
+                  Maui es un bóxer de 7 años lleno de energía y entusiasmo. Desde cachorro, cada
+                  salida era una batalla.
+                </p>
+              </div>
             </div>
           </q-carousel-slide>
           <q-carousel-slide
@@ -487,5 +485,22 @@ const autoplay = ref(true);
     gap: 2rem;
     text-align: center;
   }
+}
+
+/* Maui slide: force image focus on bottom */
+.maui-slide-inner {
+  position: relative;
+}
+.maui-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: bottom center !important;
+  display: block;
+  cursor: pointer;
+}
+.maui-caption {
+  text-align: left;
+  background: rgba(255, 255, 255, 0);
 }
 </style>

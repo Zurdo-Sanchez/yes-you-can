@@ -207,6 +207,9 @@ onUnmounted(() => {
   cursor: zoom-in;
   transition: transform 0.6s ease;
 }
+.carousel-img {
+  object-position: bottom center !important;
+}
 .carousel-img:hover {
   transform: scale(1.02);
 }
