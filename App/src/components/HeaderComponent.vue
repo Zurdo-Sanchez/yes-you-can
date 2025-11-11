@@ -41,13 +41,12 @@
               </div>
             </router-link>
           </div>
-          <div
-            class="nav-link"
-            :class="{ 'nav-link-active': isActive('success') }"
-            href=""
-            @click="handleNavClick('success', $event)"
-          >
-            {{ t('header.Transformation_Stories') }}
+          <div>
+            <router-link to="/histories" style="text-decoration: none">
+              <div class="nav-link" :class="{ 'nav-link-active': isActive('success') }">
+                {{ t('header.Transformation_Stories') }}
+              </div>
+            </router-link>
           </div>
           <div
             class="nav-link"
@@ -256,12 +255,18 @@ const isActive = (sectionId: string) => {
   if (route.path === '/explorer' && sectionId === 'work') {
     return true;
   }
+  if (route.path === '/histories' && sectionId === 'success') {
+    return true;
+  }
   // Si estamos en /whoami, no marcar otras secciones como activas
   if (route.path === '/whoami') {
     return false;
   }
   // Si estamos en /explorer, no marcar otras secciones como activas
   if (route.path === '/explorer') {
+    return false;
+  }
+  if (route.path === '/histories') {
     return false;
   }
   // Para la página principal, usar la detección de intersección
