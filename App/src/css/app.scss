@@ -1,1 +1,29 @@
 // app global css in SCSS form
+
+/* Ensure carousel slides always show the bottom of the image (not centered) */
+.q-carousel-slide__img,
+.q-carousel__slide .q-carousel-slide__img,
+.q-carousel__slide,
+.q-carousel__slide[style*='background-image'],
+.q-carousel__slide .q-img__image,
+.q-carousel__img,
+.q-carousel__img--content {
+  background-position: bottom center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* If a slide uses an <img> element instead of background, ensure object-position bottom */
+.carousel-img,
+.q-carousel-slide img,
+.q-carousel img,
+.q-img__image {
+  object-position: bottom center !important;
+}
+
+/* Specific helper for the Maui slide if needed (keeps behavior scoped when component styles are present) */
+.maui-slide,
+.q-carousel-slide.maui-slide,
+.q-carousel-slide.maui-slide .q-carousel__slide {
+  background-position: bottom center !important;
+}

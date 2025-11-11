@@ -250,7 +250,7 @@ export default {
             'Tu perro puede aprender a estar tranquilo cuando no estás en casa. Con este programa trabajamos paso a paso para que aprenda a quedarse solo sin ansiedad, ladridos ni destrucción. Recuperas tu libertad y él su calma.',
         },
         2: {
-          title: '¿Vamos a las terrazas?',
+          title: '¿Vamos a tomar una birras?',
           subTitle: 'El perro sociable que te acompaña a todas partes',
           type: 'Nivel 2',
           description:
