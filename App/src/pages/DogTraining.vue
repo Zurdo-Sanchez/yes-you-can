@@ -82,16 +82,17 @@
               <q-toggle dense dark color="primary" v-model="autoplay" label="Auto Play" />
             </q-carousel-control>
           </template>
-          <q-carousel-slide name="maui">
-            <div class="maui-slide-inner" @click="$router.push('/histories')">
-              <img src="../assets/Maui-Juan-Xavi.jpeg" alt="Maui" class="carousel-img maui-img" />
-              <div class="q-mt-md maui-caption">
-                <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
-                <p class="success-desc">
-                  Maui es un bóxer de 7 años lleno de energía y entusiasmo. Desde cachorro, cada
-                  salida era una batalla.
-                </p>
-              </div>
+          <q-carousel-slide
+            name="maui"
+            img-src="../assets/Maui-Juan-Xavi.jpeg"
+            @click="$router.push('/histories')"
+          >
+            <div class="q-mt-md">
+              <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
+              <p class="success-desc">
+                Maui es un bóxer de 7 años lleno de energía y entusiasmo. Desde cachorro, cada
+                salida era una batalla.
+              </p>
             </div>
           </q-carousel-slide>
           <q-carousel-slide

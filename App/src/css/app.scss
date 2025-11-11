@@ -27,3 +27,10 @@
 .q-carousel-slide.maui-slide .q-carousel__slide {
   background-position: bottom center !important;
 }
+
+/* Also target slide elements by name attribute (Quasar renders slides with a name attribute) */
+.q-carousel__slide[name='maui'],
+.q-carousel-slide[name='maui'] {
+  background-position: bottom center !important;
+  background-size: cover !important;
+}
