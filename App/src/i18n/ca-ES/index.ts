@@ -47,7 +47,7 @@ export default {
   },
   contact: {
     email: 'contacte@yesyoucan.cat',
-    phone: '+34 667 67 63 05',
+    phone: '+34 676 456 725',
     contact_us: 'Contacta’ns',
     your_name: 'El teu nom',
     your_email: 'El teu correu electrònic',

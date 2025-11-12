@@ -50,7 +50,7 @@ export default {
   },
   contact: {
     email: 'contact@yesyoucan.cat',
-    phone: '+34 667 67 63 05',
+    phone: '+34 676 456 725',
     contact_us: 'Contact Us',
     your_name: 'Your Name',
     your_email: 'Your Email',

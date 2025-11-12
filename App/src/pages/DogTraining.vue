@@ -251,7 +251,7 @@ const structuredData = {
   name: 'Yes YouCan - Adiestramiento Canino',
   description: 'Servicios profesionales de adiestramiento canino en Cataluña',
   url: 'https://yesyoucan.cat',
-  telephone: '+34-XXX-XXX-XXX',
+  telephone: '+34 676 456 725',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Cataluña',
