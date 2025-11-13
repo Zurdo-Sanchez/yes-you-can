@@ -103,14 +103,14 @@ export class MailService implements OnModuleInit {
       text: plainText,
       html,
     });
-
+    console.log("Mail sent:", info);
     // Si usamos Ethereal, devuelve la URL de preview en logs
     try {
       // nodemailer.getTestMessageUrl funciona con nodemailer import default
       const preview = nodemailer.getTestMessageUrl(info as any);
       if (preview) this.logger.log(`Preview URL: ${preview}`);
     } catch (err) {
-      // ignore
+      this.logger.error("Error getting preview URL:", err as any);
     }
 
     return info;
