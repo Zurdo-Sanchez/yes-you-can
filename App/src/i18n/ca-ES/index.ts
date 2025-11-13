@@ -165,6 +165,9 @@ export default {
     },
   },
   history: {
+    title: 'Històries de transformació',
+    subtitle:
+      'Històries reals de gossos i les seves famílies que van canviar per sempre gràcies a "Yes You Can"',
     1: {
       title: 'Maui: la prova que mai no és tard per canviar',
       description:

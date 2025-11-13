@@ -169,6 +169,9 @@ export default {
     },
   },
   history: {
+    title: 'Historias de transformación',
+    subtitle:
+      'Historias reales de perros y sus familias que cambiaron para siempre gracias a "Yes YouCan"',
     1: {
       title: 'Maui: la prueba de que nunca es tarde para cambiar',
       description:

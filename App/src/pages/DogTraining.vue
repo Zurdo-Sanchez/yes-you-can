@@ -248,8 +248,8 @@ useMeta(() => metaState.value);
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Yes YouCan - Adiestramiento Canino',
-  description: 'Servicios profesionales de adiestramiento canino en Cataluña',
+  name: 'Yes YouCan - Educación Canina',
+  description: 'Servicios profesionales de educación canina en Cataluña',
   url: 'https://yesyoucan.cat',
   telephone: '+34 676 456 725',
   address: {

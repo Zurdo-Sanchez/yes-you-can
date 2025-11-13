@@ -1,6 +1,3 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
   failed: 'Action failed',
   success: 'Action was successful',
@@ -172,6 +169,8 @@ export default {
     },
   },
   history: {
+    title: 'Stories of transformation',
+    subtitle: 'Real stories of dogs and their families who changed forever thanks to "Yes You Can"',
     1: {
       title: "Maui: proof that it's never too late to change",
       description:

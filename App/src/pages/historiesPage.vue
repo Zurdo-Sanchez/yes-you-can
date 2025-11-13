@@ -44,7 +44,7 @@
     <main class="container">
       <article v-for="(block, idx) in story" :key="idx" class="story-block reveal">
         <div class="media" @click="openLightbox(block.img)">
-          <h4>{{ block.title }}</h4>
+          <h4 class="title">{{ block.title }}</h4>
           <img :src="block.img" :alt="block.title" />
         </div>
         <div class="text">
@@ -62,20 +62,72 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted, computed, watch } from 'vue';
 
 import MauiImg from '../assets/Maui-Juan-Xavi.jpeg';
 import LunaKumoImg from '../assets/Luna y Kumo.png';
 import { useI18n } from 'vue-i18n';
+import { useMeta } from 'quasar';
+import { useRoute } from 'vue-router';
 
-const { t } = useI18n();
-const title = 'Historias de transformación';
-const subtitle =
-  'Historias reales de perros y sus familias que cambiaron para siempre gracias a "Yes You Can"';
+const origin: string = typeof window !== 'undefined' ? window.location.origin : '';
+const explorerOgImage: string = MauiImg;
+
+const { t, locale } = useI18n();
+const route = useRoute();
+
+// META TAGS
+const buildMeta = () => ({
+  title: 'Explorer - Nivel Básico | Yes You Can',
+  meta: {
+    description: {
+      name: 'description',
+      content:
+        'Curso Explorer de adiestramiento canino básico. Obediencia básica, normas de convivencia y primeras órdenes esenciales para cachorros.',
+    },
+    'og:title': {
+      property: 'og:title',
+      content: 'Explorer - Nivel Básico de Adiestramiento Canino',
+    },
+    'og:description': {
+      property: 'og:description',
+      content:
+        'El inicio de la aventura. Curso básico de adiestramiento para cachorros y perros sin entrenamiento previo.',
+    },
+    'og:type': {
+      property: 'og:type',
+      content: 'website',
+    },
+    'og:url': {
+      property: 'og:url',
+      content: `${origin}${route.fullPath}`,
+    },
+    'og:image': {
+      property: 'og:image',
+      content: `${origin}${explorerOgImage}`,
+    },
+    'og:image:alt': {
+      property: 'og:image:alt',
+      content: 'Curso Explorer de adiestramiento canino básico',
+    },
+  },
+});
+
+const metaState = ref(buildMeta());
+useMeta(() => metaState.value);
+
+watch([locale, () => route.fullPath], () => {
+  metaState.value = buildMeta();
+});
+
+// STATIC DATA
+const subtitle = computed(() => t('history.subtitle'));
+const title = computed(() => t('history.title'));
 
 const images: string[] = [MauiImg, LunaKumoImg];
 
-const story: Array<{ title: string; text: string; img: string }> = [
+// ✅ STORY AHORA ES COMPUTED → las traducciones funcionan
+const story = computed(() => [
   {
     title: t('history.1.title'),
     text: t('history.1.description'),
@@ -86,9 +138,9 @@ const story: Array<{ title: string; text: string; img: string }> = [
     text: t('history.2.description'),
     img: images[1]!,
   },
-];
+]);
 
-// Carousel state + autoplay
+// CAROUSEL
 const currentImage = ref<number>(0);
 let intervalId: ReturnType<typeof setInterval> | null = null;
 
@@ -103,21 +155,20 @@ function prev() {
 function goTo(i: number) {
   currentImage.value = i;
 }
+
 function startAuto() {
   stopAuto();
   intervalId = setInterval(next, 4500);
 }
 function stopAuto() {
-  if (intervalId) {
-    clearInterval(intervalId);
-    intervalId = null;
-  }
+  if (intervalId) clearInterval(intervalId);
+  intervalId = null;
 }
 function pauseAuto() {
   stopAuto();
 }
 
-// Lightbox
+// LIGHTBOX
 const lightboxOpen = ref<boolean>(false);
 const lightboxImage = ref<string>('');
 
@@ -130,8 +181,9 @@ function closeLightbox() {
   lightboxImage.value = '';
 }
 
-// Reveal on scroll
+// SCROLL REVEAL
 let observer: IntersectionObserver | null = null;
+
 onMounted(() => {
   startAuto();
 
@@ -140,7 +192,7 @@ onMounted(() => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
-          if (observer) observer.unobserve(entry.target);
+          observer?.unobserve(entry.target);
         }
       });
     },
@@ -148,16 +200,15 @@ onMounted(() => {
   );
 
   document.querySelectorAll('.reveal').forEach((el) => {
-    if (observer) observer.observe(el);
+    observer?.observe(el);
   });
 });
 
 onUnmounted(() => {
   stopAuto();
-  if (observer) observer.disconnect();
+  observer?.disconnect();
 });
 </script>
-
 <style scoped>
 /* Layout and typography */
 .page {
@@ -166,7 +217,9 @@ onUnmounted(() => {
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
   min-height: 100vh;
 }
-
+.title {
+  text-align: center;
+}
 /* Hero */
 .hero {
   background: linear-gradient(135deg, rgba(3, 105, 161, 0.06), rgba(99, 102, 241, 0.03));
