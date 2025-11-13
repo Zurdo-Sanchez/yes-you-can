@@ -11,5 +11,8 @@ async function bootstrap() {
   const port = Number(process.env.PORT || 7000);
   await app.listen(port, "0.0.0.0");
   console.log("API listening on", port);
+
+  console.log("SMTP_HOST=", process.env.SMTP_HOST);
+  console.log("SMTP_USER=", process.env.SMTP_USER);
 }
 bootstrap();
