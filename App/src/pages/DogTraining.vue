@@ -205,7 +205,7 @@ const route = useRoute();
 
 const dogTrainingOgImage =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRPb5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc';
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
   title: t('meta.dogTraining.title'),

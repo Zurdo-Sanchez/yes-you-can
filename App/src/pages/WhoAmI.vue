@@ -39,7 +39,7 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 const whoAmIOgImage = new URL('../assets/Xavi1.png', import.meta.url).href;
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
   title: t('meta.whoAmI.title'),

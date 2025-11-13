@@ -89,7 +89,7 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 const explorerOgImage = '/img/home/explorador.png';
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
   title: 'Explorer - Nivel Básico | Yes You Can',
