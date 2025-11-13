@@ -68,7 +68,7 @@ let MailService = (MailService_1 = class MailService {
     const from =
       process.env.MAIL_FROM || process.env.SMTP_USER || "no-reply@example.com";
     const to = process.env.MAIL_TO || process.env.SMTP_USER || from;
-    console.log("Sending contact email from", from, "to", to);
+    this.logger.log("Sending contact email from", from, "to", to);
     // helper to escape user-provided values for HTML
     const escapeHtml = (unsafe) =>
       unsafe
