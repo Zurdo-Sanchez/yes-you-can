@@ -37,7 +37,7 @@ export default defineBoot(({ app }) => {
 
   const persisted = typeof window !== 'undefined' ? localStorage.getItem('lang') : null;
   const initialLocale =
-    (storeLocale as MessageLanguages) || (persisted as MessageLanguages) || 'es-ES';
+    (storeLocale as MessageLanguages) || (persisted as MessageLanguages) || 'ca-ES';
 
   const i18n = createI18n<{ message: MessageSchema }, MessageLanguages>({
     locale: initialLocale,

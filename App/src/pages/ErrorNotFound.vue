@@ -28,7 +28,7 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 const notFoundOgImage = new URL('../assets/logo.png', import.meta.url).href;
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
   title: t('meta.notFound.title'),

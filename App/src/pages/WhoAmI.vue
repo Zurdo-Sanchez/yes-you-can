@@ -5,16 +5,16 @@
       <img src="../assets/xavi ahora.jpeg" class="profile-img" />
       <div class="bio-text">
         <h2 class="subtitle" style="color: var(--q-text)">{{ t('profile.name') }}</h2>
-        <p>{{ t('profile.paraf.1') }}</p>
+        <p class="description-text">{{ t('profile.paraf.1') }}</p>
         <img src="../assets/Xavi-bruna-bb.png" class="other-img" />
-        <p>{{ t('profile.paraf.2') }}</p>
+        <p class="description-text">{{ t('profile.paraf.2') }}</p>
         <img src="../assets/Xavi-bruna-joc.png" class="other-img" />
-        <p>{{ t('profile.paraf.3') }}</p>
-        <p>{{ t('profile.paraf.4') }}</p>
-        <p>{{ t('profile.paraf.5') }}</p>
-        <p>{{ t('profile.paraf.6') }}</p>
+        <p class="description-text">{{ t('profile.paraf.3') }}</p>
+        <p class="description-text">{{ t('profile.paraf.4') }}</p>
+        <p class="description-text">{{ t('profile.paraf.5') }}</p>
+        <p class="description-text">{{ t('profile.paraf.6') }}</p>
         <img src="../assets/Xavi-bruna-grande.png" class="other-img" />
-        <p>{{ t('profile.paraf.7') }}</p>
+        <p class="description-text">{{ t('profile.paraf.7') }}</p>
         <ul>
           <li>
             <strong style="color: var(--q-text)">{{ t('profile.ubicacion.title') }}:</strong>
@@ -39,7 +39,7 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 const whoAmIOgImage = new URL('../assets/Xavi1.png', import.meta.url).href;
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
   title: t('meta.whoAmI.title'),
@@ -83,6 +83,9 @@ watch([locale, () => route.fullPath], () => {
 });
 </script>
 <style scoped>
+.description-text {
+  text-align: justify;
+}
 .biography-page {
   text-align: center;
   max-width: 700px;

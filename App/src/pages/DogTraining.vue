@@ -82,49 +82,30 @@
               <q-toggle dense dark color="primary" v-model="autoplay" label="Auto Play" />
             </q-carousel-control>
           </template>
-          <q-carousel-slide name="maui" img-src="../assets/Maui-Juan-Xavi.jpeg">
+          <q-carousel-slide
+            name="maui"
+            img-src="../assets/Maui-Juan-Xavi.jpeg"
+            @click="$router.push('/histories')"
+          >
             <div class="q-mt-md">
               <h3 class="success-title">Maui: la prueba de que nunca es tarde para cambiar</h3>
               <p class="success-desc">
                 Maui es un bóxer de 7 años lleno de energía y entusiasmo. Desde cachorro, cada
-                salida era una batalla: tirones de correa, ladridos a otros perros, energía
-                desbordada… tanto, que sus dueños, Juan y Georgina, terminaron limitándose a sacarlo
-                solo de madrugada o muy tarde por la noche para evitar problemas. Pero todo eso
-                cambió en solo 45 minutos. El primer día del programa básico Nivel Explorador-¡Patas
-                Afuera! Maui sorprendió a todos caminando tranquilo al lado de Juan, sin tirar, sin
-                estrés, disfrutando del paseo como nunca antes. Hoy, Juan y Georgina ya no piensan
-                en la hora ni en los obstáculos. Pasear con Maui se ha convertido en un momento de
-                libertad y felicidad compartida. -- Lo inspirador de esta historia no es solo el
-                cambio de Maui, sino el recordatorio de que con la educación adecuada, cualquier
-                perro —sin importar la edad o las costumbres— puede aprender a disfrutar de la vida
-                en equilibrio junto a su familia. --Si Maui pudo hacerlo, tu perro también puede.
+                salida era una batalla.
               </p>
             </div>
           </q-carousel-slide>
-          <q-carousel-slide name="luna-y-kumo" img-src="../assets/Luna y Kumo.png">
+          <q-carousel-slide
+            name="luna-y-kumo"
+            img-src="../assets/Luna y Kumo.png"
+            @click="$router.push('/histories')"
+          >
             <div class="q-mt-md">
               <h3 class="success-title">Luna y Kumo: de tensiones en casa a paz compartida</h3>
               <p class="success-desc">
                 Luna, una mestiza de 4 años, siempre fue la reina de la casa: cariñosa, juguetona y
                 dueña de cada rincón. Kumo, un husky de 2 años, llegó con energía y curiosidad, pero
-                pronto las cosas se tensaron: gruñidos cuando se acercaban al plato, persecuciones
-                por el pasillo, y peleas por el sofá que convertían el hogar en un campo de batalla
-                emocional. Sus dueños, Marta y David, vivían con la frustración de no poder
-                disfrutar de su propia casa. Separaban áreas, recogían juguetes, y evitaban traer
-                visitas por miedo a que los perros discutieran. Lo que debía ser confort y compañía
-                se había vuelto fuente de estrés. Decidieron probar el programa basico de educación
-                nivel explorador “Dog and Chill”. En la primera sesión, con ejercicios guiados y
-                técnicas de gestión de recursos, Luna y Kumo aprendieron límites claros, señales de
-                calma y turnos para el espacio y la comida. Lo que empezó como desconfianza se
-                transformó rápidamente en respeto. En dos semanas, los cambios eran palpables: ya no
-                había carreras ni gruñidos cuando compartían el salón. Luna dejó de tensarse al
-                entrar Kumo a la cocina; Kumo aprendió a esperar su turno y a responder a las
-                indicaciones de Marta y David. Hoy son inseparables, se buscan para jugar y la casa
-                volvió a ser un lugar de calma y risas. “Recuperamos nuestro hogar —nos dicen Marta
-                y David—. Verlos relajados nos devolvió la tranquilidad que habíamos perdido.” Esta
-                historia demuestra que la convivencia armoniosa se puede enseñar. No importa la
-                edad, la raza o el historial: con las herramientas correctas y constancia, los
-                perros aprenden a vivir en paz y a hacer del hogar un refugio para toda la familia.
+                pronto las cosas se tensaron.
               </p>
             </div>
           </q-carousel-slide>
@@ -224,7 +205,7 @@ const route = useRoute();
 
 const dogTrainingOgImage =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ken66f0FdZpFkaPsXCJ78HSoickxzM4_qsvXrwIF8L3QySqXEESdorydEvJ46wrsyJk9uA2qR1UJkHRD2s727aWu3nQ3qHe0obFBzfZgMYGThTdNXJrAkFkbnqJpvfNJ_wHJQKmwPIiM3Poiiot7H_QdfUt6bmFkK4J-MW7g4DfFUP8a-ezQqUlGxToA8HRPb5Q7VK5Khf0z1t_Ixo7AmujEjpUvWZdogZnBfcelSICrlA5lJ2oeXJP8V962MPL_uVcdL4p7bc';
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
   title: t('meta.dogTraining.title'),
@@ -267,10 +248,10 @@ useMeta(() => metaState.value);
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Yes YouCan - Adiestramiento Canino',
-  description: 'Servicios profesionales de adiestramiento canino en Cataluña',
+  name: 'Yes YouCan - Educación Canina',
+  description: 'Servicios profesionales de educación canina en Cataluña',
   url: 'https://yesyoucan.cat',
-  telephone: '+34-XXX-XXX-XXX',
+  telephone: '+34 676 456 725',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Cataluña',
@@ -505,5 +486,22 @@ const autoplay = ref(true);
     gap: 2rem;
     text-align: center;
   }
+}
+
+/* Maui slide: force image focus on bottom */
+.maui-slide-inner {
+  position: relative;
+}
+.maui-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: bottom center !important;
+  display: block;
+  cursor: pointer;
+}
+.maui-caption {
+  text-align: left;
+  background: rgba(255, 255, 255, 0);
 }
 </style>

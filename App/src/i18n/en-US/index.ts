@@ -1,6 +1,3 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
   failed: 'Action failed',
   success: 'Action was successful',
@@ -50,7 +47,7 @@ export default {
   },
   contact: {
     email: 'contact@yesyoucan.cat',
-    phone: '+34 667 67 63 05',
+    phone: '+34 676 456 725',
     contact_us: 'Contact Us',
     your_name: 'Your Name',
     your_email: 'Your Email',
@@ -169,6 +166,20 @@ export default {
     links: {
       privacyPolicy: 'Privacy Policy',
       termsOfService: 'Terms of Service',
+    },
+  },
+  history: {
+    title: 'Stories of transformation',
+    subtitle: 'Real stories of dogs and their families who changed forever thanks to "Yes You Can"',
+    1: {
+      title: "Maui: proof that it's never too late to change",
+      description:
+        "Maui is a 7-year-old boxer full of energy and enthusiasm. Since he was a puppy, every outing was a battle: leash pulling, barking at other dogs, overflowing energy… so much so that his owners, Juan and Georgina, ended up only taking him out at dawn or very late at night to avoid problems. But all of that changed in just 45 minutes. On the first day of the basic Explorer Level program — Paws Out! — Maui surprised everyone by walking calmly beside Juan, not pulling, not stressed, enjoying the walk like never before. Today, Juan and Georgina no longer worry about the time or obstacles. Walking with Maui has become a moment of freedom and shared happiness. The inspiring part of this story is not only Maui's change, but the reminder that with appropriate education, any dog —regardless of age or habits— can learn to enjoy life in balance with their family. If Maui could do it, your dog can too.",
+    },
+    2: {
+      title: 'Luna and Kumo: from tensions at home to shared peace',
+      description:
+        'Luna, a 4-year-old mixed breed, was always the queen of the house: affectionate, playful and owner of every corner. Kumo, a 2-year-old husky, arrived with energy and curiosity, but soon tensions arose: growling over the bowl, chasing in the hallway, and fights over the sofa that turned the home into an emotional battlefield. Their owners, Marta and David, lived with the frustration of not being able to enjoy their own home. They set up separated areas, picked up toys, and avoided inviting guests for fear the dogs would fight. What should have been comfort and companionship had become a source of stress. They decided to try the basic Explorer level program “Dog and Chill”. In the first session, with guided exercises and resource management techniques, Luna and Kumo learned clear boundaries, calming signals and taking turns for space and food. What began as distrust quickly transformed into respect. In two weeks the changes were noticeable: there were no more chases or growls when they shared the living room. Luna stopped tensing when Kumo entered the kitchen; Kumo learned to wait his turn and respond to Marta and David’s cues. Today they are inseparable, seek each other to play and the home returned to being a place of calm and laughter. “We got our home back,” Marta and David tell us. Seeing them relaxed returned the peace they had lost. This story shows that harmonious coexistence can be taught. It does not matter the age, breed or history: with the right tools and consistency, dogs learn to live in peace and make the home a refuge for the whole family.',
     },
   },
   pages: {
@@ -316,9 +327,9 @@ export default {
       ogImageAlt: 'Portrait of Xavi Burgos with his dog Bruna.',
     },
     notFound: {
-      title: 'Page not found | Yes YouCan',
+      title: 'Page not found | YesYouCan',
       description:
-        'The page you are looking for does not exist or has moved. Return to the home page to keep exploring Yes YouCan.',
+        'The page you are looking for does not exist or has moved. Return to the home page to keep exploring YesYouCan.',
       ogTitle: 'YesYouCan · Page not found',
       ogDescription: 'Use our menu to return to dog training services and available resources.',
       ogImageAlt: 'Dog trying to find its way back home.',

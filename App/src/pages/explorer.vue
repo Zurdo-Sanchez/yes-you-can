@@ -89,24 +89,22 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 const explorerOgImage = '/img/home/explorador.png';
-const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.dog';
+const origin = typeof window !== 'undefined' ? window.location.origin : 'https://yesyoucan.cat';
 
 const buildMeta = () => ({
-  title: 'Explorer - Nivel Básico | Yes You Can',
+  title: `${t('pages.explorer.levelBadge')} - ${t('pages.explorer.mainTitle')} | Yes YouCan`,
   meta: {
     description: {
       name: 'description',
-      content:
-        'Curso Explorer de adiestramiento canino básico. Obediencia básica, normas de convivencia y primeras órdenes esenciales para cachorros.',
+      content: t('pages.explorer.description'),
     },
     'og:title': {
       property: 'og:title',
-      content: 'Explorer - Nivel Básico de Adiestramiento Canino',
+      content: t('pages.explorer.mainTitle'),
     },
     'og:description': {
       property: 'og:description',
-      content:
-        'El inicio de la aventura. Curso básico de adiestramiento para cachorros y perros sin entrenamiento previo.',
+      content: t('pages.explorer.description'),
     },
     'og:type': {
       property: 'og:type',
@@ -122,11 +120,10 @@ const buildMeta = () => ({
     },
     'og:image:alt': {
       property: 'og:image:alt',
-      content: 'Curso Explorer de adiestramiento canino básico',
+      content: t('meta.dogTraining.ogImageAlt') || t('pages.explorer.mainTitle'),
     },
   },
 });
-
 const metaState = ref(buildMeta());
 useMeta(() => metaState.value);
 

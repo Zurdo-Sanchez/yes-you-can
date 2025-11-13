@@ -47,7 +47,7 @@ export default {
   },
   contact: {
     email: 'contacte@yesyoucan.cat',
-    phone: '+34 667 67 63 05',
+    phone: '+34 676 456 725',
     contact_us: 'Contacta’ns',
     your_name: 'El teu nom',
     your_email: 'El teu correu electrònic',
@@ -164,10 +164,25 @@ export default {
       termsOfService: 'Termes del servei',
     },
   },
+  history: {
+    title: 'Històries de transformació',
+    subtitle:
+      'Històries reals de gossos i les seves famílies que van canviar per sempre gràcies a "Yes You Can"',
+    1: {
+      title: 'Maui: la prova que mai no és tard per canviar',
+      description:
+        "Maui és un bóxer de 7 anys ple d'energia i entusiasme. Des de cadell, cada sortida era una lluita: estrebades de corretja, bordades a altres gossos, energia desbocada… tant que els seus propietaris, Juan i Georgina, van acabar limitant-se a treure'l només de matinada o molt tard al vespre per evitar problemes. Però tot això va canviar en només 45 minuts. El primer dia del programa bàsic Nivell Explorador — Potes Fora! — Maui va sorprendre tothom caminant tranquil al costat de Juan, sense estirar, sense estrès, gaudint la passejada com mai abans. Avui, Juan i Georgina ja no es fixen en l'hora ni en els obstacles. Passejar amb en Maui s'ha convertit en un moment de llibertat i felicitat compartida. El més inspirador d'aquesta història no és només el canvi d'en Maui, sinó el recordatori que amb l'educació adequada qualsevol gos —sense importar l'edat o els hàbits— pot aprendre a gaudir de la vida en equilibri al costat de la seva família. Si en Maui ho va poder fer, el teu gos també pot.",
+    },
+    2: {
+      title: 'Luna i Kumo: de tensions a casa a pau compartida',
+      description:
+        "Luna, una mestissa de 4 anys, sempre va ser la reina de la casa: carinyosa, juganera i posseïdora de cada racó. En Kumo, un husky de 2 anys, va arribar amb energia i curiositat, però aviat les coses es van tensar: grunyits quan s'acostaven al plat, persecucions pel passadís i baralles pel sofà que convertien la llar en un camp de batalla emocional. Els seus propietaris, Marta i David, vivien frustrats per no poder gaudir de la seva pròpia casa. Separaven espais, recollien joguines i evitaven portar visites per por que els gossos discutissin. Allò que havia de ser confort i companyia s'havia tornat una font d'estrès. Van decidir provar el programa bàsic d'educació Nivell Explorador \"Dog & Chill\". A la primera sessió, amb exercicis guiats i tècniques de gestió de recursos, la Luna i en Kumo van aprendre límits clars, senyals de calma i torns per a l'espai i el menjar. Allò que va començar com desconfiança es va transformar ràpidament en respecte. En dues setmanes, els canvis eren palpables: ja no hi havia carreres ni grunyits quan compartien el saló. La Luna va deixar de posar-se tensa quan en Kumo entrava a la cuina; en Kumo va aprendre a esperar el seu torn i a respondre a les indicacions de la Marta i en David. Avui són inseparables, es busquen per jugar i la casa ha tornat a ser un lloc de calma i rialles. \"Hem recuperat la nostra llar —ens diuen la Marta i en David—. Veure'ls relaxats ens va tornar la tranquil·litat que havíem perdut.\" Aquesta història demostra que la convivència harmoniosa s'ensenya. No importa l'edat, la raça o l'historial: amb les eines adequades i constància, els gossos aprenen a viure en pau i a fer de la llar un refugi per a tota la família.",
+    },
+  },
   pages: {
     explorer: {
       levelBadge: 'Nivell Bàsic',
-      mainTitle: 'Explorer',
+      mainTitle: 'Explorador',
       subtitle: 'Primer pas cap a una convivència en harmonia',
       description:
         "El nivell Explorador és el primer graó en el camí cap a una convivència equilibrada i feliç amb el teu gos. En aquesta etapa, abordem les necessitats bàsiques d'educació canina, tant dins de la llar com en els espais públics, a través de dos programes complementaris i divertits que enforteixen el vincle entre humans i gossos.",
@@ -246,7 +261,7 @@ export default {
             'El teu gos pot aprendre a estar tranquil quan no estàs a casa. Amb aquest programa, treballem pas a pas perquè aprengui a quedar-se sol sense ansietat, lladrucs ni destruccions. Recuperes la teva llibertat i ell la seva calma.',
         },
         2: {
-          title: 'Anem a les terrasses?',
+          title: 'Anem a fer una birra?',
           subTitle: "El gos sociable que t'acompanya arreu",
           type: 'Nivell 2',
           description:
@@ -301,15 +316,15 @@ export default {
       title: 'Coneix en Xavi Burgos | Educador caní de Yes YouCan',
       description:
         'Coneix el recorregut i la vocació d’en Xavi Burgos, especialista en educació canina a domicili a Catalunya.',
-      ogTitle: 'Xavi Burgos · Educador caní a Yes YouCan',
+      ogTitle: 'Xavi Burgos · Educador caní a YesYouCan',
       ogDescription:
         'Descobreix com va néixer la vocació d’en Xavi i com acompanya persones i gossos a viure en harmonia.',
       ogImageAlt: 'Retrat d’en Xavi Burgos amb la seva gossa Bruna.',
     },
     notFound: {
-      title: 'Pàgina no trobada | Yes YouCan',
+      title: 'Pàgina no trobada | YesYouCan',
       description:
-        'La pàgina que busques no existeix o ha canviat d’adreça. Torna a l’inici per continuar explorant Yes YouCan.',
+        'La pàgina que busques no existeix o ha canviat d’adreça. Torna a l’inici per continuar explorant YesYouCan.',
       ogTitle: 'YesYouCan · Pàgina no trobada',
       ogDescription:
         'Utilitza el nostre menú per tornar als serveis d’educació canina i als recursos disponibles.',
