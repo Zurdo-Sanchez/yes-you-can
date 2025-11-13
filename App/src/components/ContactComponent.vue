@@ -127,7 +127,7 @@ const sendNotification = async () => {
 
   loading.value = true;
   try {
-    const res = await fetch('http://api:7000/mail/contact', {
+    const res = await fetch('http://172.29.0.4:7000/mail/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
