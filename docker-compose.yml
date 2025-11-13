@@ -6,6 +6,8 @@ services:
     build:
       context: ./Api
       dockerfile: dockerfile
+    env_file:
+      - ./Api/.env
     image: yesyoucan-api:latest
     restart: unless-stopped
     expose:
