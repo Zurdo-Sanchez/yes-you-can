@@ -83,13 +83,13 @@ let MailService = MailService_1 = class MailService {
             text: plainText,
             html,
         });
-        this.logger.log("Mail sent:", info);
         // Si usamos Ethereal, devuelve la URL de preview en logs
         try {
             // nodemailer.getTestMessageUrl funciona con nodemailer import default
             const preview = nodemailer.getTestMessageUrl(info);
             if (preview)
                 this.logger.log(`Preview URL: ${preview}`);
+            this.logger.log("Mail sent:", info);
         }
         catch (err) {
             this.logger.error("Error getting preview URL:", err);
