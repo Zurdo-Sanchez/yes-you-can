@@ -167,7 +167,7 @@ export default {
   pages: {
     explorer: {
       levelBadge: 'Nivell Bàsic',
-      mainTitle: 'Explorer',
+      mainTitle: 'Explorador',
       subtitle: 'Primer pas cap a una convivència en harmonia',
       description:
         "El nivell Explorador és el primer graó en el camí cap a una convivència equilibrada i feliç amb el teu gos. En aquesta etapa, abordem les necessitats bàsiques d'educació canina, tant dins de la llar com en els espais públics, a través de dos programes complementaris i divertits que enforteixen el vincle entre humans i gossos.",
