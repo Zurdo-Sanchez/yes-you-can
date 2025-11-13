@@ -176,7 +176,7 @@ watch([locale, () => route.fullPath], () => {
   margin: 0;
 }
 .paraf {
-  text-align: justifyP;
+  text-align: justify;
 }
 @media (max-width: 1160px) {
   .ImgMoreText,
