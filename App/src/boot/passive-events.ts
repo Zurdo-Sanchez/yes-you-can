@@ -12,7 +12,12 @@ export default defineBoot(() => {
       listener: EventListenerOrEventListenerObject,
       options?: boolean | AddEventListenerOptions,
     ) {
-      return EventTarget.prototype.addEventListener.call(this, type, listener, options as any);
+      return EventTarget.prototype.addEventListener.call(
+        this,
+        type,
+        listener,
+        options as boolean | AddEventListenerOptions,
+      );
     };
 
     // Override to make touchstart/touchmove passive by default unless explicitly set
