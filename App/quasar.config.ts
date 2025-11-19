@@ -12,7 +12,8 @@ export default defineConfig((ctx) => {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: ['i18n', 'axios', 'pinia', 'theme'],
+    // passive-events sets touch listeners to passive by default for better scrolling performance
+    boot: ['passive-events', 'pinia', 'i18n', 'axios', 'theme'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: ['app.scss'],
