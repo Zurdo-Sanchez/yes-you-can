@@ -121,8 +121,10 @@ function onPhoneInput(val: string) {
   telefono.value = String(val || '').replace(/\D+/g, '');
 }
 
-const apiBaseUrl = import.meta.env.VITE_API_URL || window.location.origin;
-const contactEndpoint = new URL('/mail/contact', apiBaseUrl).toString();
+const apiBaseUrl = (import.meta.env.VITE_API_URL || '').trim();
+const contactEndpoint = apiBaseUrl
+  ? new URL('/mail/contact', apiBaseUrl).toString()
+  : '/mail/contact';
 
 const sendNotification = async () => {
   if (!isValid.value)
