@@ -5,10 +5,23 @@ export default defineBoot(() => {
   if (typeof window === 'undefined' || typeof EventTarget === 'undefined') return;
 
   try {
-    const origAdd = EventTarget.prototype.addEventListener as any;
+    // Preserve a safe wrapper around the original method to avoid unbound-method lint errors
+    const origAdd = function (
+      this: EventTarget,
+      type: string,
+      listener: EventListenerOrEventListenerObject,
+      options?: boolean | AddEventListenerOptions,
+    ) {
+      return EventTarget.prototype.addEventListener.call(this, type, listener, options as any);
+    };
 
     // Override to make touchstart/touchmove passive by default unless explicitly set
-    EventTarget.prototype.addEventListener = function (type: string, listener: any, options?: any) {
+    EventTarget.prototype.addEventListener = function (
+      this: EventTarget,
+      type: string,
+      listener: EventListenerOrEventListenerObject,
+      options?: boolean | AddEventListenerOptions,
+    ) {
       if (type === 'touchstart' || type === 'touchmove') {
         // If options is a boolean (capture), convert to object preserving capture
         if (typeof options === 'boolean') {
@@ -16,14 +29,16 @@ export default defineBoot(() => {
         } else if (options == null) {
           options = { passive: true };
         } else if (typeof options === 'object') {
-          if (options.passive === undefined) options.passive = true;
+          const opts = options as AddEventListenerOptions & { passive?: boolean };
+          if (opts.passive === undefined) opts.passive = true;
+          options = opts;
         }
       }
+
       return origAdd.call(this, type, listener, options);
     };
   } catch (e) {
     // Fail silently — this is a performance hint only
-    // eslint-disable-next-line no-console
     console.warn('passive-events boot: could not patch addEventListener', e);
   }
 });
