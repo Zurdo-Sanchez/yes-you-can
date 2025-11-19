@@ -130,6 +130,15 @@ const sendNotification = async () => {
   if (!isValid.value)
     return Notify.create({ type: 'negative', message: 'Rellena todos los campos correctamente' });
 
+  const payload = {
+    name: name.value,
+    email: email.value,
+    telefono: telefono.value,
+    message: message.value,
+  };
+
+  console.log('[Contact] Enviando datos', { endpoint: contactEndpoint, payload });
+
   loading.value = true;
   try {
     const res = await fetch(contactEndpoint, {
@@ -137,15 +146,22 @@ const sendNotification = async () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        name: name.value,
-        email: email.value,
-        telefono: telefono.value,
-        message: message.value,
-      }),
+      body: JSON.stringify(payload),
     });
 
-    if (!res.ok) throw new Error('Error en el envío');
+    const responseText = await res.text();
+    console.log('[Contact] Respuesta bruta', { status: res.status, responseText });
+
+    if (!res.ok) throw new Error(`Error en el envío (${res.status})`);
+
+    let parsed;
+    try {
+      parsed = responseText ? JSON.parse(responseText) : null;
+    } catch (err) {
+      console.warn('[Contact] No se pudo parsear la respuesta como JSON', err);
+    }
+    if (parsed) console.log('[Contact] Respuesta parseada', parsed);
+
     Notify.create({ type: 'positive', message: 'Correo enviado correctamente' });
     name.value = '';
     email.value = '';
