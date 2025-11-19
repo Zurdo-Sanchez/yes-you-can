@@ -123,11 +123,11 @@ function onPhoneInput(val: string) {
 
 const sendNotification = async () => {
   if (!isValid.value)
-    return Notify.create({ type: 'negative', message: 'Rellena todos los campos correctamente' });
+    return safeNotify({ type: 'negative', message: 'Rellena todos los campos correctamente' });
 
   loading.value = true;
   try {
-    const res = await fetch('https://api.yesyoucan.cat:7000/mail/contact', {
+    const res = await fetch(`${API_BASE}/mail/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -141,18 +141,39 @@ const sendNotification = async () => {
     });
 
     if (!res.ok) throw new Error('Error en el envío');
-    Notify.create({ type: 'positive', message: 'Correo enviado correctamente' });
+    safeNotify({ type: 'positive', message: 'Correo enviado correctamente' });
     name.value = '';
     email.value = '';
     telefono.value = '';
     message.value = '';
   } catch (err) {
     console.error('Error sending notification:', err);
-    Notify.create({ type: 'negative', message: 'Error al enviar el correo' });
+    safeNotify({ type: 'negative', message: 'Error al enviar el correo' });
   } finally {
     loading.value = false;
   }
 };
+
+// API base: default to same host with port 7000. For mobile testing set
+// window.__VITE_API_URL in your index.html or replace the URL here.
+const API_BASE: string =
+  (window as any).__VITE_API_URL || `${window.location.protocol}//${window.location.hostname}:7000`;
+
+function safeNotify(opts: { type?: string; message: string }) {
+  try {
+    if (Notify && typeof (Notify as any).create === 'function') {
+      (Notify as any).create(opts);
+    } else if (typeof window !== 'undefined') {
+      // fallback for environments where Quasar Notify isn't available
+      // eslint-disable-next-line no-alert
+      alert(opts.message);
+    } else {
+      console.log('Notify fallback:', opts);
+    }
+  } catch (e) {
+    console.log('Notify error fallback', e, opts);
+  }
+}
 </script>
 <style scoped>
 .contact-section {
