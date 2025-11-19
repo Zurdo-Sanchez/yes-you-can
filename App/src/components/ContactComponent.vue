@@ -121,7 +121,27 @@ function onPhoneInput(val: string) {
   telefono.value = String(val || '').replace(/\D+/g, '');
 }
 
-const apiBaseUrl = (import.meta.env.VITE_API_URL || '').trim();
+const resolveApiBaseUrl = () => {
+  const envUrl = (import.meta.env.VITE_API_URL || '').trim();
+  if (envUrl) return envUrl;
+
+  if (typeof window === 'undefined') return '';
+
+  const { protocol, hostname, port } = window.location;
+  const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
+  const isIp = /^\d{1,3}(?:\.\d{1,3}){3}$/.test(hostname);
+
+  // En entorno productivo usamos api.<dominio> para alcanzar la API real;
+  // en local o IP caemos al mismo host/puerto para no romper el desarrollo.
+  if (!isLocalhost && !isIp && !hostname.startsWith('api.')) {
+    return `${protocol}//api.${hostname}`;
+  }
+
+  const portSuffix = port ? `:${port}` : '';
+  return `${protocol}//${hostname}${portSuffix}`;
+};
+
+const apiBaseUrl = resolveApiBaseUrl();
 const contactEndpoint = apiBaseUrl
   ? new URL('/mail/contact', apiBaseUrl).toString()
   : '/mail/contact';
