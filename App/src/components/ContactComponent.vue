@@ -131,10 +131,12 @@ const resolveApiBaseUrl = () => {
   const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
   const isIp = /^\d{1,3}(?:\.\d{1,3}){3}$/.test(hostname);
 
+  const normalizedHost = hostname.replace(/^www\./i, '');
+
   // En entorno productivo usamos api.<dominio> para alcanzar la API real;
   // en local o IP caemos al mismo host/puerto para no romper el desarrollo.
-  if (!isLocalhost && !isIp && !hostname.startsWith('api.')) {
-    return `${protocol}//api.${hostname}`;
+  if (!isLocalhost && !isIp && !normalizedHost.startsWith('api.')) {
+    return `${protocol}//api.${normalizedHost}`;
   }
 
   const portSuffix = port ? `:${port}` : '';
