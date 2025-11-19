@@ -121,13 +121,16 @@ function onPhoneInput(val: string) {
   telefono.value = String(val || '').replace(/\D+/g, '');
 }
 
+const apiBaseUrl = import.meta.env.VITE_API_URL || window.location.origin;
+const contactEndpoint = new URL('/mail/contact', apiBaseUrl).toString();
+
 const sendNotification = async () => {
   if (!isValid.value)
     return Notify.create({ type: 'negative', message: 'Rellena todos los campos correctamente' });
 
   loading.value = true;
   try {
-    const res = await fetch('http://172.29.0.3:7000/mail/contact', {
+    const res = await fetch(contactEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
